@@ -1,6 +1,4 @@
 class DishesController < ApplicationController
-  http_basic_authenticate_with name: "admin", password: "admin"
-  layout 'admin'
   def index
   	@dish = Dish.all
   end
