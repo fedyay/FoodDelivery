@@ -478,3 +478,1354 @@ Processing by ActiveAdmin::Devise::PasswordsController#new as HTML
 Completed 200 OK in 158ms (Views: 128.6ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/asder" for 127.0.0.1 at 2016-09-01 19:40:48 +0600
+Processing by PagesController#dishes as HTML
+  Parameters: {"id"=>"asder"}
+  [1m[36mRest Load (0.3ms)[0m  [1m[34mSELECT  "rests".* FROM "rests" WHERE "rests"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+Completed 404 Not Found in 126ms (ActiveRecord: 1.3ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Rest with 'id'=asder):
+  
+app/controllers/pages_controller.rb:7:in `dishes'
+  Rendering /home/fedyay/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/fedyay/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/fedyay/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.8ms)
+  Rendering /home/fedyay/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/fedyay/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendering /home/fedyay/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/fedyay/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.3ms)
+  Rendered /home/fedyay/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (36.2ms)
+Started GET "/admin/admin_users/new" for 127.0.0.1 at 2016-09-01 19:42:06 +0600
+Processing by Admin::AdminUsersController#new as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/login" for 127.0.0.1 at 2016-09-01 19:42:06 +0600
+Processing by ActiveAdmin::Devise::SessionsController#new as HTML
+  Rendering /home/fedyay/.rvm/gems/ruby-2.3.0/gems/activeadmin-1.0.0.pre4/app/views/active_admin/devise/sessions/new.html.erb within layouts/active_admin_logged_out
+  Rendered /home/fedyay/.rvm/gems/ruby-2.3.0/gems/activeadmin-1.0.0.pre4/app/views/active_admin/devise/shared/_links.erb (1.9ms)
+  Rendered /home/fedyay/.rvm/gems/ruby-2.3.0/gems/activeadmin-1.0.0.pre4/app/views/active_admin/devise/sessions/new.html.erb within layouts/active_admin_logged_out (29.1ms)
+Completed 200 OK in 187ms (Views: 184.7ms | ActiveRecord: 0.0ms)
+
+
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mAdminUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "admin_users" WHERE "admin_users"."email" = ? LIMIT ?[0m  [["email", "asd@asd.asd"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mAdminUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "admin_users" WHERE "admin_users"."email" = ? LIMIT ?[0m  [["email", "asd@asd.asd"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mAdminUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "admin_users" WHERE "admin_users"."email" = ? LIMIT ?[0m  [["email", "asd@asd.asd"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mAdminUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "admin_users" WHERE "admin_users"."email" = ? LIMIT ?[0m  [["email", "asd@asd.dsa"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+Started GET "/admin/login" for 127.0.0.1 at 2016-09-01 19:48:15 +0600
+Processing by ActiveAdmin::Devise::SessionsController#new as HTML
+  Rendering /home/fedyay/.rvm/gems/ruby-2.3.0/gems/activeadmin-1.0.0.pre4/app/views/active_admin/devise/sessions/new.html.erb within layouts/active_admin_logged_out
+  Rendered /home/fedyay/.rvm/gems/ruby-2.3.0/gems/activeadmin-1.0.0.pre4/app/views/active_admin/devise/shared/_links.erb (1.6ms)
+  Rendered /home/fedyay/.rvm/gems/ruby-2.3.0/gems/activeadmin-1.0.0.pre4/app/views/active_admin/devise/sessions/new.html.erb within layouts/active_admin_logged_out (34.3ms)
+Completed 200 OK in 177ms (Views: 174.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/admin/login" for 127.0.0.1 at 2016-09-01 19:48:26 +0600
+Processing by ActiveAdmin::Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"xmRCpDesxL+Xn4BiYusTKPckjFgonrm/7RA/rJkSJmKUXopQN3D7+nUTyjQtgRBoC49ASSrPRUIe/o9QqMQSVQ==", "admin_user"=>{"email"=>"asd@asd.dsa", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Login"}
+  [1m[36mAdminUser Load (0.4ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."email" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["email", "asd@asd.dsa"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 54ms (ActiveRecord: 0.4ms)
+
+
+Processing by ActiveAdmin::Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"xmRCpDesxL+Xn4BiYusTKPckjFgonrm/7RA/rJkSJmKUXopQN3D7+nUTyjQtgRBoC49ASSrPRUIe/o9QqMQSVQ==", "admin_user"=>{"email"=>"asd@asd.dsa", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Login"}
+  Rendering /home/fedyay/.rvm/gems/ruby-2.3.0/gems/activeadmin-1.0.0.pre4/app/views/active_admin/devise/sessions/new.html.erb within layouts/active_admin_logged_out
+  Rendered /home/fedyay/.rvm/gems/ruby-2.3.0/gems/activeadmin-1.0.0.pre4/app/views/active_admin/devise/shared/_links.erb (1.5ms)
+  Rendered /home/fedyay/.rvm/gems/ruby-2.3.0/gems/activeadmin-1.0.0.pre4/app/views/active_admin/devise/sessions/new.html.erb within layouts/active_admin_logged_out (41.2ms)
+Completed 200 OK in 336ms (Views: 154.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/admin/login" for 127.0.0.1 at 2016-09-01 19:48:34 +0600
+Processing by ActiveAdmin::Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ArdZ6ZimggyaoK2cMjnZF9H4OrlAg8H+TGz3s2OHe4RQjZEdmHq9SXgs58p9U9pXLVP2qELSPQO/gkdPUlFPsw==", "admin_user"=>{"email"=>"asd@asd.asd", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Login"}
+  [1m[36mAdminUser Load (0.4ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."email" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["email", "asd@asd.asd"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 4ms (ActiveRecord: 0.4ms)
+
+
+Processing by ActiveAdmin::Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ArdZ6ZimggyaoK2cMjnZF9H4OrlAg8H+TGz3s2OHe4RQjZEdmHq9SXgs58p9U9pXLVP2qELSPQO/gkdPUlFPsw==", "admin_user"=>{"email"=>"asd@asd.asd", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Login"}
+  Rendering /home/fedyay/.rvm/gems/ruby-2.3.0/gems/activeadmin-1.0.0.pre4/app/views/active_admin/devise/sessions/new.html.erb within layouts/active_admin_logged_out
+  Rendered /home/fedyay/.rvm/gems/ruby-2.3.0/gems/activeadmin-1.0.0.pre4/app/views/active_admin/devise/shared/_links.erb (1.4ms)
+  Rendered /home/fedyay/.rvm/gems/ruby-2.3.0/gems/activeadmin-1.0.0.pre4/app/views/active_admin/devise/sessions/new.html.erb within layouts/active_admin_logged_out (25.2ms)
+Completed 200 OK in 286ms (Views: 111.6ms | ActiveRecord: 0.0ms)
+
+
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", :environment]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", :environment]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", :environment]]
+  [1m[35m (131.4ms)[0m  [1m[35mCREATE TABLE "active_admin_comments" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "namespace" varchar, "body" text, "resource_id" varchar NOT NULL, "resource_type" varchar NOT NULL, "author_type" varchar, "author_id" integer, "created_at" datetime, "updated_at" datetime)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mselect sqlite_version(*)[0m
+  [1m[35m (266.7ms)[0m  [1m[35mCREATE  INDEX "index_active_admin_comments_on_author_type_and_author_id" ON "active_admin_comments" ("author_type", "author_id")[0m
+  [1m[35m (0.2ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_active_admin_comments_on_author_type_and_author_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_active_admin_comments_on_author_type_and_author_id' AND type='index'
+[0m
+  [1m[35m (166.3ms)[0m  [1m[35mCREATE  INDEX "index_active_admin_comments_on_namespace" ON "active_admin_comments" ("namespace")[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_active_admin_comments_on_namespace' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_active_admin_comments_on_namespace' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_active_admin_comments_on_author_type_and_author_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_active_admin_comments_on_author_type_and_author_id' AND type='index'
+[0m
+  [1m[35m (132.5ms)[0m  [1m[35mCREATE  INDEX "index_active_admin_comments_on_resource_type_and_resource_id" ON "active_admin_comments" ("resource_type", "resource_id")[0m
+  [1m[35m (144.1ms)[0m  [1m[35mCREATE TABLE "admin_users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar DEFAULT '' NOT NULL, "encrypted_password" varchar DEFAULT '' NOT NULL, "reset_password_token" varchar, "reset_password_sent_at" datetime, "remember_created_at" datetime, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" datetime, "last_sign_in_at" datetime, "current_sign_in_ip" varchar, "last_sign_in_ip" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "name" varchar, "phone" varchar, "address" varchar)[0m
+  [1m[35m (189.0ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_admin_users_on_email" ON "admin_users" ("email")[0m
+  [1m[35m (0.3ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_admin_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_admin_users_on_email' AND type='index'
+[0m
+  [1m[35m (168.3ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_admin_users_on_reset_password_token" ON "admin_users" ("reset_password_token")[0m
+  [1m[35m (164.4ms)[0m  [1m[35mCREATE TABLE "carts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "dishes" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (154.7ms)[0m  [1m[35mCREATE TABLE "categories" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "rest_id" integer)[0m
+  [1m[35m (168.1ms)[0m  [1m[35mCREATE  INDEX "index_categories_on_rest_id" ON "categories" ("rest_id")[0m
+  [1m[35m (154.6ms)[0m  [1m[35mCREATE TABLE "dishes" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "price" float, "description" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "rest_id" integer, "counter" integer, "category_id" integer)[0m
+  [1m[35m (258.7ms)[0m  [1m[35mCREATE  INDEX "index_dishes_on_category_id" ON "dishes" ("category_id")[0m
+  [1m[35m (0.3ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_dishes_on_category_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_dishes_on_category_id' AND type='index'
+[0m
+  [1m[35m (193.8ms)[0m  [1m[35mCREATE  INDEX "index_dishes_on_rest_id" ON "dishes" ("rest_id")[0m
+  [1m[35m (245.3ms)[0m  [1m[35mCREATE TABLE "rests" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "image" varchar, "description" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (234.5ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (215.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES ('20160901132638')[0m
+  [1m[35m (219.5ms)[0m  [1m[32mINSERT INTO schema_migrations (version) VALUES ('20160901132138'), ('20160716131956'), ('20160901132141'), ('20160716131435'), ('20160706130211'), ('20160706130210'), ('20160706145548'), ('20160706144338'), ('20160712065628'), ('20160706130351');
+
+[0m
+  [1m[35m (190.2ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", 2016-09-01 13:51:14 UTC], ["updated_at", 2016-09-01 13:51:14 UTC]]
+  [1m[35m (178.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (215.6ms)[0m  [1m[35mCREATE TABLE "active_admin_comments" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "namespace" varchar, "body" text, "resource_id" varchar NOT NULL, "resource_type" varchar NOT NULL, "author_type" varchar, "author_id" integer, "created_at" datetime, "updated_at" datetime)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mselect sqlite_version(*)[0m
+  [1m[35m (215.2ms)[0m  [1m[35mCREATE  INDEX "index_active_admin_comments_on_author_type_and_author_id" ON "active_admin_comments" ("author_type", "author_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_active_admin_comments_on_author_type_and_author_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_active_admin_comments_on_author_type_and_author_id' AND type='index'
+[0m
+  [1m[35m (222.6ms)[0m  [1m[35mCREATE  INDEX "index_active_admin_comments_on_namespace" ON "active_admin_comments" ("namespace")[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_active_admin_comments_on_namespace' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_active_admin_comments_on_namespace' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_active_admin_comments_on_author_type_and_author_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_active_admin_comments_on_author_type_and_author_id' AND type='index'
+[0m
+  [1m[35m (267.0ms)[0m  [1m[35mCREATE  INDEX "index_active_admin_comments_on_resource_type_and_resource_id" ON "active_admin_comments" ("resource_type", "resource_id")[0m
+  [1m[35m (410.3ms)[0m  [1m[35mCREATE TABLE "admin_users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar DEFAULT '' NOT NULL, "encrypted_password" varchar DEFAULT '' NOT NULL, "reset_password_token" varchar, "reset_password_sent_at" datetime, "remember_created_at" datetime, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" datetime, "last_sign_in_at" datetime, "current_sign_in_ip" varchar, "last_sign_in_ip" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "name" varchar, "phone" varchar, "address" varchar)[0m
+  [1m[35m (357.7ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_admin_users_on_email" ON "admin_users" ("email")[0m
+  [1m[35m (0.2ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_admin_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_admin_users_on_email' AND type='index'
+[0m
+  [1m[35m (326.5ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_admin_users_on_reset_password_token" ON "admin_users" ("reset_password_token")[0m
+  [1m[35m (279.3ms)[0m  [1m[35mCREATE TABLE "carts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "dishes" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (255.3ms)[0m  [1m[35mCREATE TABLE "categories" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "rest_id" integer)[0m
+  [1m[35m (296.7ms)[0m  [1m[35mCREATE  INDEX "index_categories_on_rest_id" ON "categories" ("rest_id")[0m
+  [1m[35m (298.5ms)[0m  [1m[35mCREATE TABLE "dishes" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "price" float, "description" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "rest_id" integer, "counter" integer, "category_id" integer)[0m
+  [1m[35m (367.6ms)[0m  [1m[35mCREATE  INDEX "index_dishes_on_category_id" ON "dishes" ("category_id")[0m
+  [1m[35m (0.2ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_dishes_on_category_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_dishes_on_category_id' AND type='index'
+[0m
+  [1m[35m (326.1ms)[0m  [1m[35mCREATE  INDEX "index_dishes_on_rest_id" ON "dishes" ("rest_id")[0m
+  [1m[35m (347.0ms)[0m  [1m[35mCREATE TABLE "rests" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "image" varchar, "description" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (526.5ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (523.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES ('20160901132638')[0m
+  [1m[35m (349.0ms)[0m  [1m[32mINSERT INTO schema_migrations (version) VALUES ('20160901132138'), ('20160716131956'), ('20160901132141'), ('20160716131435'), ('20160706130211'), ('20160706130210'), ('20160706145548'), ('20160706144338'), ('20160712065628'), ('20160706130351');
+
+[0m
+  [1m[35m (309.1ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", 2016-09-01 13:51:20 UTC], ["updated_at", 2016-09-01 13:51:20 UTC]]
+  [1m[35m (221.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mAdminUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "admin_users" WHERE "admin_users"."email" = ? LIMIT ?[0m  [["email", "admin@example.com"], ["LIMIT", 1]]
+  [1m[35mSQL (1.5ms)[0m  [1m[32mINSERT INTO "admin_users" ("email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["email", "admin@example.com"], ["encrypted_password", "$2a$11$KkynhO3e.fSWw/tK.VUrpepyMe2f2RTCHvUONEURXVEtp6vgKEobG"], ["created_at", 2016-09-01 13:51:21 UTC], ["updated_at", 2016-09-01 13:51:21 UTC]]
+  [1m[35m (229.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mAdminUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "admin_users" WHERE "admin_users"."email" = ? LIMIT ?[0m  [["email", "asd@asd.asd"], ["LIMIT", 1]]
+  [1m[35mSQL (1.9ms)[0m  [1m[32mINSERT INTO "admin_users" ("email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["email", "asd@asd.asd"], ["encrypted_password", "$2a$11$prVi24OhQZLfh4PeyPj.8uxghJgCOxxLML1LXU8BnSEw1lOrwEoxG"], ["created_at", 2016-09-01 13:51:49 UTC], ["updated_at", 2016-09-01 13:51:49 UTC]]
+  [1m[35m (128.6ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/" for 127.0.0.1 at 2016-09-01 19:52:07 +0600
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PagesController#rests as HTML
+  Rendering pages/rests.html.erb within layouts/application
+  [1m[36mRest Load (0.4ms)[0m  [1m[34mSELECT "rests".* FROM "rests"[0m
+  [1m[36mDish Load (0.4ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes"[0m
+  Rendered pages/_cart.html.erb (5.9ms)
+  Rendered pages/rests.html.erb within layouts/application (53.0ms)
+Completed 200 OK in 3809ms (Views: 3679.4ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/admin/admin_users/new" for 127.0.0.1 at 2016-09-01 19:52:15 +0600
+Processing by Admin::AdminUsersController#new as HTML
+Completed 401 Unauthorized in 5ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/login" for 127.0.0.1 at 2016-09-01 19:52:16 +0600
+Processing by ActiveAdmin::Devise::SessionsController#new as HTML
+  Rendering /home/fedyay/.rvm/gems/ruby-2.3.0/gems/activeadmin-1.0.0.pre4/app/views/active_admin/devise/sessions/new.html.erb within layouts/active_admin_logged_out
+  Rendered /home/fedyay/.rvm/gems/ruby-2.3.0/gems/activeadmin-1.0.0.pre4/app/views/active_admin/devise/shared/_links.erb (2.0ms)
+  Rendered /home/fedyay/.rvm/gems/ruby-2.3.0/gems/activeadmin-1.0.0.pre4/app/views/active_admin/devise/sessions/new.html.erb within layouts/active_admin_logged_out (234.4ms)
+Completed 200 OK in 730ms (Views: 645.8ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/admin/login" for 127.0.0.1 at 2016-09-01 19:52:28 +0600
+Processing by ActiveAdmin::Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"SFh0wWtpcntJTRJgHujSAkqs6ykOwKM42R21QQEWjbMaYrw1a7VNPqvBWDZRgtFCtgcnOAyRX8Uq8wW9MMC5hA==", "admin_user"=>{"email"=>"asd@asd.asd", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Login"}
+  [1m[36mAdminUser Load (0.3ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."email" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["email", "asd@asd.asd"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "admin_users" SET "current_sign_in_at" = ?, "last_sign_in_at" = ?, "current_sign_in_ip" = ?, "last_sign_in_ip" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "admin_users"."id" = ?[0m  [["current_sign_in_at", 2016-09-01 13:52:28 UTC], ["last_sign_in_at", 2016-09-01 13:52:28 UTC], ["current_sign_in_ip", "127.0.0.1"], ["last_sign_in_ip", "127.0.0.1"], ["sign_in_count", 1], ["updated_at", 2016-09-01 13:52:28 UTC], ["id", 2]]
+  [1m[35m (164.4ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/admin/admin_users/new
+Completed 302 Found in 477ms (ActiveRecord: 165.3ms)
+
+
+Started GET "/admin/admin_users/new" for 127.0.0.1 at 2016-09-01 19:52:29 +0600
+Processing by Admin::AdminUsersController#new as HTML
+  [1m[36mAdminUser Load (0.5ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering /home/fedyay/.rvm/gems/ruby-2.3.0/gems/activeadmin-1.0.0.pre4/app/views/active_admin/resource/new.html.arb
+  Rendered /home/fedyay/.rvm/gems/ruby-2.3.0/gems/activeadmin-1.0.0.pre4/app/views/active_admin/resource/new.html.arb (207.7ms)
+Completed 200 OK in 302ms (Views: 246.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/admin/dashboard" for 127.0.0.1 at 2016-09-01 19:52:39 +0600
+Processing by Admin::DashboardController#index as HTML
+  [1m[36mAdminUser Load (0.3ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering /home/fedyay/.rvm/gems/ruby-2.3.0/gems/activeadmin-1.0.0.pre4/app/views/active_admin/page/index.html.arb
+  Rendered /home/fedyay/.rvm/gems/ruby-2.3.0/gems/activeadmin-1.0.0.pre4/app/views/active_admin/page/index.html.arb (131.2ms)
+Completed 200 OK in 182ms (Views: 178.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/admin/categories" for 127.0.0.1 at 2016-09-01 19:52:40 +0600
+Processing by Admin::CategoriesController#index as HTML
+  [1m[36mAdminUser Load (0.3ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering /home/fedyay/.rvm/gems/ruby-2.3.0/gems/activeadmin-1.0.0.pre4/app/views/active_admin/resource/index.html.arb
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "categories" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mRest Load (0.4ms)[0m  [1m[34mSELECT "rests".* FROM "rests"[0m
+  [1m[36mDish Load (0.3ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes"[0m
+  Rendered /home/fedyay/.rvm/gems/ruby-2.3.0/gems/activeadmin-1.0.0.pre4/app/views/active_admin/resource/index.html.arb (231.4ms)
+Completed 200 OK in 286ms (Views: 248.5ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/admin/comments" for 127.0.0.1 at 2016-09-01 19:52:43 +0600
+Processing by Admin::CommentsController#index as HTML
+  [1m[36mAdminUser Load (0.8ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering /home/fedyay/.rvm/gems/ruby-2.3.0/gems/activeadmin-1.0.0.pre4/app/views/active_admin/resource/index.html.arb
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "active_admin_comments" WHERE "active_admin_comments"."namespace" = ?[0m  [["namespace", "admin"]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "active_admin_comments" WHERE "active_admin_comments"."namespace" = ? LIMIT ? OFFSET ?) subquery_for_count[0m  [["namespace", "admin"], ["LIMIT", 30], ["OFFSET", 0]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT DISTINCT "active_admin_comments"."resource_type" FROM "active_admin_comments" ORDER BY resource_type asc[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT DISTINCT "active_admin_comments"."author_type" FROM "active_admin_comments" ORDER BY author_type asc[0m
+  Rendered /home/fedyay/.rvm/gems/ruby-2.3.0/gems/activeadmin-1.0.0.pre4/app/views/active_admin/resource/index.html.arb (162.9ms)
+Completed 200 OK in 174ms (Views: 165.1ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/admin/dishes" for 127.0.0.1 at 2016-09-01 19:52:44 +0600
+Processing by Admin::DishesController#index as HTML
+  [1m[36mAdminUser Load (0.3ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering /home/fedyay/.rvm/gems/ruby-2.3.0/gems/activeadmin-1.0.0.pre4/app/views/active_admin/resource/index.html.arb
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "dishes" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mRest Load (0.2ms)[0m  [1m[34mSELECT "rests".* FROM "rests"[0m
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered /home/fedyay/.rvm/gems/ruby-2.3.0/gems/activeadmin-1.0.0.pre4/app/views/active_admin/resource/index.html.arb (241.9ms)
+Completed 200 OK in 251ms (Views: 245.6ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/admin/rests" for 127.0.0.1 at 2016-09-01 19:52:47 +0600
+Processing by Admin::RestsController#index as HTML
+  [1m[36mAdminUser Load (0.5ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering /home/fedyay/.rvm/gems/ruby-2.3.0/gems/activeadmin-1.0.0.pre4/app/views/active_admin/resource/index.html.arb
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "rests" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mDish Load (0.2ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes"[0m
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered /home/fedyay/.rvm/gems/ruby-2.3.0/gems/activeadmin-1.0.0.pre4/app/views/active_admin/resource/index.html.arb (171.1ms)
+Completed 200 OK in 182ms (Views: 173.8ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/admin/comments" for 127.0.0.1 at 2016-09-01 19:52:49 +0600
+Processing by Admin::CommentsController#index as HTML
+  [1m[36mAdminUser Load (0.9ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering /home/fedyay/.rvm/gems/ruby-2.3.0/gems/activeadmin-1.0.0.pre4/app/views/active_admin/resource/index.html.arb
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "active_admin_comments" WHERE "active_admin_comments"."namespace" = ?[0m  [["namespace", "admin"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "active_admin_comments" WHERE "active_admin_comments"."namespace" = ? LIMIT ? OFFSET ?) subquery_for_count[0m  [["namespace", "admin"], ["LIMIT", 30], ["OFFSET", 0]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT DISTINCT "active_admin_comments"."resource_type" FROM "active_admin_comments" ORDER BY resource_type asc[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT DISTINCT "active_admin_comments"."author_type" FROM "active_admin_comments" ORDER BY author_type asc[0m
+  Rendered /home/fedyay/.rvm/gems/ruby-2.3.0/gems/activeadmin-1.0.0.pre4/app/views/active_admin/resource/index.html.arb (152.3ms)
+Completed 200 OK in 161ms (Views: 155.2ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/admin/categories" for 127.0.0.1 at 2016-09-01 19:53:29 +0600
+Processing by Admin::CategoriesController#index as HTML
+  [1m[36mAdminUser Load (0.4ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering /home/fedyay/.rvm/gems/ruby-2.3.0/gems/activeadmin-1.0.0.pre4/app/views/active_admin/resource/index.html.arb
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "categories" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mRest Load (0.2ms)[0m  [1m[34mSELECT "rests".* FROM "rests"[0m
+  [1m[36mDish Load (0.2ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes"[0m
+  Rendered /home/fedyay/.rvm/gems/ruby-2.3.0/gems/activeadmin-1.0.0.pre4/app/views/active_admin/resource/index.html.arb (133.3ms)
+Completed 200 OK in 141ms (Views: 136.0ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/admin/admin_users/new" for 127.0.0.1 at 2016-09-01 19:56:55 +0600
+Processing by Admin::AdminUsersController#new as HTML
+  [1m[36mAdminUser Load (0.3ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering /home/fedyay/.rvm/gems/ruby-2.3.0/gems/activeadmin-1.0.0.pre4/app/views/active_admin/resource/new.html.arb
+  Rendered /home/fedyay/.rvm/gems/ruby-2.3.0/gems/activeadmin-1.0.0.pre4/app/views/active_admin/resource/new.html.arb (142.3ms)
+Completed 200 OK in 148ms (Views: 145.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/admin/categories" for 127.0.0.1 at 2016-09-01 19:56:57 +0600
+Processing by Admin::CategoriesController#index as HTML
+  [1m[36mAdminUser Load (0.3ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering /home/fedyay/.rvm/gems/ruby-2.3.0/gems/activeadmin-1.0.0.pre4/app/views/active_admin/resource/index.html.arb
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "categories" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mRest Load (0.2ms)[0m  [1m[34mSELECT "rests".* FROM "rests"[0m
+  [1m[36mDish Load (0.3ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes"[0m
+  Rendered /home/fedyay/.rvm/gems/ruby-2.3.0/gems/activeadmin-1.0.0.pre4/app/views/active_admin/resource/index.html.arb (121.4ms)
+Completed 200 OK in 128ms (Views: 123.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/admin/categories/new" for 127.0.0.1 at 2016-09-01 19:56:59 +0600
+Processing by Admin::CategoriesController#new as HTML
+  [1m[36mAdminUser Load (0.4ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering /home/fedyay/.rvm/gems/ruby-2.3.0/gems/activeadmin-1.0.0.pre4/app/views/active_admin/resource/new.html.arb
+  [1m[36mRest Load (0.2ms)[0m  [1m[34mSELECT "rests".* FROM "rests"[0m
+  Rendered /home/fedyay/.rvm/gems/ruby-2.3.0/gems/activeadmin-1.0.0.pre4/app/views/active_admin/resource/new.html.arb (213.4ms)
+Completed 200 OK in 224ms (Views: 216.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/admin/rests" for 127.0.0.1 at 2016-09-01 19:57:03 +0600
+Processing by Admin::RestsController#index as HTML
+  [1m[36mAdminUser Load (0.3ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering /home/fedyay/.rvm/gems/ruby-2.3.0/gems/activeadmin-1.0.0.pre4/app/views/active_admin/resource/index.html.arb
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "rests" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mDish Load (0.2ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes"[0m
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered /home/fedyay/.rvm/gems/ruby-2.3.0/gems/activeadmin-1.0.0.pre4/app/views/active_admin/resource/index.html.arb (188.8ms)
+Completed 200 OK in 195ms (Views: 191.0ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/admin/rests/new" for 127.0.0.1 at 2016-09-01 19:57:05 +0600
+Processing by Admin::RestsController#new as HTML
+  [1m[36mAdminUser Load (0.5ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering /home/fedyay/.rvm/gems/ruby-2.3.0/gems/activeadmin-1.0.0.pre4/app/views/active_admin/resource/new.html.arb
+  Rendered /home/fedyay/.rvm/gems/ruby-2.3.0/gems/activeadmin-1.0.0.pre4/app/views/active_admin/resource/new.html.arb (265.9ms)
+Completed 200 OK in 279ms (Views: 268.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/admin/dishes" for 127.0.0.1 at 2016-09-01 19:57:19 +0600
+Processing by Admin::DishesController#index as HTML
+  [1m[36mAdminUser Load (0.3ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering /home/fedyay/.rvm/gems/ruby-2.3.0/gems/activeadmin-1.0.0.pre4/app/views/active_admin/resource/index.html.arb
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "dishes" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mRest Load (0.2ms)[0m  [1m[34mSELECT "rests".* FROM "rests"[0m
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered /home/fedyay/.rvm/gems/ruby-2.3.0/gems/activeadmin-1.0.0.pre4/app/views/active_admin/resource/index.html.arb (151.4ms)
+Completed 200 OK in 159ms (Views: 154.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/admin/dishes/new" for 127.0.0.1 at 2016-09-01 19:57:20 +0600
+Processing by Admin::DishesController#new as HTML
+  [1m[36mAdminUser Load (0.3ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering /home/fedyay/.rvm/gems/ruby-2.3.0/gems/activeadmin-1.0.0.pre4/app/views/active_admin/resource/new.html.arb
+  [1m[36mRest Load (0.3ms)[0m  [1m[34mSELECT "rests".* FROM "rests"[0m
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered /home/fedyay/.rvm/gems/ruby-2.3.0/gems/activeadmin-1.0.0.pre4/app/views/active_admin/resource/new.html.arb (138.9ms)
+Completed 200 OK in 154ms (Views: 141.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-09-01 19:57:43 +0600
+Processing by PagesController#rests as HTML
+  Rendering pages/rests.html.erb within layouts/application
+  [1m[36mRest Load (0.2ms)[0m  [1m[34mSELECT "rests".* FROM "rests"[0m
+  [1m[36mDish Load (0.3ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes"[0m
+  Rendered pages/_cart.html.erb (1.7ms)
+  Rendered pages/rests.html.erb within layouts/application (4.1ms)
+Started GET "/" for 127.0.0.1 at 2016-09-01 19:57:43 +0600
+Processing by PagesController#rests as HTML
+  Rendering pages/rests.html.erb within layouts/application
+  [1m[36mRest Load (0.5ms)[0m  [1m[34mSELECT "rests".* FROM "rests"[0m
+  [1m[36mDish Load (0.2ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes"[0m
+  Rendered pages/_cart.html.erb (10.6ms)
+  Rendered pages/rests.html.erb within layouts/application (17.4ms)
+Completed 200 OK in 208ms (Views: 205.6ms | ActiveRecord: 0.5ms)
+
+
+Completed 200 OK in 160ms (Views: 157.9ms | ActiveRecord: 0.7ms)
+
+
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddAttachmentImageToRests (20160901135959)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+DEPRECATION WARNING: Directly inheriting from ActiveRecord::Migration is deprecated. Please specify the Rails release the migration was written for:
+
+  class AddAttachmentImageToRests < ActiveRecord::Migration[4.2] (called from load at /home/fedyay/.rbenv/versions/2.3.1/bin/rake:23)
+  [1m[35m (0.8ms)[0m  [1m[35mALTER TABLE "rests" ADD "image_file_name" varchar[0m
+  [1m[35m (0.4ms)[0m  [1m[35mALTER TABLE "rests" ADD "image_content_type" varchar[0m
+  [1m[35m (0.4ms)[0m  [1m[35mALTER TABLE "rests" ADD "image_file_size" integer[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "rests" ADD "image_updated_at" datetime[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20160901135959"]]
+  [1m[35m (156.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_active_admin_comments_on_resource_type_and_resource_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_active_admin_comments_on_resource_type_and_resource_id' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_active_admin_comments_on_namespace' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_active_admin_comments_on_namespace' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_active_admin_comments_on_author_type_and_author_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_active_admin_comments_on_author_type_and_author_id' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_admin_users_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_admin_users_on_reset_password_token' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_admin_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_admin_users_on_email' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_categories_on_rest_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_categories_on_rest_id' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_dishes_on_rest_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_dishes_on_rest_id' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_dishes_on_category_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_dishes_on_category_id' AND type='index'
+[0m
+Started GET "/admin/admin_users/new" for 127.0.0.1 at 2016-09-01 20:01:09 +0600
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Admin::AdminUsersController#new as HTML
+  [1m[36mAdminUser Load (0.3ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering /home/fedyay/.rvm/gems/ruby-2.3.0/gems/activeadmin-1.0.0.pre4/app/views/active_admin/resource/new.html.arb
+  Rendered /home/fedyay/.rvm/gems/ruby-2.3.0/gems/activeadmin-1.0.0.pre4/app/views/active_admin/resource/new.html.arb (616.5ms)
+Completed 200 OK in 660ms (Views: 623.3ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/admin/rests" for 127.0.0.1 at 2016-09-01 20:01:13 +0600
+Processing by Admin::RestsController#index as HTML
+  [1m[36mAdminUser Load (1.3ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering /home/fedyay/.rvm/gems/ruby-2.3.0/gems/activeadmin-1.0.0.pre4/app/views/active_admin/resource/index.html.arb
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "rests" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mDish Load (0.3ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes"[0m
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered /home/fedyay/.rvm/gems/ruby-2.3.0/gems/activeadmin-1.0.0.pre4/app/views/active_admin/resource/index.html.arb (317.3ms)
+Completed 200 OK in 342ms (Views: 323.1ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/admin/rests/new" for 127.0.0.1 at 2016-09-01 20:01:15 +0600
+Processing by Admin::RestsController#new as HTML
+  [1m[36mAdminUser Load (0.3ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering /home/fedyay/.rvm/gems/ruby-2.3.0/gems/activeadmin-1.0.0.pre4/app/views/active_admin/resource/new.html.arb
+  Rendered /home/fedyay/.rvm/gems/ruby-2.3.0/gems/activeadmin-1.0.0.pre4/app/views/active_admin/resource/new.html.arb (247.2ms)
+Completed 200 OK in 271ms (Views: 251.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/admin/admin_users/new" for 127.0.0.1 at 2016-09-01 20:03:01 +0600
+Processing by Admin::AdminUsersController#new as HTML
+  [1m[36mAdminUser Load (0.3ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering /home/fedyay/.rvm/gems/ruby-2.3.0/gems/activeadmin-1.0.0.pre4/app/views/active_admin/resource/new.html.arb
+  Rendered /home/fedyay/.rvm/gems/ruby-2.3.0/gems/activeadmin-1.0.0.pre4/app/views/active_admin/resource/new.html.arb (121.2ms)
+Completed 200 OK in 151ms (Views: 124.6ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/admin/rests" for 127.0.0.1 at 2016-09-01 20:03:04 +0600
+Processing by Admin::RestsController#index as HTML
+  [1m[36mAdminUser Load (0.3ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering /home/fedyay/.rvm/gems/ruby-2.3.0/gems/activeadmin-1.0.0.pre4/app/views/active_admin/resource/index.html.arb
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "rests" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mDish Load (0.2ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes"[0m
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered /home/fedyay/.rvm/gems/ruby-2.3.0/gems/activeadmin-1.0.0.pre4/app/views/active_admin/resource/index.html.arb (147.4ms)
+Completed 200 OK in 157ms (Views: 149.6ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/admin/rests/new" for 127.0.0.1 at 2016-09-01 20:03:06 +0600
+Processing by Admin::RestsController#new as HTML
+  [1m[36mAdminUser Load (0.4ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering /home/fedyay/.rvm/gems/ruby-2.3.0/gems/activeadmin-1.0.0.pre4/app/views/active_admin/resource/new.html.arb
+  Rendered /home/fedyay/.rvm/gems/ruby-2.3.0/gems/activeadmin-1.0.0.pre4/app/views/active_admin/resource/new.html.arb (162.7ms)
+Completed 200 OK in 177ms (Views: 165.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/admin/rests/new" for 127.0.0.1 at 2016-09-01 20:03:46 +0600
+Processing by Admin::RestsController#new as HTML
+  [1m[36mAdminUser Load (0.2ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering /home/fedyay/.rvm/gems/ruby-2.3.0/gems/activeadmin-1.0.0.pre4/app/views/active_admin/resource/new.html.arb
+  Rendered /home/fedyay/.rvm/gems/ruby-2.3.0/gems/activeadmin-1.0.0.pre4/app/views/active_admin/resource/new.html.arb (151.7ms)
+Completed 200 OK in 203ms (Views: 154.9ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/images/thumb/missing.png" for 127.0.0.1 at 2016-09-01 20:03:46 +0600
+  
+ActionController::RoutingError (No route matches [GET] "/images/thumb/missing.png"):
+  
+actionpack (5.0.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.3.1) lib/web_console/middleware.rb:131:in `call_app'
+web-console (3.3.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.3.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.3.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `block in tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `tagged'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.1.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.0.1) lib/rails/engine.rb:522:in `call'
+puma (3.6.0) lib/puma/configuration.rb:225:in `call'
+puma (3.6.0) lib/puma/server.rb:578:in `handle_request'
+puma (3.6.0) lib/puma/server.rb:415:in `process_client'
+puma (3.6.0) lib/puma/server.rb:275:in `block in run'
+puma (3.6.0) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
+  Rendering /home/fedyay/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /home/fedyay/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/fedyay/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendered collection of /home/fedyay/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [55 times] (46.9ms)
+  Rendered /home/fedyay/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (11.3ms)
+  Rendering /home/fedyay/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/fedyay/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.2ms)
+  Rendered /home/fedyay/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (101.4ms)
+Started POST "/admin/rests" for 127.0.0.1 at 2016-09-01 20:04:04 +0600
+Processing by Admin::RestsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Gq+dALvFjIwui5odxQ9YXnVDoFBLrE2XQE37Opm4SDOmpX4Sw+fETDQ5vvk2wIwh4YUfUDFq+7rCyxg57FRs0g==", "rest"=>{"title"=>"Baraszek", "description"=>"qwe", "image"=>#<ActionDispatch::Http::UploadedFile:0x007f0248ab49a0 @tempfile=#<Tempfile:/tmp/RackMultipart20160901-17015-1xq80h2.jpg>, @original_filename="images.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"rest[image]\"; filename=\"images.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Create Rest"}
+  [1m[36mAdminUser Load (1.0ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 1.0ms)
+
+
+  
+ActiveModel::ForbiddenAttributesError (ActiveModel::ForbiddenAttributesError):
+  
+activemodel (5.0.0.1) lib/active_model/forbidden_attributes_protection.rb:21:in `sanitize_for_mass_assignment'
+activemodel (5.0.0.1) lib/active_model/attribute_assignment.rb:33:in `assign_attributes'
+activeadmin (1.0.0.pre4) lib/active_admin/resource_controller/data_access.rb:301:in `assign_attributes'
+activeadmin (1.0.0.pre4) lib/active_admin/resource_controller/data_access.rb:123:in `build_resource'
+/home/fedyay/.rvm/gems/ruby-2.3.0/bundler/gems/inherited_resources-4434f0ae72f7/lib/inherited_resources/actions.rb:31:in `create'
+actionpack (5.0.0.1) lib/action_controller/metal/basic_implicit_render.rb:4:in `send_action'
+actionpack (5.0.0.1) lib/abstract_controller/base.rb:188:in `process_action'
+actionpack (5.0.0.1) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (5.0.0.1) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+activesupport (5.0.0.1) lib/active_support/callbacks.rb:126:in `call'
+activesupport (5.0.0.1) lib/active_support/callbacks.rb:506:in `block (2 levels) in compile'
+activesupport (5.0.0.1) lib/active_support/callbacks.rb:455:in `call'
+activesupport (5.0.0.1) lib/active_support/callbacks.rb:101:in `__run_callbacks__'
+activesupport (5.0.0.1) lib/active_support/callbacks.rb:750:in `_run_process_action_callbacks'
+activesupport (5.0.0.1) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.0.1) lib/abstract_controller/callbacks.rb:19:in `process_action'
+actionpack (5.0.0.1) lib/action_controller/metal/rescue.rb:20:in `process_action'
+actionpack (5.0.0.1) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+activesupport (5.0.0.1) lib/active_support/notifications.rb:164:in `block in instrument'
+activesupport (5.0.0.1) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+activesupport (5.0.0.1) lib/active_support/notifications.rb:164:in `instrument'
+actionpack (5.0.0.1) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+actionpack (5.0.0.1) lib/action_controller/metal/params_wrapper.rb:248:in `process_action'
+activerecord (5.0.0.1) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+actionpack (5.0.0.1) lib/abstract_controller/base.rb:126:in `process'
+actionview (5.0.0.1) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.0.0.1) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (5.0.0.1) lib/action_controller/metal.rb:262:in `dispatch'
+actionpack (5.0.0.1) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (5.0.0.1) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (5.0.0.1) lib/action_dispatch/journey/router.rb:39:in `block in serve'
+actionpack (5.0.0.1) lib/action_dispatch/journey/router.rb:26:in `each'
+actionpack (5.0.0.1) lib/action_dispatch/journey/router.rb:26:in `serve'
+actionpack (5.0.0.1) lib/action_dispatch/routing/route_set.rb:725:in `call'
+warden (1.2.6) lib/warden/manager.rb:35:in `block in call'
+warden (1.2.6) lib/warden/manager.rb:34:in `catch'
+warden (1.2.6) lib/warden/manager.rb:34:in `call'
+rack (2.0.1) lib/rack/etag.rb:25:in `call'
+rack (2.0.1) lib/rack/conditional_get.rb:38:in `call'
+rack (2.0.1) lib/rack/head.rb:12:in `call'
+rack (2.0.1) lib/rack/session/abstract/id.rb:222:in `context'
+rack (2.0.1) lib/rack/session/abstract/id.rb:216:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.0.0.1) lib/active_record/migration.rb:552:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/callbacks.rb:38:in `block in call'
+activesupport (5.0.0.1) lib/active_support/callbacks.rb:97:in `__run_callbacks__'
+activesupport (5.0.0.1) lib/active_support/callbacks.rb:750:in `_run_call_callbacks'
+activesupport (5.0.0.1) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/callbacks.rb:36:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:49:in `call'
+web-console (3.3.1) lib/web_console/middleware.rb:131:in `call_app'
+web-console (3.3.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.3.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.3.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `block in tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `tagged'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.1.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.0.1) lib/rails/engine.rb:522:in `call'
+puma (3.6.0) lib/puma/configuration.rb:225:in `call'
+puma (3.6.0) lib/puma/server.rb:578:in `handle_request'
+puma (3.6.0) lib/puma/server.rb:415:in `process_client'
+puma (3.6.0) lib/puma/server.rb:275:in `block in run'
+puma (3.6.0) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
+  Rendering /home/fedyay/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/fedyay/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/fedyay/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.0ms)
+  Rendering /home/fedyay/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/fedyay/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendering /home/fedyay/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/fedyay/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.8ms)
+  Rendered /home/fedyay/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (46.4ms)
+Started POST "/admin/rests" for 127.0.0.1 at 2016-09-01 20:05:22 +0600
+Processing by Admin::RestsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Gq+dALvFjIwui5odxQ9YXnVDoFBLrE2XQE37Opm4SDOmpX4Sw+fETDQ5vvk2wIwh4YUfUDFq+7rCyxg57FRs0g==", "rest"=>{"title"=>"Baraszek", "description"=>"qwe", "image"=>#<ActionDispatch::Http::UploadedFile:0x007f0244d50690 @tempfile=#<Tempfile:/tmp/RackMultipart20160901-17015-1xr26ct.jpg>, @original_filename="images.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"rest[image]\"; filename=\"images.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Create Rest"}
+  [1m[36mAdminUser Load (0.3ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Command :: file -b --mime '/tmp/59b514174bffe4ae402b3d63aad79fe020160901-17015-embxlm.jpg'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/59b514174bffe4ae402b3d63aad79fe020160901-17015-17qkge9.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/59b514174bffe4ae402b3d63aad79fe020160901-17015-17qkge9.jpg[0]'
+Command :: convert '/tmp/59b514174bffe4ae402b3d63aad79fe020160901-17015-17qkge9.jpg[0]' -auto-orient -resize "300x300" '/tmp/f6fabf77c903d16400f5cd1aafba3dbc20160901-17015-1yr7h0t'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/59b514174bffe4ae402b3d63aad79fe020160901-17015-17qkge9.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/59b514174bffe4ae402b3d63aad79fe020160901-17015-17qkge9.jpg[0]'
+Command :: convert '/tmp/59b514174bffe4ae402b3d63aad79fe020160901-17015-17qkge9.jpg[0]' -auto-orient -resize "100x100" '/tmp/f6fabf77c903d16400f5cd1aafba3dbc20160901-17015-me33z4'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+Command :: file -b --mime '/tmp/59b514174bffe4ae402b3d63aad79fe020160901-17015-1q23p20.jpg'
+  [1m[35mSQL (1.5ms)[0m  [1m[32mINSERT INTO "rests" ("title", "description", "created_at", "updated_at", "image_file_name", "image_content_type", "image_file_size", "image_updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Baraszek"], ["description", "qwe"], ["created_at", 2016-09-01 14:05:23 UTC], ["updated_at", 2016-09-01 14:05:23 UTC], ["image_file_name", "images.jpg"], ["image_content_type", "image/jpeg"], ["image_file_size", 2439], ["image_updated_at", 2016-09-01 14:05:22 UTC]]
+  [1m[35m (179.5ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/admin/rests/1
+Completed 302 Found in 1294ms (ActiveRecord: 183.5ms)
+
+
+Started GET "/admin/rests/1" for 127.0.0.1 at 2016-09-01 20:05:24 +0600
+Processing by Admin::RestsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAdminUser Load (0.4ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mRest Load (0.3ms)[0m  [1m[34mSELECT  "rests".* FROM "rests" WHERE "rests"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /home/fedyay/.rvm/gems/ruby-2.3.0/gems/activeadmin-1.0.0.pre4/app/views/active_admin/resource/show.html.arb
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "active_admin_comments" WHERE "active_admin_comments"."resource_type" = ? AND "active_admin_comments"."resource_id" = ? AND "active_admin_comments"."namespace" = ?[0m  [["resource_type", "Rest"], ["resource_id", "1"], ["namespace", "admin"]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "active_admin_comments" WHERE "active_admin_comments"."resource_type" = ? AND "active_admin_comments"."resource_id" = ? AND "active_admin_comments"."namespace" = ?[0m  [["resource_type", "Rest"], ["resource_id", "1"], ["namespace", "admin"]]
+  Rendered /home/fedyay/.rvm/gems/ruby-2.3.0/gems/activeadmin-1.0.0.pre4/app/views/active_admin/resource/show.html.arb (193.7ms)
+Completed 200 OK in 228ms (Views: 204.9ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/admin/dishes" for 127.0.0.1 at 2016-09-01 20:05:30 +0600
+Processing by Admin::DishesController#index as HTML
+  [1m[36mAdminUser Load (0.7ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering /home/fedyay/.rvm/gems/ruby-2.3.0/gems/activeadmin-1.0.0.pre4/app/views/active_admin/resource/index.html.arb
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "dishes" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mRest Load (0.4ms)[0m  [1m[34mSELECT "rests".* FROM "rests"[0m
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered /home/fedyay/.rvm/gems/ruby-2.3.0/gems/activeadmin-1.0.0.pre4/app/views/active_admin/resource/index.html.arb (195.1ms)
+Completed 200 OK in 207ms (Views: 197.9ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/admin/categories" for 127.0.0.1 at 2016-09-01 20:05:32 +0600
+Processing by Admin::CategoriesController#index as HTML
+  [1m[36mAdminUser Load (1.0ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering /home/fedyay/.rvm/gems/ruby-2.3.0/gems/activeadmin-1.0.0.pre4/app/views/active_admin/resource/index.html.arb
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "categories" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mRest Load (0.2ms)[0m  [1m[34mSELECT "rests".* FROM "rests"[0m
+  [1m[36mDish Load (0.2ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes"[0m
+  Rendered /home/fedyay/.rvm/gems/ruby-2.3.0/gems/activeadmin-1.0.0.pre4/app/views/active_admin/resource/index.html.arb (132.8ms)
+Completed 200 OK in 143ms (Views: 135.3ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/admin/categories/new" for 127.0.0.1 at 2016-09-01 20:05:34 +0600
+Processing by Admin::CategoriesController#new as HTML
+  [1m[36mAdminUser Load (0.7ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering /home/fedyay/.rvm/gems/ruby-2.3.0/gems/activeadmin-1.0.0.pre4/app/views/active_admin/resource/new.html.arb
+  [1m[36mRest Load (0.3ms)[0m  [1m[34mSELECT "rests".* FROM "rests"[0m
+  Rendered /home/fedyay/.rvm/gems/ruby-2.3.0/gems/activeadmin-1.0.0.pre4/app/views/active_admin/resource/new.html.arb (136.5ms)
+Completed 200 OK in 150ms (Views: 139.5ms | ActiveRecord: 1.2ms)
+
+
+Started POST "/admin/categories" for 127.0.0.1 at 2016-09-01 20:05:41 +0600
+Processing by Admin::CategoriesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"mH0g+yuZj7cSHh9h07SaVyKFYWXE0IQN7xVoNtBLeBskd8PpU7vHdwisO4Uge04otkPeZb4WMiBtk4s1padc+g==", "category"=>{"rest_id"=>"1", "title"=>"meat"}, "commit"=>"Create Category"}
+  [1m[36mAdminUser Load (0.4ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.4ms)
+
+
+  
+ActiveModel::ForbiddenAttributesError (ActiveModel::ForbiddenAttributesError):
+  
+activemodel (5.0.0.1) lib/active_model/forbidden_attributes_protection.rb:21:in `sanitize_for_mass_assignment'
+activemodel (5.0.0.1) lib/active_model/attribute_assignment.rb:33:in `assign_attributes'
+activeadmin (1.0.0.pre4) lib/active_admin/resource_controller/data_access.rb:301:in `assign_attributes'
+activeadmin (1.0.0.pre4) lib/active_admin/resource_controller/data_access.rb:123:in `build_resource'
+/home/fedyay/.rvm/gems/ruby-2.3.0/bundler/gems/inherited_resources-4434f0ae72f7/lib/inherited_resources/actions.rb:31:in `create'
+actionpack (5.0.0.1) lib/action_controller/metal/basic_implicit_render.rb:4:in `send_action'
+actionpack (5.0.0.1) lib/abstract_controller/base.rb:188:in `process_action'
+actionpack (5.0.0.1) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (5.0.0.1) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+activesupport (5.0.0.1) lib/active_support/callbacks.rb:126:in `call'
+activesupport (5.0.0.1) lib/active_support/callbacks.rb:506:in `block (2 levels) in compile'
+activesupport (5.0.0.1) lib/active_support/callbacks.rb:455:in `call'
+activesupport (5.0.0.1) lib/active_support/callbacks.rb:101:in `__run_callbacks__'
+activesupport (5.0.0.1) lib/active_support/callbacks.rb:750:in `_run_process_action_callbacks'
+activesupport (5.0.0.1) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.0.1) lib/abstract_controller/callbacks.rb:19:in `process_action'
+actionpack (5.0.0.1) lib/action_controller/metal/rescue.rb:20:in `process_action'
+actionpack (5.0.0.1) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+activesupport (5.0.0.1) lib/active_support/notifications.rb:164:in `block in instrument'
+activesupport (5.0.0.1) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+activesupport (5.0.0.1) lib/active_support/notifications.rb:164:in `instrument'
+actionpack (5.0.0.1) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+actionpack (5.0.0.1) lib/action_controller/metal/params_wrapper.rb:248:in `process_action'
+activerecord (5.0.0.1) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+actionpack (5.0.0.1) lib/abstract_controller/base.rb:126:in `process'
+actionview (5.0.0.1) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.0.0.1) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (5.0.0.1) lib/action_controller/metal.rb:262:in `dispatch'
+actionpack (5.0.0.1) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (5.0.0.1) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (5.0.0.1) lib/action_dispatch/journey/router.rb:39:in `block in serve'
+actionpack (5.0.0.1) lib/action_dispatch/journey/router.rb:26:in `each'
+actionpack (5.0.0.1) lib/action_dispatch/journey/router.rb:26:in `serve'
+actionpack (5.0.0.1) lib/action_dispatch/routing/route_set.rb:725:in `call'
+warden (1.2.6) lib/warden/manager.rb:35:in `block in call'
+warden (1.2.6) lib/warden/manager.rb:34:in `catch'
+warden (1.2.6) lib/warden/manager.rb:34:in `call'
+rack (2.0.1) lib/rack/etag.rb:25:in `call'
+rack (2.0.1) lib/rack/conditional_get.rb:38:in `call'
+rack (2.0.1) lib/rack/head.rb:12:in `call'
+rack (2.0.1) lib/rack/session/abstract/id.rb:222:in `context'
+rack (2.0.1) lib/rack/session/abstract/id.rb:216:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.0.0.1) lib/active_record/migration.rb:552:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/callbacks.rb:38:in `block in call'
+activesupport (5.0.0.1) lib/active_support/callbacks.rb:97:in `__run_callbacks__'
+activesupport (5.0.0.1) lib/active_support/callbacks.rb:750:in `_run_call_callbacks'
+activesupport (5.0.0.1) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/callbacks.rb:36:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:49:in `call'
+web-console (3.3.1) lib/web_console/middleware.rb:131:in `call_app'
+web-console (3.3.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.3.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.3.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `block in tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `tagged'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.1.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.0.1) lib/rails/engine.rb:522:in `call'
+puma (3.6.0) lib/puma/configuration.rb:225:in `call'
+puma (3.6.0) lib/puma/server.rb:578:in `handle_request'
+puma (3.6.0) lib/puma/server.rb:415:in `process_client'
+puma (3.6.0) lib/puma/server.rb:275:in `block in run'
+puma (3.6.0) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
+  Rendering /home/fedyay/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/fedyay/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/fedyay/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.6ms)
+  Rendering /home/fedyay/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/fedyay/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendering /home/fedyay/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/fedyay/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /home/fedyay/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (27.4ms)
+Started POST "/admin/categories" for 127.0.0.1 at 2016-09-01 20:06:19 +0600
+Processing by Admin::CategoriesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"mH0g+yuZj7cSHh9h07SaVyKFYWXE0IQN7xVoNtBLeBskd8PpU7vHdwisO4Uge04otkPeZb4WMiBtk4s1padc+g==", "category"=>{"rest_id"=>"1", "title"=>"meat"}, "commit"=>"Create Category"}
+  [1m[36mAdminUser Load (0.2ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "categories" ("title", "created_at", "updated_at", "rest_id") VALUES (?, ?, ?, ?)[0m  [["title", "meat"], ["created_at", 2016-09-01 14:06:20 UTC], ["updated_at", 2016-09-01 14:06:20 UTC], ["rest_id", 1]]
+  [1m[35m (150.5ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/admin/categories/1
+Completed 302 Found in 213ms (ActiveRecord: 152.9ms)
+
+
+Started GET "/admin/categories/1" for 127.0.0.1 at 2016-09-01 20:06:20 +0600
+Processing by Admin::CategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAdminUser Load (0.4ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /home/fedyay/.rvm/gems/ruby-2.3.0/gems/activeadmin-1.0.0.pre4/app/views/active_admin/resource/show.html.arb
+  [1m[36mRest Load (0.2ms)[0m  [1m[34mSELECT  "rests".* FROM "rests" WHERE "rests"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "active_admin_comments" WHERE "active_admin_comments"."resource_type" = ? AND "active_admin_comments"."resource_id" = ? AND "active_admin_comments"."namespace" = ?[0m  [["resource_type", "Category"], ["resource_id", "1"], ["namespace", "admin"]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "active_admin_comments" WHERE "active_admin_comments"."resource_type" = ? AND "active_admin_comments"."resource_id" = ? AND "active_admin_comments"."namespace" = ?[0m  [["resource_type", "Category"], ["resource_id", "1"], ["namespace", "admin"]]
+  Rendered /home/fedyay/.rvm/gems/ruby-2.3.0/gems/activeadmin-1.0.0.pre4/app/views/active_admin/resource/show.html.arb (181.6ms)
+Completed 200 OK in 200ms (Views: 183.1ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/admin/dishes" for 127.0.0.1 at 2016-09-01 20:06:23 +0600
+Processing by Admin::DishesController#index as HTML
+  [1m[36mAdminUser Load (0.9ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering /home/fedyay/.rvm/gems/ruby-2.3.0/gems/activeadmin-1.0.0.pre4/app/views/active_admin/resource/index.html.arb
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "dishes" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mRest Load (0.2ms)[0m  [1m[34mSELECT "rests".* FROM "rests"[0m
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered /home/fedyay/.rvm/gems/ruby-2.3.0/gems/activeadmin-1.0.0.pre4/app/views/active_admin/resource/index.html.arb (148.1ms)
+Completed 200 OK in 160ms (Views: 151.0ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/admin/dishes/new" for 127.0.0.1 at 2016-09-01 20:06:25 +0600
+Processing by Admin::DishesController#new as HTML
+  [1m[36mAdminUser Load (0.7ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering /home/fedyay/.rvm/gems/ruby-2.3.0/gems/activeadmin-1.0.0.pre4/app/views/active_admin/resource/new.html.arb
+  [1m[36mRest Load (0.3ms)[0m  [1m[34mSELECT "rests".* FROM "rests"[0m
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered /home/fedyay/.rvm/gems/ruby-2.3.0/gems/activeadmin-1.0.0.pre4/app/views/active_admin/resource/new.html.arb (161.2ms)
+Completed 200 OK in 176ms (Views: 163.5ms | ActiveRecord: 1.4ms)
+
+
+Started POST "/admin/dishes" for 127.0.0.1 at 2016-09-01 20:06:38 +0600
+Processing by Admin::DishesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"NSM9g5JzHNLJbk87JP32M9cNxDRr+7oI0zC1zcEwiNuJKd6R6lFUEtPca9/XMiJMQ8t7NBE9DCVRtlbOtNysOg==", "dish"=>{"rest_id"=>"1", "category_id"=>"1", "title"=>"Beef", "price"=>"123", "description"=>"qwe", "counter"=>"123"}, "commit"=>"Create Dish"}
+  [1m[36mAdminUser Load (3.4ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 3.4ms)
+
+
+  
+ActiveModel::ForbiddenAttributesError (ActiveModel::ForbiddenAttributesError):
+  
+activemodel (5.0.0.1) lib/active_model/forbidden_attributes_protection.rb:21:in `sanitize_for_mass_assignment'
+activemodel (5.0.0.1) lib/active_model/attribute_assignment.rb:33:in `assign_attributes'
+activeadmin (1.0.0.pre4) lib/active_admin/resource_controller/data_access.rb:301:in `assign_attributes'
+activeadmin (1.0.0.pre4) lib/active_admin/resource_controller/data_access.rb:123:in `build_resource'
+/home/fedyay/.rvm/gems/ruby-2.3.0/bundler/gems/inherited_resources-4434f0ae72f7/lib/inherited_resources/actions.rb:31:in `create'
+actionpack (5.0.0.1) lib/action_controller/metal/basic_implicit_render.rb:4:in `send_action'
+actionpack (5.0.0.1) lib/abstract_controller/base.rb:188:in `process_action'
+actionpack (5.0.0.1) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (5.0.0.1) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+activesupport (5.0.0.1) lib/active_support/callbacks.rb:126:in `call'
+activesupport (5.0.0.1) lib/active_support/callbacks.rb:506:in `block (2 levels) in compile'
+activesupport (5.0.0.1) lib/active_support/callbacks.rb:455:in `call'
+activesupport (5.0.0.1) lib/active_support/callbacks.rb:101:in `__run_callbacks__'
+activesupport (5.0.0.1) lib/active_support/callbacks.rb:750:in `_run_process_action_callbacks'
+activesupport (5.0.0.1) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.0.1) lib/abstract_controller/callbacks.rb:19:in `process_action'
+actionpack (5.0.0.1) lib/action_controller/metal/rescue.rb:20:in `process_action'
+actionpack (5.0.0.1) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+activesupport (5.0.0.1) lib/active_support/notifications.rb:164:in `block in instrument'
+activesupport (5.0.0.1) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+activesupport (5.0.0.1) lib/active_support/notifications.rb:164:in `instrument'
+actionpack (5.0.0.1) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+actionpack (5.0.0.1) lib/action_controller/metal/params_wrapper.rb:248:in `process_action'
+activerecord (5.0.0.1) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+actionpack (5.0.0.1) lib/abstract_controller/base.rb:126:in `process'
+actionview (5.0.0.1) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.0.0.1) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (5.0.0.1) lib/action_controller/metal.rb:262:in `dispatch'
+actionpack (5.0.0.1) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (5.0.0.1) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (5.0.0.1) lib/action_dispatch/journey/router.rb:39:in `block in serve'
+actionpack (5.0.0.1) lib/action_dispatch/journey/router.rb:26:in `each'
+actionpack (5.0.0.1) lib/action_dispatch/journey/router.rb:26:in `serve'
+actionpack (5.0.0.1) lib/action_dispatch/routing/route_set.rb:725:in `call'
+warden (1.2.6) lib/warden/manager.rb:35:in `block in call'
+warden (1.2.6) lib/warden/manager.rb:34:in `catch'
+warden (1.2.6) lib/warden/manager.rb:34:in `call'
+rack (2.0.1) lib/rack/etag.rb:25:in `call'
+rack (2.0.1) lib/rack/conditional_get.rb:38:in `call'
+rack (2.0.1) lib/rack/head.rb:12:in `call'
+rack (2.0.1) lib/rack/session/abstract/id.rb:222:in `context'
+rack (2.0.1) lib/rack/session/abstract/id.rb:216:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.0.0.1) lib/active_record/migration.rb:552:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/callbacks.rb:38:in `block in call'
+activesupport (5.0.0.1) lib/active_support/callbacks.rb:97:in `__run_callbacks__'
+activesupport (5.0.0.1) lib/active_support/callbacks.rb:750:in `_run_call_callbacks'
+activesupport (5.0.0.1) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/callbacks.rb:36:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:49:in `call'
+web-console (3.3.1) lib/web_console/middleware.rb:131:in `call_app'
+web-console (3.3.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.3.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.3.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `block in tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `tagged'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.1.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.0.1) lib/rails/engine.rb:522:in `call'
+puma (3.6.0) lib/puma/configuration.rb:225:in `call'
+puma (3.6.0) lib/puma/server.rb:578:in `handle_request'
+puma (3.6.0) lib/puma/server.rb:415:in `process_client'
+puma (3.6.0) lib/puma/server.rb:275:in `block in run'
+puma (3.6.0) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
+  Rendering /home/fedyay/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/fedyay/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/fedyay/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.8ms)
+  Rendering /home/fedyay/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/fedyay/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendering /home/fedyay/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/fedyay/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.0ms)
+  Rendered /home/fedyay/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (32.6ms)
+Started POST "/admin/dishes" for 127.0.0.1 at 2016-09-01 20:07:04 +0600
+Processing by Admin::DishesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"NSM9g5JzHNLJbk87JP32M9cNxDRr+7oI0zC1zcEwiNuJKd6R6lFUEtPca9/XMiJMQ8t7NBE9DCVRtlbOtNysOg==", "dish"=>{"rest_id"=>"1", "category_id"=>"1", "title"=>"Beef", "price"=>"123", "description"=>"qwe", "counter"=>"123"}, "commit"=>"Create Dish"}
+  [1m[36mAdminUser Load (0.2ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (30.1ms)[0m  [1m[32mINSERT INTO "dishes" ("title", "price", "description", "created_at", "updated_at", "rest_id", "counter", "category_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Beef"], ["price", 123.0], ["description", "qwe"], ["created_at", 2016-09-01 14:07:04 UTC], ["updated_at", 2016-09-01 14:07:04 UTC], ["rest_id", 1], ["counter", 123], ["category_id", 1]]
+  [1m[35m (163.9ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/admin/dishes/1
+Completed 302 Found in 245ms (ActiveRecord: 196.1ms)
+
+
+Started GET "/admin/dishes/1" for 127.0.0.1 at 2016-09-01 20:07:04 +0600
+Processing by Admin::DishesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAdminUser Load (0.4ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mDish Load (0.3ms)[0m  [1m[34mSELECT  "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /home/fedyay/.rvm/gems/ruby-2.3.0/gems/activeadmin-1.0.0.pre4/app/views/active_admin/resource/show.html.arb
+  [1m[36mRest Load (0.2ms)[0m  [1m[34mSELECT  "rests".* FROM "rests" WHERE "rests"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "active_admin_comments" WHERE "active_admin_comments"."resource_type" = ? AND "active_admin_comments"."resource_id" = ? AND "active_admin_comments"."namespace" = ?[0m  [["resource_type", "Dish"], ["resource_id", "1"], ["namespace", "admin"]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "active_admin_comments" WHERE "active_admin_comments"."resource_type" = ? AND "active_admin_comments"."resource_id" = ? AND "active_admin_comments"."namespace" = ?[0m  [["resource_type", "Dish"], ["resource_id", "1"], ["namespace", "admin"]]
+  Rendered /home/fedyay/.rvm/gems/ruby-2.3.0/gems/activeadmin-1.0.0.pre4/app/views/active_admin/resource/show.html.arb (161.4ms)
+Completed 200 OK in 169ms (Views: 163.0ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/admin/rests/1" for 127.0.0.1 at 2016-09-01 20:07:10 +0600
+Processing by Admin::RestsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAdminUser Load (0.9ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mRest Load (0.2ms)[0m  [1m[34mSELECT  "rests".* FROM "rests" WHERE "rests"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /home/fedyay/.rvm/gems/ruby-2.3.0/gems/activeadmin-1.0.0.pre4/app/views/active_admin/resource/show.html.arb
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "active_admin_comments" WHERE "active_admin_comments"."resource_type" = ? AND "active_admin_comments"."resource_id" = ? AND "active_admin_comments"."namespace" = ?[0m  [["resource_type", "Rest"], ["resource_id", "1"], ["namespace", "admin"]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "active_admin_comments" WHERE "active_admin_comments"."resource_type" = ? AND "active_admin_comments"."resource_id" = ? AND "active_admin_comments"."namespace" = ?[0m  [["resource_type", "Rest"], ["resource_id", "1"], ["namespace", "admin"]]
+  Rendered /home/fedyay/.rvm/gems/ruby-2.3.0/gems/activeadmin-1.0.0.pre4/app/views/active_admin/resource/show.html.arb (132.8ms)
+Completed 200 OK in 141ms (Views: 135.9ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-09-01 20:07:15 +0600
+Processing by PagesController#rests as HTML
+  Rendering pages/rests.html.erb within layouts/application
+  [1m[36mRest Load (0.7ms)[0m  [1m[34mSELECT "rests".* FROM "rests"[0m
+  [1m[36mDish Load (0.2ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes"[0m
+  Rendered pages/_cart.html.erb (2.2ms)
+  Rendered pages/rests.html.erb within layouts/application (7.6ms)
+Completed 200 OK in 134ms (Views: 131.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/upl/rests//system/rests/images/000/000/001/original/images.jpg?1472738722" for 127.0.0.1 at 2016-09-01 20:07:15 +0600
+  
+ActionController::RoutingError (No route matches [GET] "/upl/rests/system/rests/images/000/000/001/original/images.jpg"):
+  
+actionpack (5.0.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.3.1) lib/web_console/middleware.rb:131:in `call_app'
+web-console (3.3.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.3.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.3.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `block in tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `tagged'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.1.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.0.1) lib/rails/engine.rb:522:in `call'
+puma (3.6.0) lib/puma/configuration.rb:225:in `call'
+puma (3.6.0) lib/puma/server.rb:578:in `handle_request'
+puma (3.6.0) lib/puma/server.rb:415:in `process_client'
+puma (3.6.0) lib/puma/server.rb:275:in `block in run'
+puma (3.6.0) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
+  Rendering /home/fedyay/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /home/fedyay/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/fedyay/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendered collection of /home/fedyay/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [55 times] (22.0ms)
+  Rendered /home/fedyay/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.0ms)
+  Rendering /home/fedyay/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/fedyay/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.7ms)
+  Rendered /home/fedyay/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (58.6ms)
+Started GET "/1" for 127.0.0.1 at 2016-09-01 20:07:37 +0600
+Processing by PagesController#dishes as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRest Load (0.9ms)[0m  [1m[34mSELECT  "rests".* FROM "rests" WHERE "rests"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."rest_id" = ?[0m  [["rest_id", 1]]
+  Rendering pages/dishes.html.erb within layouts/application
+  [1m[36mDish Load (0.4ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."category_id" = ?[0m  [["category_id", 1]]
+  [1m[36mDish Load (0.2ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes"[0m
+  Rendered pages/_cart.html.erb (2.0ms)
+  Rendered pages/dishes.html.erb within layouts/application (9.2ms)
+Completed 200 OK in 187ms (Views: 135.2ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/upl/rests//system/rests/images/000/000/001/original/images.jpg?1472738722" for 127.0.0.1 at 2016-09-01 20:07:37 +0600
+  
+ActionController::RoutingError (No route matches [GET] "/upl/rests/system/rests/images/000/000/001/original/images.jpg"):
+  
+actionpack (5.0.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.3.1) lib/web_console/middleware.rb:131:in `call_app'
+web-console (3.3.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.3.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.3.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `block in tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `tagged'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.1.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.0.1) lib/rails/engine.rb:522:in `call'
+puma (3.6.0) lib/puma/configuration.rb:225:in `call'
+puma (3.6.0) lib/puma/server.rb:578:in `handle_request'
+puma (3.6.0) lib/puma/server.rb:415:in `process_client'
+puma (3.6.0) lib/puma/server.rb:275:in `block in run'
+puma (3.6.0) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
+  Rendering /home/fedyay/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /home/fedyay/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/fedyay/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered collection of /home/fedyay/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [55 times] (22.9ms)
+  Rendered /home/fedyay/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.5ms)
+  Rendering /home/fedyay/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/fedyay/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.7ms)
+  Rendered /home/fedyay/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (56.3ms)
+Started GET "/1" for 127.0.0.1 at 2016-09-01 20:07:48 +0600
+Processing by PagesController#dishes as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRest Load (0.4ms)[0m  [1m[34mSELECT  "rests".* FROM "rests" WHERE "rests"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."rest_id" = ?[0m  [["rest_id", 1]]
+  Rendering pages/dishes.html.erb within layouts/application
+  [1m[36mDish Load (0.3ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."category_id" = ?[0m  [["category_id", 1]]
+  [1m[36mDish Load (0.3ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes"[0m
+  Rendered pages/_cart.html.erb (2.3ms)
+  Rendered pages/dishes.html.erb within layouts/application (7.2ms)
+Completed 200 OK in 107ms (Views: 102.4ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/1" for 127.0.0.1 at 2016-09-01 20:07:50 +0600
+Processing by PagesController#dishes as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRest Load (0.6ms)[0m  [1m[34mSELECT  "rests".* FROM "rests" WHERE "rests"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."rest_id" = ?[0m  [["rest_id", 1]]
+  Rendering pages/dishes.html.erb within layouts/application
+  [1m[36mDish Load (0.4ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."category_id" = ?[0m  [["category_id", 1]]
+  [1m[36mDish Load (0.3ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes"[0m
+  Rendered pages/_cart.html.erb (2.5ms)
+  Rendered pages/dishes.html.erb within layouts/application (9.4ms)
+Completed 200 OK in 150ms (Views: 144.1ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/1" for 127.0.0.1 at 2016-09-01 20:07:52 +0600
+Processing by PagesController#dishes as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRest Load (0.4ms)[0m  [1m[34mSELECT  "rests".* FROM "rests" WHERE "rests"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."rest_id" = ?[0m  [["rest_id", 1]]
+  Rendering pages/dishes.html.erb within layouts/application
+  [1m[36mDish Load (0.3ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."category_id" = ?[0m  [["category_id", 1]]
+  [1m[36mDish Load (0.3ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes"[0m
+  Rendered pages/_cart.html.erb (2.1ms)
+  Rendered pages/dishes.html.erb within layouts/application (6.3ms)
+Completed 200 OK in 105ms (Views: 99.4ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/1" for 127.0.0.1 at 2016-09-01 20:08:51 +0600
+Processing by PagesController#dishes as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRest Load (0.3ms)[0m  [1m[34mSELECT  "rests".* FROM "rests" WHERE "rests"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."rest_id" = ?[0m  [["rest_id", 1]]
+  Rendering pages/dishes.html.erb within layouts/application
+  [1m[36mDish Load (0.3ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."category_id" = ?[0m  [["category_id", 1]]
+  [1m[36mDish Load (0.2ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes"[0m
+  Rendered pages/_cart.html.erb (1.8ms)
+  Rendered pages/dishes.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 116ms (Views: 111.2ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-09-01 20:08:53 +0600
+Processing by PagesController#rests as HTML
+  Rendering pages/rests.html.erb within layouts/application
+  [1m[36mRest Load (0.3ms)[0m  [1m[34mSELECT "rests".* FROM "rests"[0m
+  Rendered pages/rests.html.erb within layouts/application (276.3ms)
+Completed 500 Internal Server Error in 283ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `medium' for #<#<Class:0x007f0248c19390>:0x007f02448596f0>):
+    13: 	<tr>
+    14: 		<td><div class="col-md-1"><%= link_to rest.title, forest_show_path(rest), class: 'btn btn-primary' %></div></td>
+    15: 		<td><div class="col-md-1"><%= rest.description %></div></td>
+    16: 		<td><div class="col-md-1"><%= image_tag rest.image.url(medium), size: '100' %></div></td>
+    17: 	</tr>
+    18: 
+    19: 	<% end %>
+  
+app/views/pages/rests.html.erb:16:in `block in _app_views_pages_rests_html_erb___2318773561632720692_69823858135740'
+app/views/pages/rests.html.erb:11:in `_app_views_pages_rests_html_erb___2318773561632720692_69823858135740'
+  Rendering /home/fedyay/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /home/fedyay/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/fedyay/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.5ms)
+  Rendering /home/fedyay/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/fedyay/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendering /home/fedyay/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/fedyay/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /home/fedyay/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (30.6ms)
+Started GET "/" for 127.0.0.1 at 2016-09-01 20:09:04 +0600
+Processing by PagesController#rests as HTML
+  Rendering pages/rests.html.erb within layouts/application
+  [1m[36mRest Load (0.4ms)[0m  [1m[34mSELECT "rests".* FROM "rests"[0m
+  Rendered pages/rests.html.erb within layouts/application (308.6ms)
+Completed 500 Internal Server Error in 314ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `medium' for #<#<Class:0x007f0248c19390>:0x007f024e349c28>):
+    13: 	<tr>
+    14: 		<td><div class="col-md-1"><%= link_to rest.title, forest_show_path(rest), class: 'btn btn-primary' %></div></td>
+    15: 		<td><div class="col-md-1"><%= rest.description %></div></td>
+    16: 		<td><div class="col-md-1"><%= image_tag rest.image.url(medium) %></div></td>
+    17: 	</tr>
+    18: 
+    19: 	<% end %>
+  
+app/views/pages/rests.html.erb:16:in `block in _app_views_pages_rests_html_erb___2318773561632720692_69823939367720'
+app/views/pages/rests.html.erb:11:in `_app_views_pages_rests_html_erb___2318773561632720692_69823939367720'
+  Rendering /home/fedyay/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /home/fedyay/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/fedyay/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (11.7ms)
+  Rendering /home/fedyay/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/fedyay/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.2ms)
+  Rendering /home/fedyay/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/fedyay/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.8ms)
+  Rendered /home/fedyay/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (39.7ms)
+Started GET "/" for 127.0.0.1 at 2016-09-01 20:09:30 +0600
+Processing by PagesController#rests as HTML
+  Rendering pages/rests.html.erb within layouts/application
+  [1m[36mRest Load (0.3ms)[0m  [1m[34mSELECT "rests".* FROM "rests"[0m
+  [1m[36mDish Load (0.3ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes"[0m
+  Rendered pages/_cart.html.erb (2.4ms)
+  Rendered pages/rests.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 115ms (Views: 113.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/1" for 127.0.0.1 at 2016-09-01 20:09:37 +0600
+Processing by PagesController#dishes as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRest Load (0.4ms)[0m  [1m[34mSELECT  "rests".* FROM "rests" WHERE "rests"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."rest_id" = ?[0m  [["rest_id", 1]]
+  Rendering pages/dishes.html.erb within layouts/application
+  [1m[36mDish Load (0.2ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."category_id" = ?[0m  [["category_id", 1]]
+  [1m[36mDish Load (0.3ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes"[0m
+  Rendered pages/_cart.html.erb (2.2ms)
+  Rendered pages/dishes.html.erb within layouts/application (8.0ms)
+Completed 200 OK in 157ms (Views: 150.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/1" for 127.0.0.1 at 2016-09-01 20:11:04 +0600
+Processing by PagesController#dishes as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRest Load (0.3ms)[0m  [1m[34mSELECT  "rests".* FROM "rests" WHERE "rests"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."rest_id" = ?[0m  [["rest_id", 1]]
+  Rendering pages/dishes.html.erb within layouts/application
+  [1m[36mDish Load (0.3ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."category_id" = ?[0m  [["category_id", 1]]
+  [1m[36mDish Load (0.2ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes"[0m
+  Rendered pages/_cart.html.erb (2.1ms)
+  Rendered pages/dishes.html.erb within layouts/application (22.4ms)
+Completed 200 OK in 203ms (Views: 173.7ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/admin/admin_users/new" for 127.0.0.1 at 2016-09-01 20:11:08 +0600
+Processing by Admin::AdminUsersController#new as HTML
+  [1m[36mAdminUser Load (0.2ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering /home/fedyay/.rvm/gems/ruby-2.3.0/gems/activeadmin-1.0.0.pre4/app/views/active_admin/resource/new.html.arb
+  Rendered /home/fedyay/.rvm/gems/ruby-2.3.0/gems/activeadmin-1.0.0.pre4/app/views/active_admin/resource/new.html.arb (296.4ms)
+Completed 200 OK in 326ms (Views: 299.6ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/admin/dishes" for 127.0.0.1 at 2016-09-01 20:11:11 +0600
+Processing by Admin::DishesController#index as HTML
+  [1m[36mAdminUser Load (0.4ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering /home/fedyay/.rvm/gems/ruby-2.3.0/gems/activeadmin-1.0.0.pre4/app/views/active_admin/resource/index.html.arb
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "dishes" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "dishes" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "dishes"[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "dishes" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mDish Load (0.3ms)[0m  [1m[34mSELECT  "dishes".* FROM "dishes" ORDER BY "dishes"."id" desc LIMIT ? OFFSET ?[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mRest Load (0.3ms)[0m  [1m[34mSELECT "rests".* FROM "rests"[0m
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered /home/fedyay/.rvm/gems/ruby-2.3.0/gems/activeadmin-1.0.0.pre4/app/views/active_admin/resource/index.html.arb (232.5ms)
+Completed 200 OK in 241ms (Views: 234.7ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/admin/categories" for 127.0.0.1 at 2016-09-01 20:11:12 +0600
+Processing by Admin::CategoriesController#index as HTML
+  [1m[36mAdminUser Load (3.8ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering /home/fedyay/.rvm/gems/ruby-2.3.0/gems/activeadmin-1.0.0.pre4/app/views/active_admin/resource/index.html.arb
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "categories" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "categories" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "categories"[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "categories" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" ORDER BY "categories"."id" desc LIMIT ? OFFSET ?[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mRest Load (0.2ms)[0m  [1m[34mSELECT "rests".* FROM "rests"[0m
+  [1m[36mDish Load (0.2ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes"[0m
+  Rendered /home/fedyay/.rvm/gems/ruby-2.3.0/gems/activeadmin-1.0.0.pre4/app/views/active_admin/resource/index.html.arb (171.0ms)
+Completed 200 OK in 186ms (Views: 174.5ms | ActiveRecord: 4.8ms)
+
+
+Started GET "/admin/rests" for 127.0.0.1 at 2016-09-01 20:11:14 +0600
+Processing by Admin::RestsController#index as HTML
+  [1m[36mAdminUser Load (0.9ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering /home/fedyay/.rvm/gems/ruby-2.3.0/gems/activeadmin-1.0.0.pre4/app/views/active_admin/resource/index.html.arb
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "rests" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "rests" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "rests"[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "rests" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mRest Load (0.3ms)[0m  [1m[34mSELECT  "rests".* FROM "rests" ORDER BY "rests"."id" desc LIMIT ? OFFSET ?[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mDish Load (0.3ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes"[0m
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered /home/fedyay/.rvm/gems/ruby-2.3.0/gems/activeadmin-1.0.0.pre4/app/views/active_admin/resource/index.html.arb (208.5ms)
+Completed 200 OK in 218ms (Views: 210.8ms | ActiveRecord: 2.2ms)
+
+
