@@ -1,0 +1,32 @@
+<h1><%= @rest.title %></h1>
+<br>
+<%= link_to 'New Dish', new_dish_path, class: 'btn btn-primary' %>
+<%= link_to 'New Category', new_category_path, class: 'btn btn-primary' %>
+<br>
+<br>
+<br>
+<table>
+	<tr>
+		<th>Title</th>
+		<th>Price</th>
+		<th>Description</th>
+		<th>Actions</th>
+	</tr>
+
+	<% @dishes.each do |dish| %>
+
+	<tr>
+		<td><%= dish.title %></td>
+		<td><%= dish.price %></td>
+		<td><%= dish.description %></td>
+		<td>
+			<%= link_to 'Edit', dish_edit_path(dish), class: 'btn btn-warning' %>
+			<%= link_to 'Delete', dish_path(dish), class: 'btn btn-danger',
+									method: :delete,
+									data: {confirm: 'Realy?'}
+			 %>
+		</td>
+	</tr>
+
+	<% end %>
+</table>

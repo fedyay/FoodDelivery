@@ -1,0 +1,22 @@
+<h1><%= @rest.title %></h1>
+<h4><%= @rest.description %></h4>
+<br>
+<br>
+<% @categories.each do |category| %>
+	<tr><h3><%= category.title %></h3></tr>
+	<% @dishes = category.dishes.to_a %>
+	<% @dishes.each do |dish| %>
+		<tr>
+			<td><%= dish.title %></td>
+			<td><%= dish.price %> сом</td>
+			<td><%= dish.description %></td>
+			<td><button id=<%= "#{dish.id}" %> class='btn btn-primary adder'>Добавить в корзину</button></td>
+			<br>
+			<br>
+		</tr>
+	<% end %>
+<% end %>
+
+<% content_for(:side_bar) do %>
+	<% render 'cart' %>
+<% end %>

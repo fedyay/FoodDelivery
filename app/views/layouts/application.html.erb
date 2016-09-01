@@ -1,14 +1,30 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Asdasd</title>
-    <%= csrf_meta_tags %>
+<head>
+  <title>Food</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<style type="text/css">
+  #main-content{
+    width: 70%;
+    float: left;
+  }
+  #side-content{
+    width: 30%;
+    float: right;
+  }
+</style>
+<div class="wrapper">
+  <div id="main-content">
+      <%= yield %>
+  </div>
+  <div id="side-content">
+      <%= yield(:side_bar) %>
+  </div>
+</div>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
-
-  <body>
-    <%= yield %>
-  </body>
+</body>
 </html>

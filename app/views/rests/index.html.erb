@@ -1,0 +1,35 @@
+<h1>Restaurants list</h1>
+
+<div class="row">
+	<div class="col-md-1">
+		<%= link_to 'Create rest', new_rest_path, class: 'btn btn-primary' %>
+	</div>
+</div>
+<br>
+<br>
+<br>
+<table>
+	<tr>
+		<th><div class="col-md-1">Title</div></th>
+		<th><div class="col-md-1">Description</div></th>
+		<th><div class="col-md-1">Image</div></th>
+		<th>Actions</th>
+	</tr>
+	
+	<% @rests.each do |rest| %>
+
+	<tr>
+		<td><div class="col-md-1"><%= link_to rest.title, rest_show_path(rest), class: 'btn btn-primary' %></div></td>
+		<td><div class="col-md-1"><%= rest.description %></div></td>
+		<td><div class="col-md-1"><%= image_tag "/upl/rests/#{rest.image}", size: '100' %></div></td>
+		<td>
+			<%= link_to 'Edit', rest_edit_path(rest), class: 'btn btn-warning' %>
+			<%= link_to 'Delete', rest_path(rest), class: 'btn btn-danger',
+									method: :delete,
+									data: {confirm: 'Realy?'}
+			 %>
+		</td>
+	</tr>
+
+	<% end %>
+</table>

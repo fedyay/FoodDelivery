@@ -1,0 +1,24 @@
+<h1>Restaurants list</h1>
+<br>
+<br>
+<table>
+	<tr>
+		<th><div class="col-md-1">Title</div></th>
+		<th><div class="col-md-1">Description</div></th>
+		<th><div class="col-md-1">Image</div></th>
+	</tr>
+	
+	<% @rests.each do |rest| %>
+
+	<tr>
+		<td><div class="col-md-1"><%= link_to rest.title, forest_show_path(rest), class: 'btn btn-primary' %></div></td>
+		<td><div class="col-md-1"><%= rest.description %></div></td>
+		<td><div class="col-md-1"><%= image_tag "/upl/rests/#{rest.image}", size: '100' %></div></td>
+	</tr>
+
+	<% end %>
+</table>
+
+<% content_for(:side_bar) do %>
+	<% render 'cart' %>
+<% end %>

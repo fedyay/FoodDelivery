@@ -1,0 +1,40 @@
+<h1>New category</h1>
+<% if @category.errors.any? %>
+	<div class="errors">
+		Total number of errors: <%= @category.errors.count %>
+	</div>
+<% end %>
+
+<%= form_for @category do |f| %>
+	<div>
+		<%= f.label :rest_id %>
+		<%if @category.errors[:rest_id].any? %>
+			<div class="errors">
+			<ul>
+				<% @category.errors[:rest_id].each do |message| %>
+				<li><%= message %></li>
+				<% end %>
+			</ul>
+		<% end %>
+		<br>
+		<%= f.collection_select :rest_id, Rest.all, :id, :title, :include_blank => true %><br>
+	</div>
+
+	<div>
+		<%= f.label :title %>
+		<%if @category.errors[:title].any? %>
+			<div class="errors">
+			<ul>
+				<% @category.errors[:title].each do |message| %>
+				<li><%= message %></li>
+				<% end %>
+			</ul>
+		<% end %>
+		<br>
+		<%= f.text_field :title %><br>
+	</div>
+
+	<div>
+		<%= f.submit %>
+	</div>
+<% end %>

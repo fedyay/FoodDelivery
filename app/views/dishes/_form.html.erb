@@ -1,0 +1,83 @@
+<% if @dish.errors.any? %>
+	<div class="errors">
+		Total number of errors: <%= @dish.errors.count %>
+	</div>
+<% end %>
+
+<%= form_for @dish do |f| %>
+	<div>
+		<%= f.label :rest_id %>
+		<%if @dish.errors[:rest_id].any? %>
+			<div class="errors">
+			<ul>
+				<% @dish.errors[:rest_id].each do |message| %>
+				<li><%= message %></li>
+				<% end %>
+			</ul>
+		<% end %>
+		<br>
+		<%= f.collection_select :rest_id, Rest.all, :id, :title, :include_blank => true %><br>
+	</div>
+
+	<div>
+		<%= f.label :category_id %>
+		<%if @dish.errors[:category_id].any? %>
+			<div class="errors">
+			<ul>
+				<% @dish.errors[:category_id].each do |message| %>
+				<li><%= message %></li>
+				<% end %>
+			</ul>
+		<% end %>
+		<br>
+		<%= f.collection_select :category_id, Category.all, :id, :title, :include_blank => true %><br>
+	</div>
+
+	<div>
+		<%= f.label :title %>
+		<%if @dish.errors[:title].any? %>
+			<div class="errors">
+			<ul>
+				<% @dish.errors[:title].each do |message| %>
+				<li><%= message %></li>
+				<% end %>
+			</ul>
+		<% end %>
+		<br>
+		<%= f.text_field :title %><br>
+	</div>
+
+	<div>
+		<%= f.label :price %>
+		<%if @dish.errors[:price].any? %>
+			<div class="errors">
+			<ul>
+				<% @dish.errors[:price].each do |message| %>
+				<li><%= message %></li>
+				<% end %>
+			</ul>
+		<% end %>
+		<br>
+		<%= f.text_field :price %><br>
+	</div>
+
+	<div>
+		<%= f.label :description %>
+		<%if @dish.errors[:description].any? %>
+			<div class="errors">
+			<ul>
+				<% @dish.errors[:description].each do |message| %>
+				<li><%= message %></li>
+				<% end %>
+			</ul>
+		<% end %>
+		<br>
+		<%= f.text_area :description %><br>
+	</div>
+
+	<%= f.hidden_field :counter, value: 0 %>
+
+	<div>
+		<%= f.submit %>
+	</div>
+<% end %>

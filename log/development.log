@@ -1,0 +1,100 @@
+Started GET "/" for 127.0.0.1 at 2016-09-01 19:11:25 +0600
+Processing by PagesController#rests as HTML
+  Rendering pages/rests.html.erb within layouts/application
+  [1m[36mRest Load (1.0ms)[0m  [1m[34mSELECT "rests".* FROM "rests"[0m
+  Rendered pages/rests.html.erb within layouts/application (8.1ms)
+Completed 500 Internal Server Error in 212ms (ActiveRecord: 1.0ms)
+
+
+  
+ActionView::Template::Error (SQLite3::SQLException: no such table: rests: SELECT "rests".* FROM "rests"):
+     8: 		<th><div class="col-md-1">Image</div></th>
+     9: 	</tr>
+    10: 	
+    11: 	<% @rests.each do |rest| %>
+    12: 
+    13: 	<tr>
+    14: 		<td><div class="col-md-1"><%= link_to rest.title, forest_show_path(rest), class: 'btn btn-primary' %></div></td>
+  
+app/views/pages/rests.html.erb:11:in `_app_views_pages_rests_html_erb__106057896407590215_47354577806100'
+  Rendering /home/fedyay/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /home/fedyay/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/fedyay/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (10.5ms)
+  Rendering /home/fedyay/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/fedyay/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.2ms)
+  Rendering /home/fedyay/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/fedyay/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /home/fedyay/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (84.0ms)
+DEPRECATION WARNING: Passing #original_exception is deprecated and has no effect. Exceptions will automatically capture the original exception. (called from load at /home/fedyay/.rbenv/versions/2.3.1/bin/rake:23)
+  [1m[35m (158.0ms)[0m  [1m[35mCREATE TABLE "carts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "dishes" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (121.2ms)[0m  [1m[35mCREATE TABLE "categories" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "rest_id" integer)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mselect sqlite_version(*)[0m
+  [1m[35m (133.5ms)[0m  [1m[35mCREATE  INDEX "index_categories_on_rest_id" ON "categories" ("rest_id")[0m
+  [1m[35m (133.0ms)[0m  [1m[35mCREATE TABLE "dishes" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "price" float, "description" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "rest_id" integer, "counter" integer, "category_id" integer)[0m
+  [1m[35m (121.1ms)[0m  [1m[35mCREATE  INDEX "index_dishes_on_category_id" ON "dishes" ("category_id")[0m
+  [1m[35m (0.3ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_dishes_on_category_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_dishes_on_category_id' AND type='index'
+[0m
+  [1m[35m (134.3ms)[0m  [1m[35mCREATE  INDEX "index_dishes_on_rest_id" ON "dishes" ("rest_id")[0m
+  [1m[35m (166.6ms)[0m  [1m[35mCREATE TABLE "rests" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "image" varchar, "description" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (167.1ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (184.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES ('20160716131956')[0m
+  [1m[35m (150.2ms)[0m  [1m[32mINSERT INTO schema_migrations (version) VALUES ('20160716131435'), ('20160706130211'), ('20160706130210'), ('20160706145548'), ('20160706144338'), ('20160712065628'), ('20160706130351');
+
+[0m
+  [1m[35m (125.3ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", 2016-09-01 13:12:23 UTC], ["updated_at", 2016-09-01 13:12:23 UTC]]
+  [1m[35m (127.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (159.7ms)[0m  [1m[35mCREATE TABLE "carts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "dishes" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (132.5ms)[0m  [1m[35mCREATE TABLE "categories" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "rest_id" integer)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mselect sqlite_version(*)[0m
+  [1m[35m (143.9ms)[0m  [1m[35mCREATE  INDEX "index_categories_on_rest_id" ON "categories" ("rest_id")[0m
+  [1m[35m (132.1ms)[0m  [1m[35mCREATE TABLE "dishes" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "price" float, "description" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "rest_id" integer, "counter" integer, "category_id" integer)[0m
+  [1m[35m (133.1ms)[0m  [1m[35mCREATE  INDEX "index_dishes_on_category_id" ON "dishes" ("category_id")[0m
+  [1m[35m (0.3ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_dishes_on_category_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_dishes_on_category_id' AND type='index'
+[0m
+  [1m[35m (143.0ms)[0m  [1m[35mCREATE  INDEX "index_dishes_on_rest_id" ON "dishes" ("rest_id")[0m
+  [1m[35m (169.4ms)[0m  [1m[35mCREATE TABLE "rests" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "image" varchar, "description" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (143.8ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (143.9ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES ('20160716131956')[0m
+  [1m[35m (124.3ms)[0m  [1m[32mINSERT INTO schema_migrations (version) VALUES ('20160716131435'), ('20160706130211'), ('20160706130210'), ('20160706145548'), ('20160706144338'), ('20160712065628'), ('20160706130351');
+
+[0m
+  [1m[35m (133.2ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", 2016-09-01 13:12:25 UTC], ["updated_at", 2016-09-01 13:12:25 UTC]]
+  [1m[35m (117.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Started GET "/" for 127.0.0.1 at 2016-09-01 19:12:36 +0600
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PagesController#rests as HTML
+  Rendering pages/rests.html.erb within layouts/application
+  [1m[36mRest Load (0.2ms)[0m  [1m[34mSELECT "rests".* FROM "rests"[0m
+  [1m[36mDish Load (0.3ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes"[0m
+  Rendered pages/_cart.html.erb (44.2ms)
+  Rendered pages/rests.html.erb within layouts/application (48.9ms)
+Completed 200 OK in 613ms (Views: 593.3ms | ActiveRecord: 1.1ms)
+
+

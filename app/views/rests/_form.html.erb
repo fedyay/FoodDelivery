@@ -1,0 +1,44 @@
+<% if @rest.errors.any? %>
+	<div class="errors">
+		Total number of errors: <%= @rest.errors.count %>
+	</div>
+<% end %>
+
+<%= form_for @rest do |f| %>
+	<div>
+		<%= f.label :title %>
+		<%if @rest.errors[:title].any? %>
+			<div class="errors">
+			<ul>
+				<% @rest.errors[:title].each do |message| %>
+				<li><%= message %></li>
+				<% end %>
+			</ul>
+		<% end %>
+		<br>
+		<%= f.text_field :title %><br>
+	</div>
+
+	<div>
+		<%= f.label :description %>
+		<%if @rest.errors[:description].any? %>
+			<div class="errors">
+			<ul>
+				<% @rest.errors[:description].each do |message| %>
+				<li><%= message %></li>
+				<% end %>
+			</ul>
+		<% end %>
+		<br>
+		<%= f.text_area :description %><br>
+	</div>
+
+	<div>
+		<%= f.label :image %><br>
+		<%= f.file_field :image %><br>
+	</div>
+
+	<div>
+		<%= f.submit %>
+	</div>
+<% end %>
