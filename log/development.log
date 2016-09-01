@@ -1829,3 +1829,972 @@ Processing by Admin::RestsController#index as HTML
 Completed 200 OK in 218ms (Views: 210.8ms | ActiveRecord: 2.2ms)
 
 
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateUsers (20160901141330)
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (2.1ms)[0m  [1m[35mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "phone" varchar, "address" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20160901141330"]]
+  [1m[35m (176.5ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddDeviseToUsers (20160901141503)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[35mALTER TABLE "users" ADD "email" varchar DEFAULT '' NOT NULL[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "users" ADD "encrypted_password" varchar DEFAULT '' NOT NULL[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "users" ADD "reset_password_token" varchar[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "users" ADD "reset_password_sent_at" datetime[0m
+  [1m[35m (0.4ms)[0m  [1m[35mALTER TABLE "users" ADD "remember_created_at" datetime[0m
+  [1m[35m (0.6ms)[0m  [1m[35mALTER TABLE "users" ADD "sign_in_count" integer DEFAULT 0 NOT NULL[0m
+  [1m[35m (7.2ms)[0m  [1m[35mALTER TABLE "users" ADD "current_sign_in_at" datetime[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "users" ADD "last_sign_in_at" datetime[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "users" ADD "current_sign_in_ip" varchar[0m
+  [1m[35m (0.6ms)[0m  [1m[35mALTER TABLE "users" ADD "last_sign_in_ip" varchar[0m
+  [1m[35m (0.1ms)[0m  [1m[34mselect sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20160901141503"]]
+  [1m[35m (179.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_active_admin_comments_on_resource_type_and_resource_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_active_admin_comments_on_resource_type_and_resource_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_active_admin_comments_on_namespace' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_active_admin_comments_on_namespace' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_active_admin_comments_on_author_type_and_author_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_active_admin_comments_on_author_type_and_author_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_admin_users_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_admin_users_on_reset_password_token' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_admin_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_admin_users_on_email' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_categories_on_rest_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_categories_on_rest_id' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_dishes_on_rest_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_dishes_on_rest_id' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_dishes_on_category_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_dishes_on_category_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+[0m
+Started GET "/" for 127.0.0.1 at 2016-09-01 20:17:02 +0600
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PagesController#rests as HTML
+  Rendering pages/rests.html.erb within layouts/application
+  [1m[36mRest Load (0.3ms)[0m  [1m[34mSELECT "rests".* FROM "rests"[0m
+  [1m[36mDish Load (0.4ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes"[0m
+  Rendered pages/_cart.html.erb (19.7ms)
+  Rendered pages/rests.html.erb within layouts/application (46.5ms)
+Completed 200 OK in 978ms (Views: 942.7ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-09-01 20:17:58 +0600
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PagesController#rests as HTML
+  Rendering pages/rests.html.erb within layouts/application
+  [1m[36mRest Load (0.3ms)[0m  [1m[34mSELECT "rests".* FROM "rests"[0m
+  [1m[36mDish Load (0.3ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes"[0m
+  Rendered pages/_cart.html.erb (11.5ms)
+  Rendered pages/rests.html.erb within layouts/application (29.0ms)
+Completed 200 OK in 3368ms (Views: 3354.5ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-09-01 20:18:08 +0600
+Processing by PagesController#rests as HTML
+  Rendering pages/rests.html.erb within layouts/application
+  [1m[36mRest Load (0.7ms)[0m  [1m[34mSELECT "rests".* FROM "rests"[0m
+  [1m[36mDish Load (0.3ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes"[0m
+  Rendered pages/_cart.html.erb (2.6ms)
+  Rendered pages/rests.html.erb within layouts/application (7.4ms)
+Completed 200 OK in 156ms (Views: 153.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-09-01 20:20:20 +0600
+Processing by PagesController#rests as HTML
+  Rendering pages/rests.html.erb within layouts/application
+  [1m[36mRest Load (0.6ms)[0m  [1m[34mSELECT "rests".* FROM "rests"[0m
+  [1m[36mDish Load (0.2ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes"[0m
+  Rendered pages/_cart.html.erb (2.0ms)
+  Rendered pages/rests.html.erb within layouts/application (6.5ms)
+Completed 200 OK in 164ms (Views: 161.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-09-01 20:20:33 +0600
+Processing by PagesController#rests as HTML
+  Rendering pages/rests.html.erb within layouts/application
+  [1m[36mRest Load (0.3ms)[0m  [1m[34mSELECT "rests".* FROM "rests"[0m
+  [1m[36mDish Load (0.3ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes"[0m
+  Rendered pages/_cart.html.erb (2.6ms)
+  Rendered pages/rests.html.erb within layouts/application (6.2ms)
+Completed 200 OK in 139ms (Views: 136.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-09-01 20:22:54 +0600
+Processing by PagesController#rests as HTML
+  Rendering pages/rests.html.erb within layouts/application
+  [1m[36mRest Load (0.4ms)[0m  [1m[34mSELECT "rests".* FROM "rests"[0m
+  [1m[36mDish Load (0.3ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes"[0m
+  Rendered pages/_cart.html.erb (2.4ms)
+  Rendered pages/rests.html.erb within layouts/application (15.8ms)
+Completed 500 Internal Server Error in 164ms (ActiveRecord: 0.7ms)
+
+
+  
+ActionView::Template::Error (File to import not found or unreadable: active_bootstrap_skin.
+Load paths:
+  /home/fedyay/rls/FetchFood/app/assets/config
+  /home/fedyay/rls/FetchFood/app/assets/images
+  /home/fedyay/rls/FetchFood/app/assets/javascripts
+  /home/fedyay/rls/FetchFood/app/assets/stylesheets
+  /home/fedyay/rls/FetchFood/vendor/assets/javascripts
+  /home/fedyay/rls/FetchFood/vendor/assets/stylesheets
+  /home/fedyay/.rvm/gems/ruby-2.3.0/gems/activeadmin-1.0.0.pre4/app/assets/images
+  /home/fedyay/.rvm/gems/ruby-2.3.0/gems/activeadmin-1.0.0.pre4/app/assets/javascripts
+  /home/fedyay/.rvm/gems/ruby-2.3.0/gems/activeadmin-1.0.0.pre4/app/assets/stylesheets
+  /home/fedyay/.rvm/gems/ruby-2.3.0/gems/coffee-rails-4.2.1/lib/assets/javascripts
+  /home/fedyay/.rvm/gems/ruby-2.3.0/gems/jquery-ui-rails-5.0.5/app/assets/images
+  /home/fedyay/.rvm/gems/ruby-2.3.0/gems/jquery-ui-rails-5.0.5/app/assets/javascripts
+  /home/fedyay/.rvm/gems/ruby-2.3.0/gems/jquery-ui-rails-5.0.5/app/assets/stylesheets
+  /home/fedyay/.rvm/gems/ruby-2.3.0/gems/jquery-rails-4.2.1/vendor/assets/javascripts
+  /home/fedyay/.rvm/gems/ruby-2.3.0/gems/formtastic-3.1.4/app/assets/stylesheets
+  /home/fedyay/.rvm/gems/ruby-2.3.0/gems/bourbon-4.2.7/app/assets/stylesheets
+  /home/fedyay/.rvm/gems/ruby-2.3.0/gems/twitter-bootstrap-rails-3.2.2/app/assets/fonts
+  /home/fedyay/.rvm/gems/ruby-2.3.0/gems/twitter-bootstrap-rails-3.2.2/app/assets/javascripts
+  /home/fedyay/.rvm/gems/ruby-2.3.0/gems/twitter-bootstrap-rails-3.2.2/app/assets/stylesheets
+  /home/fedyay/.rvm/gems/ruby-2.3.0/gems/twitter-bootstrap-rails-3.2.2/vendor/assets/stylesheets
+  /home/fedyay/.rvm/gems/ruby-2.3.0/gems/actioncable-5.0.0.1/lib/assets/compiled
+  /home/fedyay/.rvm/gems/ruby-2.3.0/gems/turbolinks-source-5.0.0/lib/assets/javascripts):
+    2: <html>
+    3: <head>
+    4:   <title>Food</title>
+    5:   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    6:   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    7:   <%= csrf_meta_tags %>
+    8: </head>
+  
+app/assets/stylesheets/active_admin.scss:15
+app/views/layouts/application.html.erb:5:in `_app_views_layouts_application_html_erb__2417947991704725107_70355445087940'
+  Rendering /home/fedyay/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /home/fedyay/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/fedyay/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (10.8ms)
+  Rendering /home/fedyay/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/fedyay/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.8ms)
+  Rendering /home/fedyay/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/fedyay/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /home/fedyay/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (36.9ms)
+Started GET "/" for 127.0.0.1 at 2016-09-01 20:23:00 +0600
+Processing by PagesController#rests as HTML
+  Rendering pages/rests.html.erb within layouts/application
+  [1m[36mRest Load (0.7ms)[0m  [1m[34mSELECT "rests".* FROM "rests"[0m
+  [1m[36mDish Load (0.3ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes"[0m
+  Rendered pages/_cart.html.erb (2.4ms)
+  Rendered pages/rests.html.erb within layouts/application (7.1ms)
+Completed 500 Internal Server Error in 45ms (ActiveRecord: 0.9ms)
+
+
+  
+ActionView::Template::Error (File to import not found or unreadable: active_bootstrap_skin.
+Load paths:
+  /home/fedyay/rls/FetchFood/app/assets/config
+  /home/fedyay/rls/FetchFood/app/assets/images
+  /home/fedyay/rls/FetchFood/app/assets/javascripts
+  /home/fedyay/rls/FetchFood/app/assets/stylesheets
+  /home/fedyay/rls/FetchFood/vendor/assets/javascripts
+  /home/fedyay/rls/FetchFood/vendor/assets/stylesheets
+  /home/fedyay/.rvm/gems/ruby-2.3.0/gems/activeadmin-1.0.0.pre4/app/assets/images
+  /home/fedyay/.rvm/gems/ruby-2.3.0/gems/activeadmin-1.0.0.pre4/app/assets/javascripts
+  /home/fedyay/.rvm/gems/ruby-2.3.0/gems/activeadmin-1.0.0.pre4/app/assets/stylesheets
+  /home/fedyay/.rvm/gems/ruby-2.3.0/gems/coffee-rails-4.2.1/lib/assets/javascripts
+  /home/fedyay/.rvm/gems/ruby-2.3.0/gems/jquery-ui-rails-5.0.5/app/assets/images
+  /home/fedyay/.rvm/gems/ruby-2.3.0/gems/jquery-ui-rails-5.0.5/app/assets/javascripts
+  /home/fedyay/.rvm/gems/ruby-2.3.0/gems/jquery-ui-rails-5.0.5/app/assets/stylesheets
+  /home/fedyay/.rvm/gems/ruby-2.3.0/gems/jquery-rails-4.2.1/vendor/assets/javascripts
+  /home/fedyay/.rvm/gems/ruby-2.3.0/gems/formtastic-3.1.4/app/assets/stylesheets
+  /home/fedyay/.rvm/gems/ruby-2.3.0/gems/bourbon-4.2.7/app/assets/stylesheets
+  /home/fedyay/.rvm/gems/ruby-2.3.0/gems/twitter-bootstrap-rails-3.2.2/app/assets/fonts
+  /home/fedyay/.rvm/gems/ruby-2.3.0/gems/twitter-bootstrap-rails-3.2.2/app/assets/javascripts
+  /home/fedyay/.rvm/gems/ruby-2.3.0/gems/twitter-bootstrap-rails-3.2.2/app/assets/stylesheets
+  /home/fedyay/.rvm/gems/ruby-2.3.0/gems/twitter-bootstrap-rails-3.2.2/vendor/assets/stylesheets
+  /home/fedyay/.rvm/gems/ruby-2.3.0/gems/actioncable-5.0.0.1/lib/assets/compiled
+  /home/fedyay/.rvm/gems/ruby-2.3.0/gems/turbolinks-source-5.0.0/lib/assets/javascripts):
+    2: <html>
+    3: <head>
+    4:   <title>Food</title>
+    5:   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    6:   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    7:   <%= csrf_meta_tags %>
+    8: </head>
+  
+app/assets/stylesheets/active_admin.scss:15
+app/views/layouts/application.html.erb:5:in `_app_views_layouts_application_html_erb__2417947991704725107_46961500928780'
+  Rendering /home/fedyay/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /home/fedyay/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/fedyay/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (10.1ms)
+  Rendering /home/fedyay/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/fedyay/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.4ms)
+  Rendering /home/fedyay/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/fedyay/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.7ms)
+  Rendered /home/fedyay/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (35.5ms)
+Started GET "/" for 127.0.0.1 at 2016-09-01 20:23:46 +0600
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PagesController#rests as HTML
+  Rendering pages/rests.html.erb within layouts/application
+  [1m[36mRest Load (0.2ms)[0m  [1m[34mSELECT "rests".* FROM "rests"[0m
+  [1m[36mDish Load (0.3ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes"[0m
+  Rendered pages/_cart.html.erb (12.6ms)
+  Rendered pages/rests.html.erb within layouts/application (29.4ms)
+Completed 200 OK in 12928ms (Views: 12897.6ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/admin" for 127.0.0.1 at 2016-09-01 20:24:09 +0600
+Processing by Admin::DashboardController#index as HTML
+  [1m[36mAdminUser Load (0.5ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering /home/fedyay/.rvm/gems/ruby-2.3.0/gems/activeadmin-1.0.0.pre4/app/views/active_admin/page/index.html.arb
+  Rendered /home/fedyay/.rvm/gems/ruby-2.3.0/gems/activeadmin-1.0.0.pre4/app/views/active_admin/page/index.html.arb (346.0ms)
+Completed 200 OK in 456ms (Views: 386.1ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/admin/admin_users" for 127.0.0.1 at 2016-09-01 20:24:12 +0600
+Processing by Admin::AdminUsersController#index as HTML
+  [1m[36mAdminUser Load (1.0ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering /home/fedyay/.rvm/gems/ruby-2.3.0/gems/activeadmin-1.0.0.pre4/app/views/active_admin/resource/index.html.arb
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "admin_users" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "admin_users" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "admin_users"[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "admin_users" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mAdminUser Load (0.4ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" ORDER BY "admin_users"."id" desc LIMIT ? OFFSET ?[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  Rendered /home/fedyay/.rvm/gems/ruby-2.3.0/gems/activeadmin-1.0.0.pre4/app/views/active_admin/resource/index.html.arb (348.7ms)
+Completed 200 OK in 465ms (Views: 397.0ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/admin/categories" for 127.0.0.1 at 2016-09-01 20:24:14 +0600
+Processing by Admin::CategoriesController#index as HTML
+  [1m[36mAdminUser Load (0.3ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering /home/fedyay/.rvm/gems/ruby-2.3.0/gems/activeadmin-1.0.0.pre4/app/views/active_admin/resource/index.html.arb
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "categories" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "categories" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "categories"[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "categories" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" ORDER BY "categories"."id" desc LIMIT ? OFFSET ?[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mRest Load (0.4ms)[0m  [1m[34mSELECT "rests".* FROM "rests"[0m
+  [1m[36mDish Load (0.3ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes"[0m
+  Rendered /home/fedyay/.rvm/gems/ruby-2.3.0/gems/activeadmin-1.0.0.pre4/app/views/active_admin/resource/index.html.arb (277.4ms)
+Completed 200 OK in 289ms (Views: 279.8ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/admin/dashboard" for 127.0.0.1 at 2016-09-01 20:24:22 +0600
+Processing by Admin::DashboardController#index as HTML
+  [1m[36mAdminUser Load (0.8ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering /home/fedyay/.rvm/gems/ruby-2.3.0/gems/activeadmin-1.0.0.pre4/app/views/active_admin/page/index.html.arb
+  Rendered /home/fedyay/.rvm/gems/ruby-2.3.0/gems/activeadmin-1.0.0.pre4/app/views/active_admin/page/index.html.arb (170.6ms)
+Completed 200 OK in 177ms (Views: 172.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/admin/rests" for 127.0.0.1 at 2016-09-01 20:24:25 +0600
+Processing by Admin::RestsController#index as HTML
+  [1m[36mAdminUser Load (0.7ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering /home/fedyay/.rvm/gems/ruby-2.3.0/gems/activeadmin-1.0.0.pre4/app/views/active_admin/resource/index.html.arb
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "rests" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "rests" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "rests"[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "rests" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mRest Load (0.2ms)[0m  [1m[34mSELECT  "rests".* FROM "rests" ORDER BY "rests"."id" desc LIMIT ? OFFSET ?[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mDish Load (0.3ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes"[0m
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered /home/fedyay/.rvm/gems/ruby-2.3.0/gems/activeadmin-1.0.0.pre4/app/views/active_admin/resource/index.html.arb (218.0ms)
+Completed 200 OK in 227ms (Views: 220.9ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/admin/dishes" for 127.0.0.1 at 2016-09-01 20:24:26 +0600
+Processing by Admin::DishesController#index as HTML
+  [1m[36mAdminUser Load (0.4ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering /home/fedyay/.rvm/gems/ruby-2.3.0/gems/activeadmin-1.0.0.pre4/app/views/active_admin/resource/index.html.arb
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "dishes" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "dishes" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "dishes"[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "dishes" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mDish Load (0.3ms)[0m  [1m[34mSELECT  "dishes".* FROM "dishes" ORDER BY "dishes"."id" desc LIMIT ? OFFSET ?[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mRest Load (0.3ms)[0m  [1m[34mSELECT "rests".* FROM "rests"[0m
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered /home/fedyay/.rvm/gems/ruby-2.3.0/gems/activeadmin-1.0.0.pre4/app/views/active_admin/resource/index.html.arb (229.5ms)
+Completed 200 OK in 239ms (Views: 232.2ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/admin/comments" for 127.0.0.1 at 2016-09-01 20:24:28 +0600
+Processing by Admin::CommentsController#index as HTML
+  [1m[36mAdminUser Load (0.4ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering /home/fedyay/.rvm/gems/ruby-2.3.0/gems/activeadmin-1.0.0.pre4/app/views/active_admin/resource/index.html.arb
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "active_admin_comments" WHERE "active_admin_comments"."namespace" = ?[0m  [["namespace", "admin"]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "active_admin_comments" WHERE "active_admin_comments"."namespace" = ? LIMIT ? OFFSET ?) subquery_for_count[0m  [["namespace", "admin"], ["LIMIT", 30], ["OFFSET", 0]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT DISTINCT "active_admin_comments"."resource_type" FROM "active_admin_comments" ORDER BY resource_type asc[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT DISTINCT "active_admin_comments"."author_type" FROM "active_admin_comments" ORDER BY author_type asc[0m
+  Rendered /home/fedyay/.rvm/gems/ruby-2.3.0/gems/activeadmin-1.0.0.pre4/app/views/active_admin/resource/index.html.arb (176.8ms)
+Completed 200 OK in 190ms (Views: 179.4ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/admin" for 127.0.0.1 at 2016-09-01 20:24:30 +0600
+Processing by Admin::DashboardController#index as HTML
+  [1m[36mAdminUser Load (0.5ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering /home/fedyay/.rvm/gems/ruby-2.3.0/gems/activeadmin-1.0.0.pre4/app/views/active_admin/page/index.html.arb
+  Rendered /home/fedyay/.rvm/gems/ruby-2.3.0/gems/activeadmin-1.0.0.pre4/app/views/active_admin/page/index.html.arb (142.7ms)
+Completed 200 OK in 149ms (Views: 144.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/admin/categories" for 127.0.0.1 at 2016-09-01 20:24:31 +0600
+Processing by Admin::CategoriesController#index as HTML
+  [1m[36mAdminUser Load (0.3ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering /home/fedyay/.rvm/gems/ruby-2.3.0/gems/activeadmin-1.0.0.pre4/app/views/active_admin/resource/index.html.arb
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "categories" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "categories" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "categories"[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "categories" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" ORDER BY "categories"."id" desc LIMIT ? OFFSET ?[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mRest Load (0.3ms)[0m  [1m[34mSELECT "rests".* FROM "rests"[0m
+  [1m[36mDish Load (0.3ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes"[0m
+  Rendered /home/fedyay/.rvm/gems/ruby-2.3.0/gems/activeadmin-1.0.0.pre4/app/views/active_admin/resource/index.html.arb (206.5ms)
+Completed 200 OK in 214ms (Views: 208.8ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/admin/admin_users/2" for 127.0.0.1 at 2016-09-01 20:24:33 +0600
+Processing by Admin::AdminUsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mAdminUser Load (3.8ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mAdminUser Load (0.4ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering /home/fedyay/.rvm/gems/ruby-2.3.0/gems/activeadmin-1.0.0.pre4/app/views/active_admin/resource/show.html.arb
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "active_admin_comments" WHERE "active_admin_comments"."resource_type" = ? AND "active_admin_comments"."resource_id" = ? AND "active_admin_comments"."namespace" = ?[0m  [["resource_type", "AdminUser"], ["resource_id", "2"], ["namespace", "admin"]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "active_admin_comments" WHERE "active_admin_comments"."resource_type" = ? AND "active_admin_comments"."resource_id" = ? AND "active_admin_comments"."namespace" = ?[0m  [["resource_type", "AdminUser"], ["resource_id", "2"], ["namespace", "admin"]]
+  Rendered /home/fedyay/.rvm/gems/ruby-2.3.0/gems/activeadmin-1.0.0.pre4/app/views/active_admin/resource/show.html.arb (269.2ms)
+Completed 200 OK in 336ms (Views: 279.5ms | ActiveRecord: 4.7ms)
+
+
+Started GET "/admin/categories" for 127.0.0.1 at 2016-09-01 20:24:36 +0600
+Processing by Admin::CategoriesController#index as HTML
+  [1m[36mAdminUser Load (0.5ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering /home/fedyay/.rvm/gems/ruby-2.3.0/gems/activeadmin-1.0.0.pre4/app/views/active_admin/resource/index.html.arb
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "categories" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "categories" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "categories"[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "categories" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" ORDER BY "categories"."id" desc LIMIT ? OFFSET ?[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mRest Load (0.3ms)[0m  [1m[34mSELECT "rests".* FROM "rests"[0m
+  [1m[36mDish Load (0.3ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes"[0m
+  Rendered /home/fedyay/.rvm/gems/ruby-2.3.0/gems/activeadmin-1.0.0.pre4/app/views/active_admin/resource/index.html.arb (267.5ms)
+Completed 200 OK in 279ms (Views: 271.4ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-09-01 20:24:59 +0600
+Processing by PagesController#rests as HTML
+  Rendering pages/rests.html.erb within layouts/application
+  [1m[36mRest Load (0.4ms)[0m  [1m[34mSELECT "rests".* FROM "rests"[0m
+  [1m[36mDish Load (0.3ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes"[0m
+  Rendered pages/_cart.html.erb (3.3ms)
+  Rendered pages/rests.html.erb within layouts/application (75.0ms)
+Completed 200 OK in 323ms (Views: 305.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-09-01 20:25:01 +0600
+Processing by PagesController#rests as HTML
+  Rendering pages/rests.html.erb within layouts/application
+  [1m[36mRest Load (0.3ms)[0m  [1m[34mSELECT "rests".* FROM "rests"[0m
+  [1m[36mDish Load (0.4ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes"[0m
+  Rendered pages/_cart.html.erb (3.9ms)
+  Rendered pages/rests.html.erb within layouts/application (16.4ms)
+Completed 200 OK in 172ms (Views: 169.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-09-01 20:25:02 +0600
+Processing by PagesController#rests as HTML
+  Rendering pages/rests.html.erb within layouts/application
+  [1m[36mRest Load (0.3ms)[0m  [1m[34mSELECT "rests".* FROM "rests"[0m
+  [1m[36mDish Load (0.3ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes"[0m
+  Rendered pages/_cart.html.erb (2.5ms)
+  Rendered pages/rests.html.erb within layouts/application (7.2ms)
+Completed 200 OK in 160ms (Views: 158.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-09-01 20:25:02 +0600
+Processing by PagesController#rests as HTML
+  Rendering pages/rests.html.erb within layouts/application
+  [1m[36mRest Load (0.3ms)[0m  [1m[34mSELECT "rests".* FROM "rests"[0m
+  [1m[36mDish Load (0.3ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes"[0m
+  Rendered pages/_cart.html.erb (2.7ms)
+  Rendered pages/rests.html.erb within layouts/application (7.8ms)
+Completed 200 OK in 156ms (Views: 149.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2016-09-01 20:25:06 +0600
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering /home/fedyay/.rvm/gems/ruby-2.3.0/gems/devise-4.2.0/app/views/devise/registrations/new.html.erb within layouts/application
+  Rendered /home/fedyay/.rvm/gems/ruby-2.3.0/gems/devise-4.2.0/app/views/devise/shared/_links.html.erb (2.1ms)
+  Rendered /home/fedyay/.rvm/gems/ruby-2.3.0/gems/devise-4.2.0/app/views/devise/registrations/new.html.erb within layouts/application (55.3ms)
+Completed 200 OK in 341ms (Views: 319.7ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2016-09-01 20:25:14 +0600
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"EwCFD28Laoe/OBp4NShWeirx/+FCImQbntQKAuKG5xWvCmYdFykiR6WKPpzG54IFvjdA4Tjk0jYcUukBl2rD9A==", "user"=>{"email"=>"asd@asd.asd", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "asd@asd.asd"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "users" ("created_at", "updated_at", "email", "encrypted_password") VALUES (?, ?, ?, ?)[0m  [["created_at", 2016-09-01 14:25:14 UTC], ["updated_at", 2016-09-01 14:25:14 UTC], ["email", "asd@asd.asd"], ["encrypted_password", "$2a$11$1o8z6qTSl/QFua5MUr.IHu/NhQeJTWal4Zn4Cm0T2b8l5ucHBS6Ly"]]
+  [1m[35m (178.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.2ms)[0m  [1m[33mUPDATE "users" SET "updated_at" = ?, "sign_in_count" = ?, "current_sign_in_at" = ?, "last_sign_in_at" = ?, "current_sign_in_ip" = ?, "last_sign_in_ip" = ? WHERE "users"."id" = ?[0m  [["updated_at", 2016-09-01 14:25:15 UTC], ["sign_in_count", 1], ["current_sign_in_at", 2016-09-01 14:25:15 UTC], ["last_sign_in_at", 2016-09-01 14:25:15 UTC], ["current_sign_in_ip", "127.0.0.1"], ["last_sign_in_ip", "127.0.0.1"], ["id", 1]]
+  [1m[35m (229.4ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 1063ms (ActiveRecord: 409.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-09-01 20:25:15 +0600
+Processing by PagesController#rests as HTML
+  Rendering pages/rests.html.erb within layouts/application
+  [1m[36mRest Load (0.4ms)[0m  [1m[34mSELECT "rests".* FROM "rests"[0m
+  [1m[36mDish Load (0.2ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes"[0m
+  Rendered pages/_cart.html.erb (1.9ms)
+  Rendered pages/rests.html.erb within layouts/application (6.3ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 146ms (Views: 143.8ms | ActiveRecord: 1.0ms)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2016-09-01 20:25:38 +0600
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"hV7pchpB+eRkLEFv3Ay/yxXak6Nq8vOIjItXBfroYbU5VApgYmOxJH6eZYsvw2u0gRwsoxA0RaUODbQGjwRFVA=="}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mAdminUser Load (0.2ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 48ms (ActiveRecord: 1.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-09-01 20:25:38 +0600
+Processing by PagesController#rests as HTML
+  Rendering pages/rests.html.erb within layouts/application
+  [1m[36mRest Load (0.3ms)[0m  [1m[34mSELECT "rests".* FROM "rests"[0m
+  [1m[36mDish Load (0.2ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes"[0m
+  Rendered pages/_cart.html.erb (2.1ms)
+  Rendered pages/rests.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 165ms (Views: 163.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2016-09-01 20:25:40 +0600
+Processing by Devise::SessionsController#new as HTML
+  Rendering /home/fedyay/.rvm/gems/ruby-2.3.0/gems/devise-4.2.0/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /home/fedyay/.rvm/gems/ruby-2.3.0/gems/devise-4.2.0/app/views/devise/shared/_links.html.erb (1.8ms)
+  Rendered /home/fedyay/.rvm/gems/ruby-2.3.0/gems/devise-4.2.0/app/views/devise/sessions/new.html.erb within layouts/application (28.4ms)
+Completed 200 OK in 210ms (Views: 206.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2016-09-01 20:25:44 +0600
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"mo378sOUc2B4ahBVvzfFSJdktMB+kTelPblDLSWnjjno+c42vpRaRtnBcsBJZkCWShwRbBETRyOUSCI84Jckiw==", "user"=>{"email"=>"asd@asd.asd", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "asd@asd.asd"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["current_sign_in_at", 2016-09-01 14:25:44 UTC], ["sign_in_count", 2], ["updated_at", 2016-09-01 14:25:44 UTC], ["id", 1]]
+  [1m[35m (172.4ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 408ms (ActiveRecord: 173.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-09-01 20:25:44 +0600
+Processing by PagesController#rests as HTML
+  Rendering pages/rests.html.erb within layouts/application
+  [1m[36mRest Load (0.3ms)[0m  [1m[34mSELECT "rests".* FROM "rests"[0m
+  [1m[36mDish Load (0.3ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes"[0m
+  Rendered pages/_cart.html.erb (2.4ms)
+  Rendered pages/rests.html.erb within layouts/application (6.4ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 213ms (Views: 210.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/users/edit.1" for 127.0.0.1 at 2016-09-01 20:25:47 +0600
+Processing by Devise::RegistrationsController#edit as 
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /home/fedyay/.rvm/gems/ruby-2.3.0/gems/devise-4.2.0/app/views/devise/registrations/edit.html.erb within layouts/application
+  Rendered /home/fedyay/.rvm/gems/ruby-2.3.0/gems/devise-4.2.0/app/views/devise/registrations/edit.html.erb within layouts/application (7.7ms)
+Completed 200 OK in 190ms (Views: 186.0ms | ActiveRecord: 0.5ms)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2016-09-01 20:25:52 +0600
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"/FTGTkASHE7x9wAASr1T8pr8GFL8jP/HxhqCFA7Ago74DfV+yXfiprEeeAgjS+7PUhCtC7ARfKg7VKO0RNd2fg=="}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 7ms (ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-09-01 20:25:52 +0600
+Processing by PagesController#rests as HTML
+  Rendering pages/rests.html.erb within layouts/application
+  [1m[36mRest Load (0.3ms)[0m  [1m[34mSELECT "rests".* FROM "rests"[0m
+  [1m[36mDish Load (0.3ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes"[0m
+  Rendered pages/_cart.html.erb (2.2ms)
+  Rendered pages/rests.html.erb within layouts/application (6.8ms)
+Completed 200 OK in 198ms (Views: 195.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2016-09-01 20:25:57 +0600
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering /home/fedyay/.rvm/gems/ruby-2.3.0/gems/devise-4.2.0/app/views/devise/registrations/new.html.erb within layouts/application
+  Rendered /home/fedyay/.rvm/gems/ruby-2.3.0/gems/devise-4.2.0/app/views/devise/shared/_links.html.erb (2.2ms)
+  Rendered /home/fedyay/.rvm/gems/ruby-2.3.0/gems/devise-4.2.0/app/views/devise/registrations/new.html.erb within layouts/application (11.1ms)
+Completed 200 OK in 220ms (Views: 217.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2016-09-01 20:26:02 +0600
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"JYJOGzoiUssqi+hJJzu5kOtuSoRH/CKG0LeSnm9ESqgexT9RKB+/anWa0DNHlXd5smqNYgZc3GS33NcdUbHtLg==", "user"=>{"email"=>"dsa@dsa.dsa", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "dsa@dsa.dsa"], ["LIMIT", 1]]
+  [1m[35mSQL (1.7ms)[0m  [1m[32mINSERT INTO "users" ("created_at", "updated_at", "email", "encrypted_password") VALUES (?, ?, ?, ?)[0m  [["created_at", 2016-09-01 14:26:02 UTC], ["updated_at", 2016-09-01 14:26:02 UTC], ["email", "dsa@dsa.dsa"], ["encrypted_password", "$2a$11$E0wcYYi5zETwIgxQTEmUz.w25dRbhA1JTinLPKKEzd0KNwXhQer/y"]]
+  [1m[35m (144.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "users" SET "updated_at" = ?, "sign_in_count" = ?, "current_sign_in_at" = ?, "last_sign_in_at" = ?, "current_sign_in_ip" = ?, "last_sign_in_ip" = ? WHERE "users"."id" = ?[0m  [["updated_at", 2016-09-01 14:26:03 UTC], ["sign_in_count", 1], ["current_sign_in_at", 2016-09-01 14:26:03 UTC], ["last_sign_in_at", 2016-09-01 14:26:03 UTC], ["current_sign_in_ip", "127.0.0.1"], ["last_sign_in_ip", "127.0.0.1"], ["id", 2]]
+  [1m[35m (128.4ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 471ms (ActiveRecord: 275.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-09-01 20:26:03 +0600
+Processing by PagesController#rests as HTML
+  Rendering pages/rests.html.erb within layouts/application
+  [1m[36mRest Load (0.3ms)[0m  [1m[34mSELECT "rests".* FROM "rests"[0m
+  [1m[36mDish Load (0.2ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes"[0m
+  Rendered pages/_cart.html.erb (2.2ms)
+  Rendered pages/rests.html.erb within layouts/application (5.8ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 170ms (Views: 167.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-09-01 20:28:34 +0600
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PagesController#rests as HTML
+  Rendering pages/rests.html.erb within layouts/application
+  [1m[36mRest Load (0.3ms)[0m  [1m[34mSELECT "rests".* FROM "rests"[0m
+  [1m[36mDish Load (0.3ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes"[0m
+  Rendered pages/_cart.html.erb (16.7ms)
+  Rendered pages/rests.html.erb within layouts/application (39.8ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 999ms (Views: 961.9ms | ActiveRecord: 3.3ms)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2016-09-01 20:28:38 +0600
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"BFnvgVym62E7DB8x/CE/vDuMsZFMRgHwUliOcWQ0bGk/Hp7LTpsGwGQdJ0ucj/FVYoh2dw3m/xI1M8vyWsHL7w=="}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 9ms (ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-09-01 20:28:38 +0600
+Processing by PagesController#rests as HTML
+  Rendering pages/rests.html.erb within layouts/application
+  [1m[36mRest Load (0.6ms)[0m  [1m[34mSELECT "rests".* FROM "rests"[0m
+  [1m[36mDish Load (0.2ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes"[0m
+  Rendered pages/_cart.html.erb (2.2ms)
+  Rendered pages/rests.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 148ms (Views: 145.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2016-09-01 20:28:40 +0600
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.5ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (44.6ms)
+Completed 200 OK in 220ms (Views: 216.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2016-09-01 20:28:42 +0600
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/registrations/new.html.erb within layouts/application (7.4ms)
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (Missing partial shared/_field_errors with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :arb, :coffee, :jbuilder]}. Searched in:
+  * "/home/fedyay/rls/FetchFood/app/views"
+  * "/home/fedyay/.rvm/gems/ruby-2.3.0/gems/activeadmin-1.0.0.pre4/app/views"
+  * "/home/fedyay/.rvm/gems/ruby-2.3.0/gems/kaminari-0.17.0/app/views"
+  * "/home/fedyay/.rvm/gems/ruby-2.3.0/gems/devise-4.2.0/app/views"
+  * "/home/fedyay/.rvm/gems/ruby-2.3.0/gems/twitter-bootstrap-rails-3.2.2/app/views"
+):
+     7:     <%= f.label :name, class: 'col-sm-2 control-label' %>
+     8:     <div class="col-sm-10">
+     9:       <%= f.text_field :name, class: 'form-control' %>
+    10:       <%= render 'shared/field_errors', object: resource, field_name: :name %>
+    11:     </div>
+    12:   </div>
+    13: 
+  
+app/views/devise/registrations/new.html.erb:10:in `block in _app_views_devise_registrations_new_html_erb__3472182941412309141_70030381441620'
+app/views/devise/registrations/new.html.erb:4:in `_app_views_devise_registrations_new_html_erb__3472182941412309141_70030381441620'
+  Rendering /home/fedyay/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /home/fedyay/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/fedyay/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (6.4ms)
+  Rendering /home/fedyay/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/fedyay/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.2ms)
+  Rendering /home/fedyay/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/fedyay/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /home/fedyay/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (43.3ms)
+Started GET "/users/sign_up" for 127.0.0.1 at 2016-09-01 20:30:27 +0600
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered shared/_field_errors.html.erb (0.6ms)
+  Rendered shared/_field_errors.html.erb (0.0ms)
+  Rendered shared/_field_errors.html.erb (0.0ms)
+  Rendered shared/_field_errors.html.erb (0.1ms)
+  Rendered devise/shared/_links.html.erb (1.4ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (11.1ms)
+Completed 200 OK in 214ms (Views: 212.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2016-09-01 20:31:14 +0600
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (2.4ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (7.8ms)
+Completed 200 OK in 189ms (Views: 187.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2016-09-01 20:31:17 +0600
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"3V7rEXsiEZ+UjyoaXeHyWlJ1orgRQV4wzOAUSwm/f773nyKKWT2cU8uyL4qn0IEteri5RMZ/zJ1JRMUt/e8/JQ==", "user"=>{"email"=>"asd@asd.asd", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "asd@asd.asd"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.1ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = ?, "last_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["current_sign_in_at", 2016-09-01 14:31:17 UTC], ["last_sign_in_at", 2016-09-01 14:25:44 UTC], ["sign_in_count", 3], ["updated_at", 2016-09-01 14:31:17 UTC], ["id", 1]]
+  [1m[35m (141.7ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 568ms (ActiveRecord: 144.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-09-01 20:31:18 +0600
+Processing by PagesController#rests as HTML
+  Rendering pages/rests.html.erb within layouts/application
+  [1m[36mRest Load (0.3ms)[0m  [1m[34mSELECT "rests".* FROM "rests"[0m
+  [1m[36mDish Load (0.3ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes"[0m
+  Rendered pages/_cart.html.erb (2.5ms)
+  Rendered pages/rests.html.erb within layouts/application (7.1ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 157ms (Views: 154.4ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/users/edit.1" for 127.0.0.1 at 2016-09-01 20:31:22 +0600
+Processing by Devise::RegistrationsController#edit as 
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering devise/registrations/edit.html.erb within layouts/application
+  Rendered shared/_field_errors.html.erb (0.8ms)
+  Rendered shared/_field_errors.html.erb (0.1ms)
+  Rendered shared/_field_errors.html.erb (0.1ms)
+  Rendered shared/_field_errors.html.erb (0.1ms)
+  Rendered shared/_field_errors.html.erb (0.1ms)
+  Rendered devise/registrations/edit.html.erb within layouts/application (26.1ms)
+Completed 200 OK in 204ms (Views: 201.9ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/users" for 127.0.0.1 at 2016-09-01 20:31:26 +0600
+Processing by Devise::RegistrationsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"hrqlYZg1R/gI/TibDTSTr3EjROLvQGVR1JjhgbGl4skHdGN+m3qdQ0biP4YoO32zq77rjizWTE7KC+anpF8AvQ=="}
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.3ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 1]]
+  [1m[35m (179.2ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 189ms (ActiveRecord: 182.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-09-01 20:31:26 +0600
+Processing by PagesController#rests as HTML
+  Rendering pages/rests.html.erb within layouts/application
+  [1m[36mRest Load (0.6ms)[0m  [1m[34mSELECT "rests".* FROM "rests"[0m
+  [1m[36mDish Load (0.3ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes"[0m
+  Rendered pages/_cart.html.erb (2.0ms)
+  Rendered pages/rests.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 166ms (Views: 163.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2016-09-01 20:31:28 +0600
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.3ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 162ms (Views: 159.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2016-09-01 20:31:34 +0600
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"hzLrdTXDP3YBzQgUkXP7WclZPjYx+Mx46bXYyiTXGq6UUXkPJaIsxAEflAFnG8JWmBmASDZMhO24vOYOFirKgQ==", "user"=>{"email"=>"dsa@dsa.dsa", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "dsa@dsa.dsa"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.5ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["current_sign_in_at", 2016-09-01 14:31:35 UTC], ["sign_in_count", 2], ["updated_at", 2016-09-01 14:31:35 UTC], ["id", 2]]
+  [1m[35m (154.6ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 347ms (ActiveRecord: 156.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-09-01 20:31:35 +0600
+Processing by PagesController#rests as HTML
+  Rendering pages/rests.html.erb within layouts/application
+  [1m[36mRest Load (0.3ms)[0m  [1m[34mSELECT "rests".* FROM "rests"[0m
+  [1m[36mDish Load (0.2ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes"[0m
+  Rendered pages/_cart.html.erb (1.7ms)
+  Rendered pages/rests.html.erb within layouts/application (5.2ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 160ms (Views: 157.3ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/users/edit.2" for 127.0.0.1 at 2016-09-01 20:31:37 +0600
+Processing by Devise::RegistrationsController#edit as 
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering devise/registrations/edit.html.erb within layouts/application
+  Rendered shared/_field_errors.html.erb (0.8ms)
+  Rendered shared/_field_errors.html.erb (0.1ms)
+  Rendered shared/_field_errors.html.erb (0.0ms)
+  Rendered shared/_field_errors.html.erb (0.0ms)
+  Rendered shared/_field_errors.html.erb (0.1ms)
+  Rendered devise/registrations/edit.html.erb within layouts/application (26.3ms)
+Completed 200 OK in 171ms (Views: 167.5ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/users" for 127.0.0.1 at 2016-09-01 20:31:40 +0600
+Processing by Devise::RegistrationsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"XTGFoUGncoNd4rYcX+ubc5krDP3Gj6lrIWyi3ybOCDyaZh5HTcwW4jDJLA0jUHTXp8Yt+IIvCUt85MHKM0NPBw=="}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.5ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 2]]
+  [1m[35m (215.7ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 223ms (ActiveRecord: 217.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-09-01 20:31:41 +0600
+Processing by PagesController#rests as HTML
+  Rendering pages/rests.html.erb within layouts/application
+  [1m[36mRest Load (0.3ms)[0m  [1m[34mSELECT "rests".* FROM "rests"[0m
+  [1m[36mDish Load (0.3ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes"[0m
+  Rendered pages/_cart.html.erb (2.5ms)
+  Rendered pages/rests.html.erb within layouts/application (9.6ms)
+Completed 200 OK in 201ms (Views: 198.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2016-09-01 20:32:19 +0600
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.4ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 205ms (Views: 203.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2016-09-01 20:32:22 +0600
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered shared/_field_errors.html.erb (0.5ms)
+  Rendered shared/_field_errors.html.erb (0.0ms)
+  Rendered shared/_field_errors.html.erb (0.0ms)
+  Rendered shared/_field_errors.html.erb (0.0ms)
+  Rendered shared/_field_errors.html.erb (0.0ms)
+  Rendered shared/_field_errors.html.erb (0.0ms)
+  Rendered devise/shared/_links.html.erb (1.3ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (12.0ms)
+Completed 200 OK in 154ms (Views: 152.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2016-09-01 20:32:35 +0600
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"FT6BP/9ZtRs2HR4CD0y8y0S96Z6OLWaCq/5YPwSY7BIqDME8g4RCMRJEzSAhlnnqTQyliXvvQbMnMkr7zoxb3w==", "user"=>{"name"=>"asd", "phone"=>"123", "address"=>"qwe", "email"=>"asd@asd.asd", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+Unpermitted parameters: name, phone, address
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "asd@asd.asd"], ["LIMIT", 1]]
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "users" ("created_at", "updated_at", "email", "encrypted_password") VALUES (?, ?, ?, ?)[0m  [["created_at", 2016-09-01 14:32:35 UTC], ["updated_at", 2016-09-01 14:32:35 UTC], ["email", "asd@asd.asd"], ["encrypted_password", "$2a$11$yHjla10LDLIUdM17iHfGCOiVBRiqB5DmYOeQ9YjS58bscs3.ZhpW."]]
+  [1m[35m (180.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "users" SET "updated_at" = ?, "sign_in_count" = ?, "current_sign_in_at" = ?, "last_sign_in_at" = ?, "current_sign_in_ip" = ?, "last_sign_in_ip" = ? WHERE "users"."id" = ?[0m  [["updated_at", 2016-09-01 14:32:36 UTC], ["sign_in_count", 1], ["current_sign_in_at", 2016-09-01 14:32:36 UTC], ["last_sign_in_at", 2016-09-01 14:32:36 UTC], ["current_sign_in_ip", "127.0.0.1"], ["last_sign_in_ip", "127.0.0.1"], ["id", 3]]
+  [1m[35m (165.7ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 626ms (ActiveRecord: 348.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-09-01 20:32:36 +0600
+Processing by PagesController#rests as HTML
+  Rendering pages/rests.html.erb within layouts/application
+  [1m[36mRest Load (0.3ms)[0m  [1m[34mSELECT "rests".* FROM "rests"[0m
+  [1m[36mDish Load (0.3ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes"[0m
+  Rendered pages/_cart.html.erb (2.0ms)
+  Rendered pages/rests.html.erb within layouts/application (6.1ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+Completed 200 OK in 185ms (Views: 182.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/users/edit.3" for 127.0.0.1 at 2016-09-01 20:32:40 +0600
+Processing by Devise::RegistrationsController#edit as 
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering devise/registrations/edit.html.erb within layouts/application
+  Rendered shared/_field_errors.html.erb (0.7ms)
+  Rendered shared/_field_errors.html.erb (0.0ms)
+  Rendered shared/_field_errors.html.erb (0.0ms)
+  Rendered shared/_field_errors.html.erb (0.1ms)
+  Rendered shared/_field_errors.html.erb (0.1ms)
+  Rendered shared/_field_errors.html.erb (0.1ms)
+  Rendered shared/_field_errors.html.erb (0.1ms)
+  Rendered devise/registrations/edit.html.erb within layouts/application (41.4ms)
+Completed 200 OK in 204ms (Views: 201.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-09-01 20:34:45 +0600
+Processing by PagesController#rests as HTML
+  Rendering pages/rests.html.erb within layouts/application
+  [1m[36mRest Load (0.8ms)[0m  [1m[34mSELECT "rests".* FROM "rests"[0m
+  [1m[36mDish Load (0.3ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes"[0m
+  Rendered pages/_cart.html.erb (18.3ms)
+  Rendered pages/rests.html.erb within layouts/application (42.1ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+Completed 200 OK in 262ms (Views: 250.2ms | ActiveRecord: 4.4ms)
+
+
+Started GET "/users/edit.3" for 127.0.0.1 at 2016-09-01 20:34:48 +0600
+Processing by Devise::RegistrationsController#edit as 
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering devise/registrations/edit.html.erb within layouts/application
+  Rendered shared/_field_errors.html.erb (0.7ms)
+  Rendered shared/_field_errors.html.erb (0.0ms)
+  Rendered shared/_field_errors.html.erb (0.0ms)
+  Rendered shared/_field_errors.html.erb (0.1ms)
+  Rendered shared/_field_errors.html.erb (0.0ms)
+  Rendered shared/_field_errors.html.erb (0.0ms)
+  Rendered shared/_field_errors.html.erb (0.1ms)
+  Rendered devise/registrations/edit.html.erb within layouts/application (33.1ms)
+Completed 200 OK in 172ms (Views: 167.7ms | ActiveRecord: 1.0ms)
+
+
+Started DELETE "/users" for 127.0.0.1 at 2016-09-01 20:34:51 +0600
+Processing by Devise::RegistrationsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"5DmExdxGbhIDQ3toGjpRQYlMBQBC59fNEa2ZISRY7QbbC8TGoJuZOCcaqEo04JRggP1JF7cl8PydYYvl7kxayw=="}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.3ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 3]]
+  [1m[35m (166.5ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 177ms (ActiveRecord: 168.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-09-01 20:34:51 +0600
+Processing by PagesController#rests as HTML
+  Rendering pages/rests.html.erb within layouts/application
+  [1m[36mRest Load (0.8ms)[0m  [1m[34mSELECT "rests".* FROM "rests"[0m
+  [1m[36mDish Load (0.4ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes"[0m
+  Rendered pages/_cart.html.erb (2.9ms)
+  Rendered pages/rests.html.erb within layouts/application (8.3ms)
+Completed 200 OK in 198ms (Views: 195.0ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2016-09-01 20:34:53 +0600
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered shared/_field_errors.html.erb (1.1ms)
+  Rendered shared/_field_errors.html.erb (0.1ms)
+  Rendered shared/_field_errors.html.erb (0.1ms)
+  Rendered shared/_field_errors.html.erb (0.1ms)
+  Rendered shared/_field_errors.html.erb (0.1ms)
+  Rendered shared/_field_errors.html.erb (0.1ms)
+  Rendered devise/shared/_links.html.erb (1.7ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (20.3ms)
+Completed 200 OK in 164ms (Views: 161.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2016-09-01 20:35:02 +0600
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"toLT2o7PEwMuOVQOlMELqL4wczK5xYgIsJVUJPabIY+N1vPFcfMFEkIOrqym6XRcO8gauo62K61314RB11ONuQ==", "user"=>{"name"=>"asd", "phone"=>"123", "address"=>"qwe", "email"=>"asd@asd.asd", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.6ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "asd@asd.asd"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "phone", "address", "created_at", "updated_at", "email", "encrypted_password") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "asd"], ["phone", "123"], ["address", "qwe"], ["created_at", 2016-09-01 14:35:02 UTC], ["updated_at", 2016-09-01 14:35:02 UTC], ["email", "asd@asd.asd"], ["encrypted_password", "$2a$11$5T4O6xIc2jz1mzbrpSZxfOuWI4a0hlxfw8itogc8qr.6HsAiRjpxK"]]
+  [1m[35m (179.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "users" SET "updated_at" = ?, "sign_in_count" = ?, "current_sign_in_at" = ?, "last_sign_in_at" = ?, "current_sign_in_ip" = ?, "last_sign_in_ip" = ? WHERE "users"."id" = ?[0m  [["updated_at", 2016-09-01 14:35:02 UTC], ["sign_in_count", 1], ["current_sign_in_at", 2016-09-01 14:35:02 UTC], ["last_sign_in_at", 2016-09-01 14:35:02 UTC], ["current_sign_in_ip", "127.0.0.1"], ["last_sign_in_ip", "127.0.0.1"], ["id", 4]]
+  [1m[35m (173.2ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 556ms (ActiveRecord: 354.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-09-01 20:35:03 +0600
+Processing by PagesController#rests as HTML
+  Rendering pages/rests.html.erb within layouts/application
+  [1m[36mRest Load (0.3ms)[0m  [1m[34mSELECT "rests".* FROM "rests"[0m
+  [1m[36mDish Load (0.3ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes"[0m
+  Rendered pages/_cart.html.erb (2.3ms)
+  Rendered pages/rests.html.erb within layouts/application (5.7ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+Completed 200 OK in 160ms (Views: 157.9ms | ActiveRecord: 0.8ms)
+
+

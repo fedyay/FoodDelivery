@@ -1,5 +1,9 @@
 source 'https://rubygems.org'
 
+gem 'acts_as_shopping_cart'
+gem 'bootstrap-sass'
+gem 'active_bootstrap_skin'
+gem 'twitter-bootstrap-rails'
 gem "paperclip", "~> 5.0.0"
 gem 'devise'
 gem 'activeadmin', '~> 1.0.0.pre4'
