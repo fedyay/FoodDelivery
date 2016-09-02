@@ -1,13 +1,1 @@
 <h2>Cart:</h2>
-<% @dishes = Dish.all %>
-<ul>
-	<% sum = 0 %>
-  <% @dishes.each do |dish| %>
-    <% if dish.counter > 0 %>
-    	<% add = dish.counter.to_i * dish.price.to_f %><%  sum = sum + add.to_f %>
-      <li name=<%= "#{dish.title}" %>  price=<%= "#{dish.price}" %> counter=<%= "#{dish.counter}" %>><%= dish.title + " " + dish.counter.to_s + " x " + dish.price.to_s + " сом  " %><br><button id=<%= "#{dish.id}" %> class='btn deleter'>delete</button></li>
-    <% end %>
-  <% end %>
-</ul>
-<h3 id="alldeleter">Total: <%= sum %> сом</h3>
-<button class='btn alldeleter'>Empty the cart</button>

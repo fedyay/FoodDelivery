@@ -67,7 +67,6 @@ ActiveRecord::Schema.define(version: 20160901141503) do
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
     t.integer  "rest_id"
-    t.integer  "counter"
     t.integer  "category_id"
     t.index ["category_id"], name: "index_dishes_on_category_id"
     t.index ["rest_id"], name: "index_dishes_on_rest_id"

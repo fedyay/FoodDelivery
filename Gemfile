@@ -1,6 +1,5 @@
 source 'https://rubygems.org'
 
-gem 'acts_as_shopping_cart'
 gem 'bootstrap-sass'
 gem 'active_bootstrap_skin'
 gem 'twitter-bootstrap-rails'

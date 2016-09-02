@@ -9,33 +9,11 @@ class PagesController < ApplicationController
 	end
 
 	def adder
-		num = params.keys
-		num = num[0].to_i
-		@dish = Dish.find(num)
-		@dish.counter += 1
-		@dish.save
-		render 'blank'
 	end
 
 	def deleter
-		num = params.keys
-		num = num[0].to_i
-		@dish = Dish.find(num)
-		@dish.counter = 0
-		@dish.save
-		respond_to do |format|
-	    format.js
-	  end
 	end
 
 	def alldeleter
-		@dishes = Dish.all
-		@dishes.each do |dish|
-			dish.counter = 0
-			dish.save
-		end
-		respond_to do |format|
-	    format.js
-	  end
 	end
 end
