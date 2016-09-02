@@ -24,16 +24,16 @@ form do |f|
 end
 
 index do
-    selectable_column
-    id_column
-    column :image do |rest|
-      image_tag rest.image.url(:thumb)
-    end
-    column :title do |rest|
-      link_to rest.title, admin_rest_path(rest)
-    end
-    column :description
-    actions
+  selectable_column
+  id_column
+  column :image do |rest|
+    image_tag rest.image.url(:thumb)
   end
+  column :title do |rest|
+    link_to rest.title, admin_rest_path(rest)
+  end
+  column :description
+  actions
+end
 
 end

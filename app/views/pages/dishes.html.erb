@@ -10,7 +10,7 @@
 			<td><%= dish.title %></td>
 			<td><%= dish.price %> сом</td>
 			<td><%= dish.description %></td>
-			<td><button id=<%= "#{dish.id}" %> class='btn btn-primary adder'>Добавить в корзину</button></td>
+			<td><%= link_to 'Add to cart', adder_path(dish), class: 'btn btn-success' %></td>
 			<br>
 			<br>
 		</tr>

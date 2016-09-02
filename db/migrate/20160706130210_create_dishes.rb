@@ -4,6 +4,7 @@ class CreateDishes < ActiveRecord::Migration
       t.string :title
       t.float :price
       t.text :description
+      t.integer :counter, :default => 0
 
       t.timestamps null: false
     end

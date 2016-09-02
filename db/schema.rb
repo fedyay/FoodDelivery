@@ -48,6 +48,7 @@ ActiveRecord::Schema.define(version: 20160901141503) do
 
   create_table "carts", force: :cascade do |t|
     t.text     "dishes"
+    t.integer  "cur_rest"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -66,6 +67,7 @@ ActiveRecord::Schema.define(version: 20160901141503) do
     t.text     "description"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
+    t.integer  "counter"
     t.integer  "rest_id"
     t.integer  "category_id"
     t.index ["category_id"], name: "index_dishes_on_category_id"

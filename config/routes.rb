@@ -6,8 +6,8 @@ Rails.application.routes.draw do
   ActiveAdmin.routes(self)
   root 'pages#rests'
   get ':id' => 'pages#dishes', as: 'forest_show'
-  get 'pages/adder'
-  get 'pages/deleter'
-  get 'pages/alldeleter'
+  get 'pages/adder', as: 'adder'
+  get 'pages/deleter', as: 'deleter'
+  get 'pages/alldeleter', as: 'alldeleter'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
