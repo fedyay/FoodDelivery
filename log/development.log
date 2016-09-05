@@ -14464,3 +14464,613 @@ Processing by PagesController#dishes as HTML
 Completed 200 OK in 151ms (Views: 145.9ms | ActiveRecord: 1.0ms)
 
 
+Started GET "/" for 127.0.0.1 at 2016-09-05 18:47:27 +0600
+Processing by PagesController#rests as HTML
+  Rendering pages/rests.html.erb within layouts/application
+  [1m[36mRest Load (6.0ms)[0m  [1m[34mSELECT "rests".* FROM "rests"[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mDish Load (0.2ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes"[0m
+  Rendered pages/_cart.html.erb (3.5ms)
+  Rendered pages/rests.html.erb within layouts/application (31.8ms)
+Completed 200 OK in 1576ms (Views: 1524.5ms | ActiveRecord: 6.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-09-05 18:48:54 +0600
+Processing by PagesController#rests as HTML
+  Rendering pages/rests.html.erb within layouts/application
+  [1m[36mRest Load (0.2ms)[0m  [1m[34mSELECT "rests".* FROM "rests"[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mDish Load (0.2ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes"[0m
+  Rendered pages/_cart.html.erb (4.2ms)
+  Rendered pages/rests.html.erb within layouts/application (9.2ms)
+Completed 200 OK in 209ms (Views: 206.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-09-05 18:49:46 +0600
+Processing by PagesController#rests as HTML
+  Rendering pages/rests.html.erb within layouts/application
+  [1m[36mRest Load (0.4ms)[0m  [1m[34mSELECT "rests".* FROM "rests"[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mDish Load (0.5ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes"[0m
+  Rendered pages/_cart.html.erb (4.9ms)
+  Rendered pages/rests.html.erb within layouts/application (10.8ms)
+Completed 200 OK in 189ms (Views: 186.2ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-09-05 18:50:02 +0600
+Processing by PagesController#rests as HTML
+  Rendering pages/rests.html.erb within layouts/application
+  [1m[36mRest Load (0.4ms)[0m  [1m[34mSELECT "rests".* FROM "rests"[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mDish Load (0.2ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes"[0m
+  Rendered pages/_cart.html.erb (3.7ms)
+  Rendered pages/rests.html.erb within layouts/application (9.1ms)
+Completed 200 OK in 181ms (Views: 178.4ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-09-05 18:50:19 +0600
+Processing by PagesController#rests as HTML
+  Rendering pages/rests.html.erb within layouts/application
+  [1m[36mRest Load (0.4ms)[0m  [1m[34mSELECT "rests".* FROM "rests"[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mDish Load (0.2ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes"[0m
+  Rendered pages/_cart.html.erb (5.6ms)
+  Rendered pages/rests.html.erb within layouts/application (12.4ms)
+Completed 200 OK in 256ms (Views: 253.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-09-05 18:50:40 +0600
+Processing by PagesController#rests as HTML
+  Rendering pages/rests.html.erb within layouts/application
+  [1m[36mRest Load (0.2ms)[0m  [1m[34mSELECT "rests".* FROM "rests"[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mDish Load (0.1ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes"[0m
+  Rendered pages/_cart.html.erb (3.9ms)
+  Rendered pages/rests.html.erb within layouts/application (8.1ms)
+Completed 200 OK in 158ms (Views: 155.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-09-05 18:50:47 +0600
+Processing by PagesController#rests as HTML
+  Rendering pages/rests.html.erb within layouts/application
+  [1m[36mRest Load (0.2ms)[0m  [1m[34mSELECT "rests".* FROM "rests"[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mDish Load (0.3ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes"[0m
+  Rendered pages/_cart.html.erb (4.2ms)
+  Rendered pages/rests.html.erb within layouts/application (8.0ms)
+Completed 200 OK in 200ms (Views: 197.5ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-09-05 18:51:17 +0600
+Processing by PagesController#rests as HTML
+  Rendering pages/rests.html.erb within layouts/application
+  [1m[36mRest Load (0.4ms)[0m  [1m[34mSELECT "rests".* FROM "rests"[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mDish Load (0.2ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes"[0m
+  Rendered pages/_cart.html.erb (4.6ms)
+  Rendered pages/rests.html.erb within layouts/application (9.7ms)
+Completed 200 OK in 194ms (Views: 191.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/1" for 127.0.0.1 at 2016-09-05 18:51:19 +0600
+Processing by PagesController#dishes as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRest Load (0.2ms)[0m  [1m[34mSELECT  "rests".* FROM "rests" WHERE "rests"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."rest_id" = ?[0m  [["rest_id", 1]]
+  Rendering pages/dishes.html.erb within layouts/application
+  [1m[36mDish Load (0.2ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."category_id" = ?[0m  [["category_id", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mDish Load (0.3ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes"[0m
+  Rendered pages/_cart.html.erb (2.8ms)
+  Rendered pages/dishes.html.erb within layouts/application (11.5ms)
+Completed 200 OK in 166ms (Views: 161.5ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/1" for 127.0.0.1 at 2016-09-05 18:52:22 +0600
+Processing by PagesController#dishes as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRest Load (0.2ms)[0m  [1m[34mSELECT  "rests".* FROM "rests" WHERE "rests"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."rest_id" = ?[0m  [["rest_id", 1]]
+  Rendering pages/dishes.html.erb within layouts/application
+  [1m[36mDish Load (0.2ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."category_id" = ?[0m  [["category_id", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mDish Load (0.2ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes"[0m
+  Rendered pages/_cart.html.erb (2.3ms)
+  Rendered pages/dishes.html.erb within layouts/application (9.8ms)
+Completed 200 OK in 159ms (Views: 154.3ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/1" for 127.0.0.1 at 2016-09-05 18:52:36 +0600
+Processing by PagesController#dishes as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRest Load (0.2ms)[0m  [1m[34mSELECT  "rests".* FROM "rests" WHERE "rests"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."rest_id" = ?[0m  [["rest_id", 1]]
+  Rendering pages/dishes.html.erb within layouts/application
+  [1m[36mDish Load (0.2ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."category_id" = ?[0m  [["category_id", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mDish Load (0.3ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes"[0m
+  Rendered pages/_cart.html.erb (3.6ms)
+  Rendered pages/dishes.html.erb within layouts/application (15.1ms)
+Completed 200 OK in 196ms (Views: 188.1ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/1" for 127.0.0.1 at 2016-09-05 18:52:44 +0600
+Processing by PagesController#dishes as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRest Load (0.2ms)[0m  [1m[34mSELECT  "rests".* FROM "rests" WHERE "rests"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."rest_id" = ?[0m  [["rest_id", 1]]
+  Rendering pages/dishes.html.erb within layouts/application
+  [1m[36mDish Load (0.3ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."category_id" = ?[0m  [["category_id", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mDish Load (0.2ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes"[0m
+  Rendered pages/_cart.html.erb (2.1ms)
+  Rendered pages/dishes.html.erb within layouts/application (8.4ms)
+Completed 200 OK in 158ms (Views: 151.1ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/1" for 127.0.0.1 at 2016-09-05 18:53:44 +0600
+Processing by PagesController#dishes as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRest Load (0.2ms)[0m  [1m[34mSELECT  "rests".* FROM "rests" WHERE "rests"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."rest_id" = ?[0m  [["rest_id", 1]]
+  Rendering pages/dishes.html.erb within layouts/application
+  [1m[36mDish Load (0.2ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."category_id" = ?[0m  [["category_id", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mDish Load (0.3ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes"[0m
+  Rendered pages/_cart.html.erb (3.2ms)
+  Rendered pages/dishes.html.erb within layouts/application (10.0ms)
+Completed 200 OK in 152ms (Views: 146.8ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/1" for 127.0.0.1 at 2016-09-05 18:54:18 +0600
+Processing by PagesController#dishes as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRest Load (0.2ms)[0m  [1m[34mSELECT  "rests".* FROM "rests" WHERE "rests"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."rest_id" = ?[0m  [["rest_id", 1]]
+  Rendering pages/dishes.html.erb within layouts/application
+  [1m[36mDish Load (0.2ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."category_id" = ?[0m  [["category_id", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mDish Load (0.3ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes"[0m
+  Rendered pages/_cart.html.erb (2.6ms)
+  Rendered pages/dishes.html.erb within layouts/application (9.8ms)
+Completed 200 OK in 181ms (Views: 175.7ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/1" for 127.0.0.1 at 2016-09-05 18:54:31 +0600
+Processing by PagesController#dishes as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRest Load (0.2ms)[0m  [1m[34mSELECT  "rests".* FROM "rests" WHERE "rests"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."rest_id" = ?[0m  [["rest_id", 1]]
+  Rendering pages/dishes.html.erb within layouts/application
+  [1m[36mDish Load (0.2ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."category_id" = ?[0m  [["category_id", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mDish Load (0.3ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes"[0m
+  Rendered pages/_cart.html.erb (2.7ms)
+  Rendered pages/dishes.html.erb within layouts/application (8.8ms)
+Completed 200 OK in 186ms (Views: 180.5ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/1" for 127.0.0.1 at 2016-09-05 18:54:36 +0600
+Processing by PagesController#dishes as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRest Load (0.2ms)[0m  [1m[34mSELECT  "rests".* FROM "rests" WHERE "rests"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."rest_id" = ?[0m  [["rest_id", 1]]
+  Rendering pages/dishes.html.erb within layouts/application
+  [1m[36mDish Load (0.2ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."category_id" = ?[0m  [["category_id", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mDish Load (0.2ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes"[0m
+  Rendered pages/_cart.html.erb (2.3ms)
+  Rendered pages/dishes.html.erb within layouts/application (9.1ms)
+Completed 200 OK in 158ms (Views: 150.4ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/1" for 127.0.0.1 at 2016-09-05 18:54:41 +0600
+Processing by PagesController#dishes as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRest Load (0.2ms)[0m  [1m[34mSELECT  "rests".* FROM "rests" WHERE "rests"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."rest_id" = ?[0m  [["rest_id", 1]]
+  Rendering pages/dishes.html.erb within layouts/application
+  [1m[36mDish Load (0.2ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."category_id" = ?[0m  [["category_id", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mDish Load (0.2ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes"[0m
+  Rendered pages/_cart.html.erb (2.1ms)
+  Rendered pages/dishes.html.erb within layouts/application (9.1ms)
+Completed 200 OK in 212ms (Views: 206.6ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/1" for 127.0.0.1 at 2016-09-05 18:55:00 +0600
+Processing by PagesController#dishes as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRest Load (0.2ms)[0m  [1m[34mSELECT  "rests".* FROM "rests" WHERE "rests"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."rest_id" = ?[0m  [["rest_id", 1]]
+  Rendering pages/dishes.html.erb within layouts/application
+  [1m[36mDish Load (0.2ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."category_id" = ?[0m  [["category_id", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mDish Load (0.2ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes"[0m
+  Rendered pages/_cart.html.erb (2.4ms)
+  Rendered pages/dishes.html.erb within layouts/application (9.6ms)
+Completed 200 OK in 154ms (Views: 148.4ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/1" for 127.0.0.1 at 2016-09-05 18:55:35 +0600
+Processing by PagesController#dishes as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRest Load (0.2ms)[0m  [1m[34mSELECT  "rests".* FROM "rests" WHERE "rests"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."rest_id" = ?[0m  [["rest_id", 1]]
+  Rendering pages/dishes.html.erb within layouts/application
+  [1m[36mDish Load (0.2ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."category_id" = ?[0m  [["category_id", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mDish Load (0.2ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes"[0m
+  Rendered pages/_cart.html.erb (2.4ms)
+  Rendered pages/dishes.html.erb within layouts/application (9.8ms)
+Completed 200 OK in 173ms (Views: 167.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/1" for 127.0.0.1 at 2016-09-05 18:55:41 +0600
+Processing by PagesController#dishes as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRest Load (0.2ms)[0m  [1m[34mSELECT  "rests".* FROM "rests" WHERE "rests"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."rest_id" = ?[0m  [["rest_id", 1]]
+  Rendering pages/dishes.html.erb within layouts/application
+  [1m[36mDish Load (0.2ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."category_id" = ?[0m  [["category_id", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mDish Load (0.2ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes"[0m
+  Rendered pages/_cart.html.erb (2.1ms)
+  Rendered pages/dishes.html.erb within layouts/application (8.8ms)
+Completed 200 OK in 154ms (Views: 148.2ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/1" for 127.0.0.1 at 2016-09-05 18:56:28 +0600
+Processing by PagesController#dishes as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRest Load (0.2ms)[0m  [1m[34mSELECT  "rests".* FROM "rests" WHERE "rests"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."rest_id" = ?[0m  [["rest_id", 1]]
+  Rendering pages/dishes.html.erb within layouts/application
+  [1m[36mDish Load (0.2ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."category_id" = ?[0m  [["category_id", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mDish Load (0.3ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes"[0m
+  Rendered pages/_cart.html.erb (2.7ms)
+  Rendered pages/dishes.html.erb within layouts/application (9.6ms)
+Completed 200 OK in 188ms (Views: 182.3ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/admin" for 127.0.0.1 at 2016-09-05 18:56:45 +0600
+Processing by Admin::DashboardController#index as HTML
+Completed 401 Unauthorized in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/login" for 127.0.0.1 at 2016-09-05 18:56:46 +0600
+Processing by ActiveAdmin::Devise::SessionsController#new as HTML
+  Rendering /home/fedyay/.rvm/gems/ruby-2.3.0/gems/activeadmin-1.0.0.pre4/app/views/active_admin/devise/sessions/new.html.erb within layouts/active_admin_logged_out
+  Rendered /home/fedyay/.rvm/gems/ruby-2.3.0/gems/activeadmin-1.0.0.pre4/app/views/active_admin/devise/shared/_links.erb (2.9ms)
+  Rendered /home/fedyay/.rvm/gems/ruby-2.3.0/gems/activeadmin-1.0.0.pre4/app/views/active_admin/devise/sessions/new.html.erb within layouts/active_admin_logged_out (257.1ms)
+Completed 200 OK in 685ms (Views: 482.7ms | ActiveRecord: 19.7ms)
+
+
+Started POST "/admin/login" for 127.0.0.1 at 2016-09-05 18:56:55 +0600
+Processing by ActiveAdmin::Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"oJn3JYFIboVgWZ2aDNM+WofKlxM4rSHSsSboEUPQa+/yg6qiil0N85PyjpXznUKjX659bNfTLjqXd5a9JPcX5A==", "admin_user"=>{"email"=>"admin@admin.admin", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Login"}
+  [1m[36mAdminUser Load (0.4ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."email" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["email", "admin@admin.admin"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (36.4ms)[0m  [1m[33mUPDATE "admin_users" SET "current_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "admin_users"."id" = ?[0m  [["current_sign_in_at", 2016-09-05 12:56:56 UTC], ["sign_in_count", 2], ["updated_at", 2016-09-05 12:56:56 UTC], ["id", 1]]
+  [1m[35m (184.4ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/admin
+Completed 302 Found in 514ms (ActiveRecord: 221.3ms)
+
+
+Started GET "/admin" for 127.0.0.1 at 2016-09-05 18:56:56 +0600
+Processing by Admin::DashboardController#index as HTML
+  [1m[36mAdminUser Load (0.4ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /home/fedyay/.rvm/gems/ruby-2.3.0/gems/activeadmin-1.0.0.pre4/app/views/active_admin/page/index.html.arb
+  Rendered /home/fedyay/.rvm/gems/ruby-2.3.0/gems/activeadmin-1.0.0.pre4/app/views/active_admin/page/index.html.arb (169.6ms)
+Completed 200 OK in 231ms (Views: 190.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/admin/categories" for 127.0.0.1 at 2016-09-05 18:56:59 +0600
+Processing by Admin::CategoriesController#index as HTML
+  [1m[36mAdminUser Load (0.4ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /home/fedyay/.rvm/gems/ruby-2.3.0/gems/activeadmin-1.0.0.pre4/app/views/active_admin/resource/index.html.arb
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "categories" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "categories" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "categories"[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "categories" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" ORDER BY "categories"."id" desc LIMIT ? OFFSET ?[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mRest Load (0.3ms)[0m  [1m[34mSELECT "rests".* FROM "rests"[0m
+  [1m[36mDish Load (0.4ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes"[0m
+  Rendered /home/fedyay/.rvm/gems/ruby-2.3.0/gems/activeadmin-1.0.0.pre4/app/views/active_admin/resource/index.html.arb (1016.4ms)
+Completed 200 OK in 1101ms (Views: 1049.0ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/admin/categories/new" for 127.0.0.1 at 2016-09-05 18:57:04 +0600
+Processing by Admin::CategoriesController#new as HTML
+  [1m[36mAdminUser Load (0.4ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /home/fedyay/.rvm/gems/ruby-2.3.0/gems/activeadmin-1.0.0.pre4/app/views/active_admin/resource/new.html.arb
+  [1m[36mRest Load (0.3ms)[0m  [1m[34mSELECT "rests".* FROM "rests"[0m
+  Rendered /home/fedyay/.rvm/gems/ruby-2.3.0/gems/activeadmin-1.0.0.pre4/app/views/active_admin/resource/new.html.arb (227.9ms)
+Completed 200 OK in 252ms (Views: 247.5ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/admin/categories" for 127.0.0.1 at 2016-09-05 18:57:10 +0600
+Processing by Admin::CategoriesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"SJb21V32xhZqQsdBUfCahqgwygj09jjVxmBaAZUAJ1WFNMKBXLqQzd3M4Lsfo/SF6TpyLWbDCn+6DUFraRUGhg==", "category"=>{"rest_id"=>"1", "title"=>"qweqweqwe"}, "commit"=>"Create Category"}
+  [1m[36mAdminUser Load (0.6ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (59.1ms)[0m  [1m[32mINSERT INTO "categories" ("title", "created_at", "updated_at", "rest_id") VALUES (?, ?, ?, ?)[0m  [["title", "qweqweqwe"], ["created_at", 2016-09-05 12:57:10 UTC], ["updated_at", 2016-09-05 12:57:10 UTC], ["rest_id", 1]]
+  [1m[35m (251.3ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/admin/categories/3
+Completed 302 Found in 334ms (ActiveRecord: 311.0ms)
+
+
+Started GET "/admin/categories/3" for 127.0.0.1 at 2016-09-05 18:57:10 +0600
+Processing by Admin::CategoriesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mAdminUser Load (0.3ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering /home/fedyay/.rvm/gems/ruby-2.3.0/gems/activeadmin-1.0.0.pre4/app/views/active_admin/resource/show.html.arb
+  [1m[36mRest Load (0.2ms)[0m  [1m[34mSELECT  "rests".* FROM "rests" WHERE "rests"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "active_admin_comments" WHERE "active_admin_comments"."resource_type" = ? AND "active_admin_comments"."resource_id" = ? AND "active_admin_comments"."namespace" = ?[0m  [["resource_type", "Category"], ["resource_id", "3"], ["namespace", "admin"]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "active_admin_comments" WHERE "active_admin_comments"."resource_type" = ? AND "active_admin_comments"."resource_id" = ? AND "active_admin_comments"."namespace" = ?[0m  [["resource_type", "Category"], ["resource_id", "3"], ["namespace", "admin"]]
+  Rendered /home/fedyay/.rvm/gems/ruby-2.3.0/gems/activeadmin-1.0.0.pre4/app/views/active_admin/resource/show.html.arb (215.3ms)
+Completed 200 OK in 234ms (Views: 228.3ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/admin/dishes" for 127.0.0.1 at 2016-09-05 18:57:12 +0600
+Processing by Admin::DishesController#index as HTML
+  [1m[36mAdminUser Load (0.4ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /home/fedyay/.rvm/gems/ruby-2.3.0/gems/activeadmin-1.0.0.pre4/app/views/active_admin/resource/index.html.arb
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "dishes" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "dishes" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "dishes"[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "dishes" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mDish Load (0.3ms)[0m  [1m[34mSELECT  "dishes".* FROM "dishes" ORDER BY "dishes"."id" desc LIMIT ? OFFSET ?[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mRest Load (0.3ms)[0m  [1m[34mSELECT  "rests".* FROM "rests" WHERE "rests"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mRest Load (0.3ms)[0m  [1m[34mSELECT  "rests".* FROM "rests" WHERE "rests"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "rests".* FROM "rests" WHERE "rests"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mRest Load (0.3ms)[0m  [1m[34mSELECT "rests".* FROM "rests"[0m
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered /home/fedyay/.rvm/gems/ruby-2.3.0/gems/activeadmin-1.0.0.pre4/app/views/active_admin/resource/index.html.arb (266.1ms)
+Completed 200 OK in 275ms (Views: 267.7ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/admin/dishes/new" for 127.0.0.1 at 2016-09-05 18:57:14 +0600
+Processing by Admin::DishesController#new as HTML
+  [1m[36mAdminUser Load (0.4ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /home/fedyay/.rvm/gems/ruby-2.3.0/gems/activeadmin-1.0.0.pre4/app/views/active_admin/resource/new.html.arb
+  [1m[36mRest Load (0.3ms)[0m  [1m[34mSELECT "rests".* FROM "rests"[0m
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered /home/fedyay/.rvm/gems/ruby-2.3.0/gems/activeadmin-1.0.0.pre4/app/views/active_admin/resource/new.html.arb (245.8ms)
+Completed 200 OK in 254ms (Views: 249.4ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/admin/dishes" for 127.0.0.1 at 2016-09-05 18:57:31 +0600
+Processing by Admin::DishesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"N0w45MEAwfObH+mwFzCb49ZahRYn6HDNqZ6d1AS6CWH67gywwEyXKCyRzkpZY/Xgl1A9M7XdQmfV84a++K8osg==", "dish"=>{"rest_id"=>"1", "category_id"=>"3", "title"=>"zxczxczxcQWeqw", "price"=>"1235", "description"=>"lkjhgdfghjkl;lkjhgf", "counter"=>""}, "commit"=>"Create Dish"}
+  [1m[36mAdminUser Load (0.3ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Unpermitted parameter: counter
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (364.0ms)[0m  [1m[32mINSERT INTO "dishes" ("title", "price", "description", "created_at", "updated_at", "rest_id", "category_id") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "zxczxczxcQWeqw"], ["price", 1235.0], ["description", "lkjhgdfghjkl;lkjhgf"], ["created_at", 2016-09-05 12:57:31 UTC], ["updated_at", 2016-09-05 12:57:31 UTC], ["rest_id", 1], ["category_id", 3]]
+  [1m[35m (119.9ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/admin/dishes/4
+Completed 302 Found in 507ms (ActiveRecord: 484.4ms)
+
+
+Started GET "/admin/dishes/4" for 127.0.0.1 at 2016-09-05 18:57:32 +0600
+Processing by Admin::DishesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mAdminUser Load (0.5ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mDish Load (0.2ms)[0m  [1m[34mSELECT  "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering /home/fedyay/.rvm/gems/ruby-2.3.0/gems/activeadmin-1.0.0.pre4/app/views/active_admin/resource/show.html.arb
+  [1m[36mRest Load (0.2ms)[0m  [1m[34mSELECT  "rests".* FROM "rests" WHERE "rests"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "active_admin_comments" WHERE "active_admin_comments"."resource_type" = ? AND "active_admin_comments"."resource_id" = ? AND "active_admin_comments"."namespace" = ?[0m  [["resource_type", "Dish"], ["resource_id", "4"], ["namespace", "admin"]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "active_admin_comments" WHERE "active_admin_comments"."resource_type" = ? AND "active_admin_comments"."resource_id" = ? AND "active_admin_comments"."namespace" = ?[0m  [["resource_type", "Dish"], ["resource_id", "4"], ["namespace", "admin"]]
+  Rendered /home/fedyay/.rvm/gems/ruby-2.3.0/gems/activeadmin-1.0.0.pre4/app/views/active_admin/resource/show.html.arb (168.1ms)
+Completed 200 OK in 179ms (Views: 173.1ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-09-05 18:57:35 +0600
+Processing by PagesController#rests as HTML
+  Rendering pages/rests.html.erb within layouts/application
+  [1m[36mRest Load (0.2ms)[0m  [1m[34mSELECT "rests".* FROM "rests"[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mDish Load (0.2ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes"[0m
+  Rendered pages/_cart.html.erb (6.0ms)
+  Rendered pages/rests.html.erb within layouts/application (10.6ms)
+Completed 200 OK in 208ms (Views: 160.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-09-05 18:57:40 +0600
+Processing by PagesController#rests as HTML
+  Rendering pages/rests.html.erb within layouts/application
+  [1m[36mRest Load (0.3ms)[0m  [1m[34mSELECT "rests".* FROM "rests"[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mDish Load (0.2ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes"[0m
+  Rendered pages/_cart.html.erb (4.0ms)
+  Rendered pages/rests.html.erb within layouts/application (8.9ms)
+Completed 200 OK in 149ms (Views: 146.5ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/1" for 127.0.0.1 at 2016-09-05 18:57:41 +0600
+Processing by PagesController#dishes as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRest Load (0.2ms)[0m  [1m[34mSELECT  "rests".* FROM "rests" WHERE "rests"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."rest_id" = ?[0m  [["rest_id", 1]]
+  Rendering pages/dishes.html.erb within layouts/application
+  [1m[36mDish Load (0.3ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."category_id" = ?[0m  [["category_id", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mDish Load (0.1ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."category_id" = ?[0m  [["category_id", 3]]
+  [1m[36mDish Load (0.2ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes"[0m
+  Rendered pages/_cart.html.erb (2.3ms)
+  Rendered pages/dishes.html.erb within layouts/application (11.6ms)
+Completed 200 OK in 151ms (Views: 144.6ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/1" for 127.0.0.1 at 2016-09-05 18:58:11 +0600
+Processing by PagesController#dishes as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRest Load (0.2ms)[0m  [1m[34mSELECT  "rests".* FROM "rests" WHERE "rests"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."rest_id" = ?[0m  [["rest_id", 1]]
+  Rendering pages/dishes.html.erb within layouts/application
+  [1m[36mDish Load (0.2ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."category_id" = ?[0m  [["category_id", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mDish Load (0.2ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."category_id" = ?[0m  [["category_id", 3]]
+  [1m[36mDish Load (0.2ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes"[0m
+  Rendered pages/_cart.html.erb (2.5ms)
+  Rendered pages/dishes.html.erb within layouts/application (10.8ms)
+Completed 200 OK in 169ms (Views: 147.8ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/admin" for 127.0.0.1 at 2016-09-05 18:58:24 +0600
+Processing by Admin::DashboardController#index as HTML
+  [1m[36mAdminUser Load (0.5ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /home/fedyay/.rvm/gems/ruby-2.3.0/gems/activeadmin-1.0.0.pre4/app/views/active_admin/page/index.html.arb
+  Rendered /home/fedyay/.rvm/gems/ruby-2.3.0/gems/activeadmin-1.0.0.pre4/app/views/active_admin/page/index.html.arb (216.4ms)
+Completed 200 OK in 222ms (Views: 218.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/admin/admin_users" for 127.0.0.1 at 2016-09-05 18:58:27 +0600
+Processing by Admin::AdminUsersController#index as HTML
+  [1m[36mAdminUser Load (0.5ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /home/fedyay/.rvm/gems/ruby-2.3.0/gems/activeadmin-1.0.0.pre4/app/views/active_admin/resource/index.html.arb
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "admin_users" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "admin_users" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "admin_users"[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "admin_users" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mAdminUser Load (0.3ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" ORDER BY "admin_users"."id" desc LIMIT ? OFFSET ?[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  Rendered /home/fedyay/.rvm/gems/ruby-2.3.0/gems/activeadmin-1.0.0.pre4/app/views/active_admin/resource/index.html.arb (248.7ms)
+Completed 200 OK in 269ms (Views: 263.1ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/admin/dishes" for 127.0.0.1 at 2016-09-05 18:58:28 +0600
+Processing by Admin::DishesController#index as HTML
+  [1m[36mAdminUser Load (0.4ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /home/fedyay/.rvm/gems/ruby-2.3.0/gems/activeadmin-1.0.0.pre4/app/views/active_admin/resource/index.html.arb
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "dishes" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "dishes" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "dishes"[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "dishes" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mDish Load (0.3ms)[0m  [1m[34mSELECT  "dishes".* FROM "dishes" ORDER BY "dishes"."id" desc LIMIT ? OFFSET ?[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mRest Load (0.3ms)[0m  [1m[34mSELECT  "rests".* FROM "rests" WHERE "rests"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mRest Load (0.2ms)[0m  [1m[34mSELECT  "rests".* FROM "rests" WHERE "rests"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "rests".* FROM "rests" WHERE "rests"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "rests".* FROM "rests" WHERE "rests"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mRest Load (0.3ms)[0m  [1m[34mSELECT "rests".* FROM "rests"[0m
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered /home/fedyay/.rvm/gems/ruby-2.3.0/gems/activeadmin-1.0.0.pre4/app/views/active_admin/resource/index.html.arb (225.9ms)
+Completed 200 OK in 235ms (Views: 227.6ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/admin/dishes/new" for 127.0.0.1 at 2016-09-05 18:58:30 +0600
+Processing by Admin::DishesController#new as HTML
+  [1m[36mAdminUser Load (0.4ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /home/fedyay/.rvm/gems/ruby-2.3.0/gems/activeadmin-1.0.0.pre4/app/views/active_admin/resource/new.html.arb
+  [1m[36mRest Load (0.3ms)[0m  [1m[34mSELECT "rests".* FROM "rests"[0m
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered /home/fedyay/.rvm/gems/ruby-2.3.0/gems/activeadmin-1.0.0.pre4/app/views/active_admin/resource/new.html.arb (216.4ms)
+Completed 200 OK in 224ms (Views: 219.6ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/admin/dishes" for 127.0.0.1 at 2016-09-05 18:58:43 +0600
+Processing by Admin::DishesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7/zORGtwi5w6fDxKDTqfQnZKJG1YKFRwBoJf+6cLfAoiXvoQajzdR43yG7BDafFBN0CcSModZtp670SRWx5d2Q==", "dish"=>{"rest_id"=>"1", "category_id"=>"3", "title"=>"iopiopiop", "price"=>"645", "description"=>"likuytresevdbnhmf,giyukt", "counter"=>""}, "commit"=>"Create Dish"}
+  [1m[36mAdminUser Load (0.4ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Unpermitted parameter: counter
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.1ms)[0m  [1m[32mINSERT INTO "dishes" ("title", "price", "description", "created_at", "updated_at", "rest_id", "category_id") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "iopiopiop"], ["price", 645.0], ["description", "likuytresevdbnhmf,giyukt"], ["created_at", 2016-09-05 12:58:43 UTC], ["updated_at", 2016-09-05 12:58:43 UTC], ["rest_id", 1], ["category_id", 3]]
+  [1m[35m (498.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/admin/dishes/5
+Completed 302 Found in 522ms (ActiveRecord: 499.8ms)
+
+
+Started GET "/admin/dishes/5" for 127.0.0.1 at 2016-09-05 18:58:43 +0600
+Processing by Admin::DishesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mAdminUser Load (0.4ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mDish Load (0.1ms)[0m  [1m[34mSELECT  "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering /home/fedyay/.rvm/gems/ruby-2.3.0/gems/activeadmin-1.0.0.pre4/app/views/active_admin/resource/show.html.arb
+  [1m[36mRest Load (0.2ms)[0m  [1m[34mSELECT  "rests".* FROM "rests" WHERE "rests"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "active_admin_comments" WHERE "active_admin_comments"."resource_type" = ? AND "active_admin_comments"."resource_id" = ? AND "active_admin_comments"."namespace" = ?[0m  [["resource_type", "Dish"], ["resource_id", "5"], ["namespace", "admin"]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "active_admin_comments" WHERE "active_admin_comments"."resource_type" = ? AND "active_admin_comments"."resource_id" = ? AND "active_admin_comments"."namespace" = ?[0m  [["resource_type", "Dish"], ["resource_id", "5"], ["namespace", "admin"]]
+  Rendered /home/fedyay/.rvm/gems/ruby-2.3.0/gems/activeadmin-1.0.0.pre4/app/views/active_admin/resource/show.html.arb (174.3ms)
+Completed 200 OK in 182ms (Views: 177.9ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-09-05 18:58:49 +0600
+Processing by PagesController#rests as HTML
+  Rendering pages/rests.html.erb within layouts/application
+  [1m[36mRest Load (0.3ms)[0m  [1m[34mSELECT "rests".* FROM "rests"[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mDish Load (0.2ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes"[0m
+  Rendered pages/_cart.html.erb (5.3ms)
+  Rendered pages/rests.html.erb within layouts/application (9.8ms)
+Completed 200 OK in 181ms (Views: 178.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/1" for 127.0.0.1 at 2016-09-05 18:58:51 +0600
+Processing by PagesController#dishes as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRest Load (0.4ms)[0m  [1m[34mSELECT  "rests".* FROM "rests" WHERE "rests"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."rest_id" = ?[0m  [["rest_id", 1]]
+  Rendering pages/dishes.html.erb within layouts/application
+  [1m[36mDish Load (0.3ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."category_id" = ?[0m  [["category_id", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mDish Load (0.1ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."category_id" = ?[0m  [["category_id", 3]]
+  [1m[36mDish Load (0.4ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes"[0m
+  Rendered pages/_cart.html.erb (3.1ms)
+  Rendered pages/dishes.html.erb within layouts/application (12.5ms)
+Completed 200 OK in 174ms (Views: 164.3ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/1" for 127.0.0.1 at 2016-09-05 18:59:05 +0600
+Processing by PagesController#dishes as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRest Load (0.4ms)[0m  [1m[34mSELECT  "rests".* FROM "rests" WHERE "rests"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."rest_id" = ?[0m  [["rest_id", 1]]
+  Rendering pages/dishes.html.erb within layouts/application
+  [1m[36mDish Load (0.2ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."category_id" = ?[0m  [["category_id", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mDish Load (0.2ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."category_id" = ?[0m  [["category_id", 3]]
+  [1m[36mDish Load (0.3ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes"[0m
+  Rendered pages/_cart.html.erb (3.2ms)
+  Rendered pages/dishes.html.erb within layouts/application (14.5ms)
+Completed 200 OK in 171ms (Views: 162.1ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/1" for 127.0.0.1 at 2016-09-05 18:59:15 +0600
+Processing by PagesController#dishes as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRest Load (0.4ms)[0m  [1m[34mSELECT  "rests".* FROM "rests" WHERE "rests"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."rest_id" = ?[0m  [["rest_id", 1]]
+  Rendering pages/dishes.html.erb within layouts/application
+  [1m[36mDish Load (0.3ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."category_id" = ?[0m  [["category_id", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mDish Load (0.2ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."category_id" = ?[0m  [["category_id", 3]]
+  [1m[36mDish Load (0.3ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes"[0m
+  Rendered pages/_cart.html.erb (3.7ms)
+  Rendered pages/dishes.html.erb within layouts/application (12.2ms)
+Completed 200 OK in 184ms (Views: 177.6ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/1" for 127.0.0.1 at 2016-09-05 18:59:26 +0600
+Processing by PagesController#dishes as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRest Load (0.1ms)[0m  [1m[34mSELECT  "rests".* FROM "rests" WHERE "rests"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."rest_id" = ?[0m  [["rest_id", 1]]
+  Rendering pages/dishes.html.erb within layouts/application
+  [1m[36mDish Load (0.2ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."category_id" = ?[0m  [["category_id", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mDish Load (0.1ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."category_id" = ?[0m  [["category_id", 3]]
+  [1m[36mDish Load (0.2ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes"[0m
+  Rendered pages/_cart.html.erb (2.3ms)
+  Rendered pages/dishes.html.erb within layouts/application (10.4ms)
+Completed 200 OK in 154ms (Views: 149.5ms | ActiveRecord: 1.0ms)
+
+

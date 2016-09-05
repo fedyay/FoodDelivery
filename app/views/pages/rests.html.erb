@@ -1,19 +1,19 @@
 <h1>Restaurants list</h1>
 <br>
 <br>
-<table>
-	<tr>
-		<th><div class="col-md-1">Title</div></th>
-		<th><div class="col-md-1">Description</div></th>
-		<th><div class="col-md-1">Image</div></th>
+<table class="container">
+	<tr class="row">
+		<th><div class="col-md-2">Title</div></th>
+		<th><div class="col-md-2">Description</div></th>
+		<th><div class="col-md-2">Image</div></th>
 	</tr>
 	
 	<% @rests.each do |rest| %>
 
-	<tr>
-		<td><div class="col-md-1"><%= link_to rest.title, forest_show_path(rest), class: 'btn btn-primary' %></div></td>
-		<td><div class="col-md-1"><%= rest.description %></div></td>
-		<td><div class="col-md-1"><%= image_tag rest.image.url(:medium) %></div></td>
+	<tr class="row">
+		<td><div class="col-md-2"><%= link_to rest.title, forest_show_path(rest), class: 'btn btn-primary' %></div></td>
+		<td><div class="col-md-2"><%= rest.description %></div></td>
+		<td><div class="col-md-2"><%= image_tag rest.image.url(:medium) %></div></td>
 	</tr>
 
 	<% end %>

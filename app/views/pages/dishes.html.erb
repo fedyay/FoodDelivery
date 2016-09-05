@@ -3,15 +3,15 @@
 <br>
 <br>
 <% @categories.each do |category| %>
-	<tr><h3><%= category.title %></h3></tr>
+	<h3><%= category.title %></h3>
 	<% @dishes = category.dishes.to_a %>
 	<% @dishes.each do |dish| %>
 		<tr>
-			<td><%= dish.title %></td>
-			<td><%= dish.price %> сом</td>
-			<td><%= dish.description %></td>
+			<td><div class="col-md-2"><%= dish.title %></div></td>
+			<td><div class="col-md-2"><%= dish.price %> сом</div></td>
+			<td><div class="col-md-3"><%= dish.description %></div></td>
 			<% unless current_user == nil %>
-				<td><%= link_to 'Add to cart', adder_path(dish), class: 'btn btn-success' %></td>
+				<td><div class="col-md-2"><%= link_to 'Add to cart', adder_path(dish), class: 'btn btn-success' %></div></td>
 			<% end %>
 			<br>
 			<br>
