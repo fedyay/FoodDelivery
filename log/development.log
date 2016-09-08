@@ -15074,3 +15074,1925 @@ Processing by PagesController#dishes as HTML
 Completed 200 OK in 154ms (Views: 149.5ms | ActiveRecord: 1.0ms)
 
 
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", :environment]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", :environment]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", :environment]]
+  [1m[35m (343.7ms)[0m  [1m[35mCREATE TABLE "active_admin_comments" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "namespace" varchar, "body" text, "resource_id" varchar NOT NULL, "resource_type" varchar NOT NULL, "author_type" varchar, "author_id" integer, "created_at" datetime, "updated_at" datetime)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mselect sqlite_version(*)[0m
+  [1m[35m (175.3ms)[0m  [1m[35mCREATE  INDEX "index_active_admin_comments_on_author_type_and_author_id" ON "active_admin_comments" ("author_type", "author_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_active_admin_comments_on_author_type_and_author_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_active_admin_comments_on_author_type_and_author_id' AND type='index'
+[0m
+  [1m[35m (263.4ms)[0m  [1m[35mCREATE  INDEX "index_active_admin_comments_on_namespace" ON "active_admin_comments" ("namespace")[0m
+  [1m[35m (0.2ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_active_admin_comments_on_namespace' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_active_admin_comments_on_namespace' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_active_admin_comments_on_author_type_and_author_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_active_admin_comments_on_author_type_and_author_id' AND type='index'
+[0m
+  [1m[35m (252.2ms)[0m  [1m[35mCREATE  INDEX "index_active_admin_comments_on_resource_type_and_resource_id" ON "active_admin_comments" ("resource_type", "resource_id")[0m
+  [1m[35m (219.8ms)[0m  [1m[35mCREATE TABLE "admin_users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar DEFAULT '' NOT NULL, "encrypted_password" varchar DEFAULT '' NOT NULL, "reset_password_token" varchar, "reset_password_sent_at" datetime, "remember_created_at" datetime, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" datetime, "last_sign_in_at" datetime, "current_sign_in_ip" varchar, "last_sign_in_ip" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "name" varchar, "phone" varchar, "address" varchar)[0m
+  [1m[35m (209.7ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_admin_users_on_email" ON "admin_users" ("email")[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_admin_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_admin_users_on_email' AND type='index'
+[0m
+  [1m[35m (235.1ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_admin_users_on_reset_password_token" ON "admin_users" ("reset_password_token")[0m
+  [1m[35m (228.2ms)[0m  [1m[35mCREATE TABLE "carts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "dishes" text, "cur_rest" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (185.1ms)[0m  [1m[35mCREATE TABLE "categories" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "rest_id" integer)[0m
+  [1m[35m (282.2ms)[0m  [1m[35mCREATE  INDEX "index_categories_on_rest_id" ON "categories" ("rest_id")[0m
+  [1m[35m (195.9ms)[0m  [1m[35mCREATE TABLE "dishes" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "price" float, "description" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "counter" integer, "rest_id" integer, "category_id" integer)[0m
+  [1m[35m (285.7ms)[0m  [1m[35mCREATE  INDEX "index_dishes_on_category_id" ON "dishes" ("category_id")[0m
+  [1m[35m (0.3ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_dishes_on_category_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_dishes_on_category_id' AND type='index'
+[0m
+  [1m[35m (201.5ms)[0m  [1m[35mCREATE  INDEX "index_dishes_on_rest_id" ON "dishes" ("rest_id")[0m
+  [1m[35m (258.5ms)[0m  [1m[35mCREATE TABLE "rests" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "image" varchar, "description" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "image_file_name" varchar, "image_content_type" varchar, "image_file_size" integer, "image_updated_at" datetime)[0m
+  [1m[35m (208.9ms)[0m  [1m[35mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "phone" varchar, "address" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "email" varchar DEFAULT '' NOT NULL, "encrypted_password" varchar DEFAULT '' NOT NULL, "reset_password_token" varchar, "reset_password_sent_at" datetime, "remember_created_at" datetime, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" datetime, "last_sign_in_at" datetime, "current_sign_in_ip" varchar, "last_sign_in_ip" varchar)[0m
+  [1m[35m (259.3ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+[0m
+  [1m[35m (169.1ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  [1m[35m (220.5ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (194.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES ('20160901141503')[0m
+  [1m[35m (251.2ms)[0m  [1m[32mINSERT INTO schema_migrations (version) VALUES ('20160901132138'), ('20160716131956'), ('20160901132638'), ('20160901132141'), ('20160901135959'), ('20160716131435'), ('20160706130211'), ('20160901141330'), ('20160706130210'), ('20160706144338'), ('20160712065628'), ('20160706130351');
+
+[0m
+  [1m[35m (157.1ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", 2016-09-08 09:50:09 UTC], ["updated_at", 2016-09-08 09:50:09 UTC]]
+  [1m[35m (129.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (101.6ms)[0m  [1m[35mCREATE TABLE "active_admin_comments" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "namespace" varchar, "body" text, "resource_id" varchar NOT NULL, "resource_type" varchar NOT NULL, "author_type" varchar, "author_id" integer, "created_at" datetime, "updated_at" datetime)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mselect sqlite_version(*)[0m
+  [1m[35m (121.9ms)[0m  [1m[35mCREATE  INDEX "index_active_admin_comments_on_author_type_and_author_id" ON "active_admin_comments" ("author_type", "author_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_active_admin_comments_on_author_type_and_author_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_active_admin_comments_on_author_type_and_author_id' AND type='index'
+[0m
+  [1m[35m (111.1ms)[0m  [1m[35mCREATE  INDEX "index_active_admin_comments_on_namespace" ON "active_admin_comments" ("namespace")[0m
+  [1m[35m (0.3ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_active_admin_comments_on_namespace' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_active_admin_comments_on_namespace' AND type='index'
+[0m
+  [1m[35m (0.3ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_active_admin_comments_on_author_type_and_author_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_active_admin_comments_on_author_type_and_author_id' AND type='index'
+[0m
+  [1m[35m (121.7ms)[0m  [1m[35mCREATE  INDEX "index_active_admin_comments_on_resource_type_and_resource_id" ON "active_admin_comments" ("resource_type", "resource_id")[0m
+  [1m[35m (130.3ms)[0m  [1m[35mCREATE TABLE "admin_users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar DEFAULT '' NOT NULL, "encrypted_password" varchar DEFAULT '' NOT NULL, "reset_password_token" varchar, "reset_password_sent_at" datetime, "remember_created_at" datetime, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" datetime, "last_sign_in_at" datetime, "current_sign_in_ip" varchar, "last_sign_in_ip" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "name" varchar, "phone" varchar, "address" varchar)[0m
+  [1m[35m (155.2ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_admin_users_on_email" ON "admin_users" ("email")[0m
+  [1m[35m (0.3ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_admin_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_admin_users_on_email' AND type='index'
+[0m
+  [1m[35m (165.6ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_admin_users_on_reset_password_token" ON "admin_users" ("reset_password_token")[0m
+  [1m[35m (134.3ms)[0m  [1m[35mCREATE TABLE "carts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "dishes" text, "cur_rest" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (190.2ms)[0m  [1m[35mCREATE TABLE "categories" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "rest_id" integer)[0m
+  [1m[35m (166.3ms)[0m  [1m[35mCREATE  INDEX "index_categories_on_rest_id" ON "categories" ("rest_id")[0m
+  [1m[35m (131.9ms)[0m  [1m[35mCREATE TABLE "dishes" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "price" float, "description" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "counter" integer, "rest_id" integer, "category_id" integer)[0m
+  [1m[35m (145.2ms)[0m  [1m[35mCREATE  INDEX "index_dishes_on_category_id" ON "dishes" ("category_id")[0m
+  [1m[35m (0.3ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_dishes_on_category_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_dishes_on_category_id' AND type='index'
+[0m
+  [1m[35m (143.3ms)[0m  [1m[35mCREATE  INDEX "index_dishes_on_rest_id" ON "dishes" ("rest_id")[0m
+  [1m[35m (162.6ms)[0m  [1m[35mCREATE TABLE "rests" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "image" varchar, "description" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "image_file_name" varchar, "image_content_type" varchar, "image_file_size" integer, "image_updated_at" datetime)[0m
+  [1m[35m (157.1ms)[0m  [1m[35mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "phone" varchar, "address" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "email" varchar DEFAULT '' NOT NULL, "encrypted_password" varchar DEFAULT '' NOT NULL, "reset_password_token" varchar, "reset_password_sent_at" datetime, "remember_created_at" datetime, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" datetime, "last_sign_in_at" datetime, "current_sign_in_ip" varchar, "last_sign_in_ip" varchar)[0m
+  [1m[35m (122.6ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (0.3ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+[0m
+  [1m[35m (109.3ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  [1m[35m (122.4ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (121.9ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES ('20160901141503')[0m
+  [1m[35m (133.5ms)[0m  [1m[32mINSERT INTO schema_migrations (version) VALUES ('20160901132138'), ('20160716131956'), ('20160901132638'), ('20160901132141'), ('20160901135959'), ('20160716131435'), ('20160706130211'), ('20160901141330'), ('20160706130210'), ('20160706144338'), ('20160712065628'), ('20160706130351');
+
+[0m
+  [1m[35m (150.2ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", 2016-09-08 09:50:12 UTC], ["updated_at", 2016-09-08 09:50:12 UTC]]
+  [1m[35m (145.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mAdminUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "admin_users" WHERE "admin_users"."email" = ? LIMIT ?[0m  [["email", "admin@example.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "admin_users" ("email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["email", "admin@example.com"], ["encrypted_password", "$2a$11$7OxUVcum20YPvyLLy9sHKu2KacOWtxMK8ZoS5HQBX9WfTpZb5uco2"], ["created_at", 2016-09-08 09:50:12 UTC], ["updated_at", 2016-09-08 09:50:12 UTC]]
+  [1m[35m (139.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", :environment]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", :environment]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", :environment]]
+  [1m[35m (198.1ms)[0m  [1m[35mCREATE TABLE "active_admin_comments" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "namespace" varchar, "body" text, "resource_id" varchar NOT NULL, "resource_type" varchar NOT NULL, "author_type" varchar, "author_id" integer, "created_at" datetime, "updated_at" datetime)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mselect sqlite_version(*)[0m
+  [1m[35m (112.0ms)[0m  [1m[35mCREATE  INDEX "index_active_admin_comments_on_author_type_and_author_id" ON "active_admin_comments" ("author_type", "author_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_active_admin_comments_on_author_type_and_author_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_active_admin_comments_on_author_type_and_author_id' AND type='index'
+[0m
+  [1m[35m (143.5ms)[0m  [1m[35mCREATE  INDEX "index_active_admin_comments_on_namespace" ON "active_admin_comments" ("namespace")[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_active_admin_comments_on_namespace' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_active_admin_comments_on_namespace' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_active_admin_comments_on_author_type_and_author_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_active_admin_comments_on_author_type_and_author_id' AND type='index'
+[0m
+  [1m[35m (144.2ms)[0m  [1m[35mCREATE  INDEX "index_active_admin_comments_on_resource_type_and_resource_id" ON "active_admin_comments" ("resource_type", "resource_id")[0m
+  [1m[35m (149.7ms)[0m  [1m[35mCREATE TABLE "admin_users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar DEFAULT '' NOT NULL, "encrypted_password" varchar DEFAULT '' NOT NULL, "reset_password_token" varchar, "reset_password_sent_at" datetime, "remember_created_at" datetime, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" datetime, "last_sign_in_at" datetime, "current_sign_in_ip" varchar, "last_sign_in_ip" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "name" varchar, "phone" varchar, "address" varchar)[0m
+  [1m[35m (156.5ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_admin_users_on_email" ON "admin_users" ("email")[0m
+  [1m[35m (0.3ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_admin_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_admin_users_on_email' AND type='index'
+[0m
+  [1m[35m (175.4ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_admin_users_on_reset_password_token" ON "admin_users" ("reset_password_token")[0m
+  [1m[35m (142.8ms)[0m  [1m[35mCREATE TABLE "carts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "dishes" text, "cur_rest" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (132.6ms)[0m  [1m[35mCREATE TABLE "categories" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "rest_id" integer)[0m
+  [1m[35m (134.4ms)[0m  [1m[35mCREATE  INDEX "index_categories_on_rest_id" ON "categories" ("rest_id")[0m
+  [1m[35m (154.0ms)[0m  [1m[35mCREATE TABLE "dishes" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "price" float, "description" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "counter" integer, "rest_id" integer, "category_id" integer)[0m
+  [1m[35m (144.5ms)[0m  [1m[35mCREATE  INDEX "index_dishes_on_category_id" ON "dishes" ("category_id")[0m
+  [1m[35m (0.2ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_dishes_on_category_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_dishes_on_category_id' AND type='index'
+[0m
+  [1m[35m (143.9ms)[0m  [1m[35mCREATE  INDEX "index_dishes_on_rest_id" ON "dishes" ("rest_id")[0m
+  [1m[35m (131.3ms)[0m  [1m[35mCREATE TABLE "rests" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "image" varchar, "description" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "image_file_name" varchar, "image_content_type" varchar, "image_file_size" integer, "image_updated_at" datetime)[0m
+  [1m[35m (196.3ms)[0m  [1m[35mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "phone" varchar, "address" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "email" varchar DEFAULT '' NOT NULL, "encrypted_password" varchar DEFAULT '' NOT NULL, "reset_password_token" varchar, "reset_password_sent_at" datetime, "remember_created_at" datetime, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" datetime, "last_sign_in_at" datetime, "current_sign_in_ip" varchar, "last_sign_in_ip" varchar)[0m
+  [1m[35m (204.2ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+[0m
+  [1m[35m (133.1ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  [1m[35m (123.2ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (132.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES ('20160901141503')[0m
+  [1m[35m (124.2ms)[0m  [1m[32mINSERT INTO schema_migrations (version) VALUES ('20160901132138'), ('20160716131956'), ('20160901132638'), ('20160901132141'), ('20160901135959'), ('20160716131435'), ('20160706130211'), ('20160901141330'), ('20160706130210'), ('20160706144338'), ('20160712065628'), ('20160706130351');
+
+[0m
+  [1m[35m (131.9ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", 2016-09-08 09:50:46 UTC], ["updated_at", 2016-09-08 09:50:46 UTC]]
+  [1m[35m (146.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (148.1ms)[0m  [1m[35mCREATE TABLE "active_admin_comments" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "namespace" varchar, "body" text, "resource_id" varchar NOT NULL, "resource_type" varchar NOT NULL, "author_type" varchar, "author_id" integer, "created_at" datetime, "updated_at" datetime)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mselect sqlite_version(*)[0m
+  [1m[35m (154.0ms)[0m  [1m[35mCREATE  INDEX "index_active_admin_comments_on_author_type_and_author_id" ON "active_admin_comments" ("author_type", "author_id")[0m
+  [1m[35m (0.3ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_active_admin_comments_on_author_type_and_author_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_active_admin_comments_on_author_type_and_author_id' AND type='index'
+[0m
+  [1m[35m (133.6ms)[0m  [1m[35mCREATE  INDEX "index_active_admin_comments_on_namespace" ON "active_admin_comments" ("namespace")[0m
+  [1m[35m (0.2ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_active_admin_comments_on_namespace' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_active_admin_comments_on_namespace' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_active_admin_comments_on_author_type_and_author_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_active_admin_comments_on_author_type_and_author_id' AND type='index'
+[0m
+  [1m[35m (142.8ms)[0m  [1m[35mCREATE  INDEX "index_active_admin_comments_on_resource_type_and_resource_id" ON "active_admin_comments" ("resource_type", "resource_id")[0m
+  [1m[35m (152.9ms)[0m  [1m[35mCREATE TABLE "admin_users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar DEFAULT '' NOT NULL, "encrypted_password" varchar DEFAULT '' NOT NULL, "reset_password_token" varchar, "reset_password_sent_at" datetime, "remember_created_at" datetime, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" datetime, "last_sign_in_at" datetime, "current_sign_in_ip" varchar, "last_sign_in_ip" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "name" varchar, "phone" varchar, "address" varchar)[0m
+  [1m[35m (172.1ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_admin_users_on_email" ON "admin_users" ("email")[0m
+  [1m[35m (0.2ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_admin_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_admin_users_on_email' AND type='index'
+[0m
+  [1m[35m (151.4ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_admin_users_on_reset_password_token" ON "admin_users" ("reset_password_token")[0m
+  [1m[35m (144.3ms)[0m  [1m[35mCREATE TABLE "carts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "dishes" text, "cur_rest" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (154.5ms)[0m  [1m[35mCREATE TABLE "categories" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "rest_id" integer)[0m
+  [1m[35m (144.0ms)[0m  [1m[35mCREATE  INDEX "index_categories_on_rest_id" ON "categories" ("rest_id")[0m
+  [1m[35m (165.7ms)[0m  [1m[35mCREATE TABLE "dishes" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "price" float, "description" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "counter" integer, "rest_id" integer, "category_id" integer)[0m
+  [1m[35m (122.1ms)[0m  [1m[35mCREATE  INDEX "index_dishes_on_category_id" ON "dishes" ("category_id")[0m
+  [1m[35m (0.3ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_dishes_on_category_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_dishes_on_category_id' AND type='index'
+[0m
+  [1m[35m (144.7ms)[0m  [1m[35mCREATE  INDEX "index_dishes_on_rest_id" ON "dishes" ("rest_id")[0m
+  [1m[35m (142.6ms)[0m  [1m[35mCREATE TABLE "rests" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "image" varchar, "description" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "image_file_name" varchar, "image_content_type" varchar, "image_file_size" integer, "image_updated_at" datetime)[0m
+  [1m[35m (165.4ms)[0m  [1m[35mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "phone" varchar, "address" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "email" varchar DEFAULT '' NOT NULL, "encrypted_password" varchar DEFAULT '' NOT NULL, "reset_password_token" varchar, "reset_password_sent_at" datetime, "remember_created_at" datetime, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" datetime, "last_sign_in_at" datetime, "current_sign_in_ip" varchar, "last_sign_in_ip" varchar)[0m
+  [1m[35m (122.4ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (0.2ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+[0m
+  [1m[35m (132.4ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  [1m[35m (144.9ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (132.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES ('20160901141503')[0m
+  [1m[35m (134.4ms)[0m  [1m[32mINSERT INTO schema_migrations (version) VALUES ('20160901132138'), ('20160716131956'), ('20160901132638'), ('20160901132141'), ('20160901135959'), ('20160716131435'), ('20160706130211'), ('20160901141330'), ('20160706130210'), ('20160706144338'), ('20160712065628'), ('20160706130351');
+
+[0m
+  [1m[35m (144.7ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", 2016-09-08 09:50:49 UTC], ["updated_at", 2016-09-08 09:50:49 UTC]]
+  [1m[35m (116.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mAdminUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "admin_users" WHERE "admin_users"."email" = ? LIMIT ?[0m  [["email", "admin@example.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "admin_users" ("email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["email", "admin@example.com"], ["encrypted_password", "$2a$11$cW7QoSuCwSVSbNhAC3bsdu3Y4tZyXvMZ61mMgHk5okKKu6yPQ3lSK"], ["created_at", 2016-09-08 09:50:50 UTC], ["updated_at", 2016-09-08 09:50:50 UTC]]
+  [1m[35m (122.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "lorem@example.com"], ["LIMIT", 1]]
+  [1m[35mSQL (1.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "phone", "address", "created_at", "updated_at", "email", "encrypted_password") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Lorem"], ["phone", "+663238674"], ["address", "5753 Logan Fields"], ["created_at", 2016-09-08 09:50:50 UTC], ["updated_at", 2016-09-08 09:50:50 UTC], ["email", "lorem@example.com"], ["encrypted_password", "$2a$11$nQ1ZPWHsIpCRuL6QB1RdE.9FNx/iajyPzKdDXxGf9GG5qZVusIgt2"]]
+  [1m[35m (153.7ms)[0m  [1m[36mcommit transaction[0m
+Command :: file -b --mime '/tmp/2ea68374d06f7593b4c2414d15ab135520160908-25017-6obi4j.png'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/2ea68374d06f7593b4c2414d15ab135520160908-25017-1gc7nse.png[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/2ea68374d06f7593b4c2414d15ab135520160908-25017-1gc7nse.png[0]'
+Command :: convert '/tmp/2ea68374d06f7593b4c2414d15ab135520160908-25017-1gc7nse.png[0]' -auto-orient -resize "300x300" '/tmp/ef045fe56ff164a2fe504f90a92618ec20160908-25017-14s4wle'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/2ea68374d06f7593b4c2414d15ab135520160908-25017-1gc7nse.png[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/2ea68374d06f7593b4c2414d15ab135520160908-25017-1gc7nse.png[0]'
+Command :: convert '/tmp/2ea68374d06f7593b4c2414d15ab135520160908-25017-1gc7nse.png[0]' -auto-orient -resize "100x100" '/tmp/ef045fe56ff164a2fe504f90a92618ec20160908-25017-1uvs0r7'
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+Command :: file -b --mime '/tmp/2ea68374d06f7593b4c2414d15ab135520160908-25017-hze6w3.png'
+  [1m[35mSQL (1.2ms)[0m  [1m[32mINSERT INTO "rests" ("title", "description", "created_at", "updated_at", "image_file_name", "image_content_type", "image_file_size", "image_updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Baraszek"], ["description", "[\"Qui iure distinctio nobis expedita vel quo.\", \"Sunt sed ut explicabo aliquid.\", \"Et dolorem harum sunt et ipsam optio.\"]"], ["created_at", 2016-09-08 09:50:54 UTC], ["updated_at", 2016-09-08 09:50:54 UTC], ["image_file_name", "quidemnemoaut.png"], ["image_content_type", "image/png"], ["image_file_size", 27773], ["image_updated_at", 2016-09-08 09:50:53 UTC]]
+  [1m[35m (145.1ms)[0m  [1m[36mcommit transaction[0m
+Command :: file -b --mime '/tmp/4d3c92fe2b90ffad3b5c79cc410d9e0d20160908-25017-61vjyv.png'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/4d3c92fe2b90ffad3b5c79cc410d9e0d20160908-25017-1n0nvyv.png[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/4d3c92fe2b90ffad3b5c79cc410d9e0d20160908-25017-1n0nvyv.png[0]'
+Command :: convert '/tmp/4d3c92fe2b90ffad3b5c79cc410d9e0d20160908-25017-1n0nvyv.png[0]' -auto-orient -resize "300x300" '/tmp/466abf49b9f2d728cc8ef070cbc83ee920160908-25017-10zgs40'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/4d3c92fe2b90ffad3b5c79cc410d9e0d20160908-25017-1n0nvyv.png[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/4d3c92fe2b90ffad3b5c79cc410d9e0d20160908-25017-1n0nvyv.png[0]'
+Command :: convert '/tmp/4d3c92fe2b90ffad3b5c79cc410d9e0d20160908-25017-1n0nvyv.png[0]' -auto-orient -resize "100x100" '/tmp/466abf49b9f2d728cc8ef070cbc83ee920160908-25017-1om9wkj'
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+Command :: file -b --mime '/tmp/4d3c92fe2b90ffad3b5c79cc410d9e0d20160908-25017-55ze68.png'
+  [1m[35mSQL (1.1ms)[0m  [1m[32mINSERT INTO "rests" ("title", "description", "created_at", "updated_at", "image_file_name", "image_content_type", "image_file_size", "image_updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["title", "repellendus"], ["description", "[\"Est qui et vero in.\", \"Deserunt possimus enim voluptatem vel veniam quisquam.\", \"Aut quo ut.\"]"], ["created_at", 2016-09-08 09:50:55 UTC], ["updated_at", 2016-09-08 09:50:55 UTC], ["image_file_name", "my-own-slug.png"], ["image_content_type", "image/png"], ["image_file_size", 36770], ["image_updated_at", 2016-09-08 09:50:55 UTC]]
+  [1m[35m (150.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "categories" ("title", "created_at", "updated_at", "rest_id") VALUES (?, ?, ?, ?)[0m  [["title", "omnis"], ["created_at", 2016-09-08 09:50:55 UTC], ["updated_at", 2016-09-08 09:50:55 UTC], ["rest_id", 1]]
+  [1m[35m (143.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "categories" ("title", "created_at", "updated_at", "rest_id") VALUES (?, ?, ?, ?)[0m  [["title", "impedit"], ["created_at", 2016-09-08 09:50:56 UTC], ["updated_at", 2016-09-08 09:50:56 UTC], ["rest_id", 1]]
+  [1m[35m (141.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "categories" ("title", "created_at", "updated_at", "rest_id") VALUES (?, ?, ?, ?)[0m  [["title", "distinctio"], ["created_at", 2016-09-08 09:50:56 UTC], ["updated_at", 2016-09-08 09:50:56 UTC], ["rest_id", 1]]
+  [1m[35m (140.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "categories" ("title", "created_at", "updated_at", "rest_id") VALUES (?, ?, ?, ?)[0m  [["title", "quas"], ["created_at", 2016-09-08 09:50:56 UTC], ["updated_at", 2016-09-08 09:50:56 UTC], ["rest_id", 2]]
+  [1m[35m (152.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "categories" ("title", "created_at", "updated_at", "rest_id") VALUES (?, ?, ?, ?)[0m  [["title", "aut"], ["created_at", 2016-09-08 09:50:56 UTC], ["updated_at", 2016-09-08 09:50:56 UTC], ["rest_id", 2]]
+  [1m[35m (143.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "dishes" ("title", "price", "description", "created_at", "updated_at", "counter", "rest_id", "category_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["title", "ab"], ["price", 447.0], ["description", "Et molestiae facilis quis omnis asperiores."], ["created_at", 2016-09-08 09:50:56 UTC], ["updated_at", 2016-09-08 09:50:56 UTC], ["counter", 0], ["rest_id", 1], ["category_id", 1]]
+  [1m[35m (139.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "dishes" ("title", "price", "description", "created_at", "updated_at", "counter", "rest_id", "category_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["title", "sapiente"], ["price", 360.0], ["description", "Cumque reprehenderit recusandae ut corporis."], ["created_at", 2016-09-08 09:50:56 UTC], ["updated_at", 2016-09-08 09:50:56 UTC], ["counter", 0], ["rest_id", 1], ["category_id", 1]]
+  [1m[35m (140.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "dishes" ("title", "price", "description", "created_at", "updated_at", "counter", "rest_id", "category_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["title", "reprehenderit"], ["price", 977.0], ["description", "Saepe natus ut eius dignissimos pariatur sint."], ["created_at", 2016-09-08 09:50:56 UTC], ["updated_at", 2016-09-08 09:50:56 UTC], ["counter", 0], ["rest_id", 1], ["category_id", 1]]
+  [1m[35m (160.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "dishes" ("title", "price", "description", "created_at", "updated_at", "counter", "rest_id", "category_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["title", "atque"], ["price", 780.0], ["description", "Quisquam molestiae ea autem eos consequatur."], ["created_at", 2016-09-08 09:50:57 UTC], ["updated_at", 2016-09-08 09:50:57 UTC], ["counter", 0], ["rest_id", 1], ["category_id", 2]]
+  [1m[35m (140.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "dishes" ("title", "price", "description", "created_at", "updated_at", "counter", "rest_id", "category_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["title", "soluta"], ["price", 591.0], ["description", "Distinctio ut velit odit nam aut temporibus ut rem."], ["created_at", 2016-09-08 09:50:57 UTC], ["updated_at", 2016-09-08 09:50:57 UTC], ["counter", 0], ["rest_id", 1], ["category_id", 2]]
+  [1m[35m (170.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "dishes" ("title", "price", "description", "created_at", "updated_at", "counter", "rest_id", "category_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["title", "consequuntur"], ["price", 399.0], ["description", "Excepturi quas optio pariatur fuga ducimus qui dolorem."], ["created_at", 2016-09-08 09:50:57 UTC], ["updated_at", 2016-09-08 09:50:57 UTC], ["counter", 0], ["rest_id", 1], ["category_id", 3]]
+  [1m[35m (132.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "dishes" ("title", "price", "description", "created_at", "updated_at", "counter", "rest_id", "category_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["title", "voluptas"], ["price", 333.0], ["description", "Molestias eaque quis exercitationem vitae maiores aliquam."], ["created_at", 2016-09-08 09:50:57 UTC], ["updated_at", 2016-09-08 09:50:57 UTC], ["counter", 0], ["rest_id", 2], ["category_id", 4]]
+  [1m[35m (164.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "dishes" ("title", "price", "description", "created_at", "updated_at", "counter", "rest_id", "category_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["title", "et"], ["price", 172.0], ["description", "Nemo aspernatur doloremque rem similique."], ["created_at", 2016-09-08 09:50:57 UTC], ["updated_at", 2016-09-08 09:50:57 UTC], ["counter", 0], ["rest_id", 2], ["category_id", 4]]
+  [1m[35m (127.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "dishes" ("title", "price", "description", "created_at", "updated_at", "counter", "rest_id", "category_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["title", "ut"], ["price", 804.0], ["description", "Ea nesciunt voluptatem explicabo porro."], ["created_at", 2016-09-08 09:50:57 UTC], ["updated_at", 2016-09-08 09:50:57 UTC], ["counter", 0], ["rest_id", 2], ["category_id", 5]]
+  [1m[35m (154.0ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/" for 127.0.0.1 at 2016-09-08 16:09:00 +0600
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PagesController#rests as HTML
+  Rendering pages/rests.html.erb within layouts/application
+  [1m[36mRest Load (0.4ms)[0m  [1m[34mSELECT "rests".* FROM "rests"[0m
+  Rendered pages/_cart.html.erb (5.1ms)
+  Rendered pages/rests.html.erb within layouts/application (32.0ms)
+Completed 200 OK in 1410ms (Views: 1324.0ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-09-08 16:09:18 +0600
+Processing by PagesController#rests as HTML
+  Rendering pages/rests.html.erb within layouts/application
+  [1m[36mRest Load (0.6ms)[0m  [1m[34mSELECT "rests".* FROM "rests"[0m
+  Rendered pages/_cart.html.erb (1.3ms)
+  Rendered pages/rests.html.erb within layouts/application (6.4ms)
+Completed 200 OK in 162ms (Views: 159.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/1" for 127.0.0.1 at 2016-09-08 16:09:19 +0600
+Processing by PagesController#dishes as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRest Load (0.7ms)[0m  [1m[34mSELECT  "rests".* FROM "rests" WHERE "rests"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."rest_id" = ?[0m  [["rest_id", 1]]
+  Rendering pages/dishes.html.erb within layouts/application
+  [1m[36mDish Load (0.3ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."category_id" = ?[0m  [["category_id", 1]]
+  [1m[36mDish Load (0.2ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."category_id" = ?[0m  [["category_id", 2]]
+  [1m[36mDish Load (0.1ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."category_id" = ?[0m  [["category_id", 3]]
+  Rendered pages/_cart.html.erb (1.9ms)
+  Rendered pages/dishes.html.erb within layouts/application (35.4ms)
+Completed 200 OK in 362ms (Views: 215.2ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/2" for 127.0.0.1 at 2016-09-08 16:09:28 +0600
+Processing by PagesController#dishes as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mRest Load (0.4ms)[0m  [1m[34mSELECT  "rests".* FROM "rests" WHERE "rests"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."rest_id" = ?[0m  [["rest_id", 2]]
+  Rendering pages/dishes.html.erb within layouts/application
+  [1m[36mDish Load (0.3ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."category_id" = ?[0m  [["category_id", 4]]
+  [1m[36mDish Load (0.1ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."category_id" = ?[0m  [["category_id", 5]]
+  Rendered pages/_cart.html.erb (0.9ms)
+  Rendered pages/dishes.html.erb within layouts/application (6.8ms)
+Completed 200 OK in 178ms (Views: 171.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-09-08 16:09:41 +0600
+Processing by PagesController#rests as HTML
+  Rendering pages/rests.html.erb within layouts/application
+  [1m[36mRest Load (0.7ms)[0m  [1m[34mSELECT "rests".* FROM "rests"[0m
+  Rendered pages/_cart.html.erb (1.2ms)
+  Rendered pages/rests.html.erb within layouts/application (6.3ms)
+Completed 200 OK in 178ms (Views: 176.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/1" for 127.0.0.1 at 2016-09-08 16:09:43 +0600
+Processing by PagesController#dishes as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRest Load (1.1ms)[0m  [1m[34mSELECT  "rests".* FROM "rests" WHERE "rests"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."rest_id" = ?[0m  [["rest_id", 1]]
+  Rendering pages/dishes.html.erb within layouts/application
+  [1m[36mDish Load (0.5ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."category_id" = ?[0m  [["category_id", 1]]
+  [1m[36mDish Load (0.4ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."category_id" = ?[0m  [["category_id", 2]]
+  [1m[36mDish Load (0.4ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."category_id" = ?[0m  [["category_id", 3]]
+  Rendered pages/_cart.html.erb (2.0ms)
+  Rendered pages/dishes.html.erb within layouts/application (18.2ms)
+Completed 200 OK in 154ms (Views: 145.7ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/2" for 127.0.0.1 at 2016-09-08 16:09:47 +0600
+Processing by PagesController#dishes as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mRest Load (0.2ms)[0m  [1m[34mSELECT  "rests".* FROM "rests" WHERE "rests"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."rest_id" = ?[0m  [["rest_id", 2]]
+  Rendering pages/dishes.html.erb within layouts/application
+  [1m[36mDish Load (0.2ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."category_id" = ?[0m  [["category_id", 4]]
+  [1m[36mDish Load (0.2ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."category_id" = ?[0m  [["category_id", 5]]
+  Rendered pages/_cart.html.erb (1.1ms)
+  Rendered pages/dishes.html.erb within layouts/application (8.1ms)
+Completed 200 OK in 198ms (Views: 190.9ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2016-09-08 16:09:52 +0600
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.9ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (68.1ms)
+Completed 200 OK in 299ms (Views: 237.9ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2016-09-08 16:10:07 +0600
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"hTZI4kYsiYXLbXqkTiZkVEmGFATxbFA9nWDsP62WOuq5n3ilri88EmujdSOJrPjgGHaIgywuaXvXMqfzOKcvvA==", "user"=>{"email"=>"lorem@example.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "lorem@example.com"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (3.5ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = ?, "last_sign_in_at" = ?, "current_sign_in_ip" = ?, "last_sign_in_ip" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["current_sign_in_at", 2016-09-08 10:10:08 UTC], ["last_sign_in_at", 2016-09-08 10:10:08 UTC], ["current_sign_in_ip", "127.0.0.1"], ["last_sign_in_ip", "127.0.0.1"], ["sign_in_count", 1], ["updated_at", 2016-09-08 10:10:08 UTC], ["id", 1]]
+  [1m[35m (142.2ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 447ms (ActiveRecord: 146.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-09-08 16:10:08 +0600
+Processing by PagesController#rests as HTML
+  Rendering pages/rests.html.erb within layouts/application
+  [1m[36mRest Load (0.3ms)[0m  [1m[34mSELECT "rests".* FROM "rests"[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mDish Load (0.3ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes"[0m
+  Rendered pages/_cart.html.erb (5.8ms)
+  Rendered pages/rests.html.erb within layouts/application (11.1ms)
+Completed 200 OK in 168ms (Views: 165.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/1" for 127.0.0.1 at 2016-09-08 16:10:12 +0600
+Processing by PagesController#dishes as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRest Load (0.4ms)[0m  [1m[34mSELECT  "rests".* FROM "rests" WHERE "rests"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."rest_id" = ?[0m  [["rest_id", 1]]
+  Rendering pages/dishes.html.erb within layouts/application
+  [1m[36mDish Load (0.4ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."category_id" = ?[0m  [["category_id", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mDish Load (0.3ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."category_id" = ?[0m  [["category_id", 2]]
+  [1m[36mDish Load (0.1ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."category_id" = ?[0m  [["category_id", 3]]
+  [1m[36mDish Load (0.2ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes"[0m
+  Rendered pages/_cart.html.erb (2.0ms)
+  Rendered pages/dishes.html.erb within layouts/application (12.7ms)
+Completed 200 OK in 176ms (Views: 160.3ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/pages/adder.6" for 127.0.0.1 at 2016-09-08 16:10:15 +0600
+Processing by PagesController#adder as 
+  [1m[36mCart Load (0.2ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" ORDER BY "carts"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "carts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", 2016-09-08 10:10:15 UTC], ["updated_at", 2016-09-08 10:10:15 UTC]]
+  [1m[35m (98.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mCart Load (0.4ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" ORDER BY "carts"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mDish Load (0.3ms)[0m  [1m[34mSELECT  "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mRest Load (0.2ms)[0m  [1m[34mSELECT  "rests".* FROM "rests" WHERE "rests"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "carts" SET "cur_rest" = ?, "updated_at" = ? WHERE "carts"."id" = ?[0m  [["cur_rest", 1], ["updated_at", 2016-09-08 10:10:16 UTC], ["id", 1]]
+  [1m[35m (120.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "dishes" SET "counter" = ?, "updated_at" = ? WHERE "dishes"."id" = ?[0m  [["counter", 1], ["updated_at", 2016-09-08 10:10:16 UTC], ["id", 6]]
+  [1m[35m (118.5ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/1
+Completed 302 Found in 400ms (ActiveRecord: 342.0ms)
+
+
+Started GET "/1" for 127.0.0.1 at 2016-09-08 16:10:16 +0600
+Processing by PagesController#dishes as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRest Load (0.2ms)[0m  [1m[34mSELECT  "rests".* FROM "rests" WHERE "rests"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."rest_id" = ?[0m  [["rest_id", 1]]
+  Rendering pages/dishes.html.erb within layouts/application
+  [1m[36mDish Load (0.3ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."category_id" = ?[0m  [["category_id", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mDish Load (0.2ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."category_id" = ?[0m  [["category_id", 2]]
+  [1m[36mDish Load (0.2ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."category_id" = ?[0m  [["category_id", 3]]
+  [1m[36mDish Load (0.4ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes"[0m
+  Rendered pages/_cart.html.erb (4.3ms)
+  Rendered pages/dishes.html.erb within layouts/application (20.8ms)
+Completed 200 OK in 210ms (Views: 202.4ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/pages/adder.5" for 127.0.0.1 at 2016-09-08 16:10:18 +0600
+Processing by PagesController#adder as 
+  [1m[36mCart Load (0.8ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" ORDER BY "carts"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" ORDER BY "carts"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mDish Load (0.4ms)[0m  [1m[34mSELECT  "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mRest Load (0.4ms)[0m  [1m[34mSELECT  "rests".* FROM "rests" WHERE "rests"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.2ms)[0m  [1m[33mUPDATE "dishes" SET "counter" = ?, "updated_at" = ? WHERE "dishes"."id" = ?[0m  [["counter", 1], ["updated_at", 2016-09-08 10:10:18 UTC], ["id", 5]]
+  [1m[35m (256.5ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/1
+Completed 302 Found in 271ms (ActiveRecord: 259.6ms)
+
+
+Started GET "/1" for 127.0.0.1 at 2016-09-08 16:10:18 +0600
+Processing by PagesController#dishes as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRest Load (0.4ms)[0m  [1m[34mSELECT  "rests".* FROM "rests" WHERE "rests"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."rest_id" = ?[0m  [["rest_id", 1]]
+  Rendering pages/dishes.html.erb within layouts/application
+  [1m[36mDish Load (0.4ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."category_id" = ?[0m  [["category_id", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mDish Load (0.2ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."category_id" = ?[0m  [["category_id", 2]]
+  [1m[36mDish Load (0.1ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."category_id" = ?[0m  [["category_id", 3]]
+  [1m[36mDish Load (0.3ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes"[0m
+  Rendered pages/_cart.html.erb (2.7ms)
+  Rendered pages/dishes.html.erb within layouts/application (14.1ms)
+Completed 200 OK in 169ms (Views: 162.6ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/pages/adder.3" for 127.0.0.1 at 2016-09-08 16:10:22 +0600
+Processing by PagesController#adder as 
+  [1m[36mCart Load (0.4ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" ORDER BY "carts"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" ORDER BY "carts"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mDish Load (0.4ms)[0m  [1m[34mSELECT  "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mRest Load (0.3ms)[0m  [1m[34mSELECT  "rests".* FROM "rests" WHERE "rests"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.1ms)[0m  [1m[33mUPDATE "dishes" SET "counter" = ?, "updated_at" = ? WHERE "dishes"."id" = ?[0m  [["counter", 1], ["updated_at", 2016-09-08 10:10:22 UTC], ["id", 3]]
+  [1m[35m (179.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/1
+Completed 302 Found in 192ms (ActiveRecord: 181.5ms)
+
+
+Started GET "/1" for 127.0.0.1 at 2016-09-08 16:10:23 +0600
+Processing by PagesController#dishes as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRest Load (0.2ms)[0m  [1m[34mSELECT  "rests".* FROM "rests" WHERE "rests"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."rest_id" = ?[0m  [["rest_id", 1]]
+  Rendering pages/dishes.html.erb within layouts/application
+  [1m[36mDish Load (0.3ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."category_id" = ?[0m  [["category_id", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mDish Load (0.2ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."category_id" = ?[0m  [["category_id", 2]]
+  [1m[36mDish Load (0.2ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."category_id" = ?[0m  [["category_id", 3]]
+  [1m[36mDish Load (0.4ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes"[0m
+  Rendered pages/_cart.html.erb (4.4ms)
+  Rendered pages/dishes.html.erb within layouts/application (18.1ms)
+Completed 200 OK in 184ms (Views: 175.0ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/pages/adder.1" for 127.0.0.1 at 2016-09-08 16:10:24 +0600
+Processing by PagesController#adder as 
+  [1m[36mCart Load (0.4ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" ORDER BY "carts"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" ORDER BY "carts"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mDish Load (0.3ms)[0m  [1m[34mSELECT  "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mRest Load (0.1ms)[0m  [1m[34mSELECT  "rests".* FROM "rests" WHERE "rests"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "dishes" SET "counter" = ?, "updated_at" = ? WHERE "dishes"."id" = ?[0m  [["counter", 1], ["updated_at", 2016-09-08 10:10:24 UTC], ["id", 1]]
+  [1m[35m (199.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/1
+Completed 302 Found in 210ms (ActiveRecord: 200.3ms)
+
+
+Started GET "/1" for 127.0.0.1 at 2016-09-08 16:10:24 +0600
+Processing by PagesController#dishes as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRest Load (0.2ms)[0m  [1m[34mSELECT  "rests".* FROM "rests" WHERE "rests"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."rest_id" = ?[0m  [["rest_id", 1]]
+  Rendering pages/dishes.html.erb within layouts/application
+  [1m[36mDish Load (0.3ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."category_id" = ?[0m  [["category_id", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mDish Load (0.1ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."category_id" = ?[0m  [["category_id", 2]]
+  [1m[36mDish Load (0.2ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."category_id" = ?[0m  [["category_id", 3]]
+  [1m[36mDish Load (0.3ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes"[0m
+  Rendered pages/_cart.html.erb (3.0ms)
+  Rendered pages/dishes.html.erb within layouts/application (13.7ms)
+Completed 200 OK in 151ms (Views: 144.1ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/pages/adder.1" for 127.0.0.1 at 2016-09-08 16:10:25 +0600
+Processing by PagesController#adder as 
+  [1m[36mCart Load (0.3ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" ORDER BY "carts"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" ORDER BY "carts"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mDish Load (0.2ms)[0m  [1m[34mSELECT  "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mRest Load (0.1ms)[0m  [1m[34mSELECT  "rests".* FROM "rests" WHERE "rests"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "dishes" SET "counter" = ?, "updated_at" = ? WHERE "dishes"."id" = ?[0m  [["counter", 2], ["updated_at", 2016-09-08 10:10:25 UTC], ["id", 1]]
+  [1m[35m (143.9ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/1
+Completed 302 Found in 157ms (ActiveRecord: 145.5ms)
+
+
+Started GET "/1" for 127.0.0.1 at 2016-09-08 16:10:25 +0600
+Processing by PagesController#dishes as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRest Load (0.2ms)[0m  [1m[34mSELECT  "rests".* FROM "rests" WHERE "rests"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."rest_id" = ?[0m  [["rest_id", 1]]
+  Rendering pages/dishes.html.erb within layouts/application
+  [1m[36mDish Load (0.2ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."category_id" = ?[0m  [["category_id", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mDish Load (0.1ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."category_id" = ?[0m  [["category_id", 2]]
+  [1m[36mDish Load (0.1ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."category_id" = ?[0m  [["category_id", 3]]
+  [1m[36mDish Load (0.2ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes"[0m
+  Rendered pages/_cart.html.erb (2.8ms)
+  Rendered pages/dishes.html.erb within layouts/application (13.2ms)
+Completed 200 OK in 155ms (Views: 149.5ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/pages/adder.1" for 127.0.0.1 at 2016-09-08 16:10:26 +0600
+Processing by PagesController#adder as 
+  [1m[36mCart Load (0.3ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" ORDER BY "carts"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" ORDER BY "carts"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mDish Load (0.1ms)[0m  [1m[34mSELECT  "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mRest Load (0.1ms)[0m  [1m[34mSELECT  "rests".* FROM "rests" WHERE "rests"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.3ms)[0m  [1m[33mUPDATE "dishes" SET "counter" = ?, "updated_at" = ? WHERE "dishes"."id" = ?[0m  [["counter", 3], ["updated_at", 2016-09-08 10:10:26 UTC], ["id", 1]]
+  [1m[35m (155.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/1
+Completed 302 Found in 166ms (ActiveRecord: 157.1ms)
+
+
+Started GET "/1" for 127.0.0.1 at 2016-09-08 16:10:26 +0600
+Processing by PagesController#dishes as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRest Load (0.2ms)[0m  [1m[34mSELECT  "rests".* FROM "rests" WHERE "rests"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."rest_id" = ?[0m  [["rest_id", 1]]
+  Rendering pages/dishes.html.erb within layouts/application
+  [1m[36mDish Load (0.2ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."category_id" = ?[0m  [["category_id", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mDish Load (0.2ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."category_id" = ?[0m  [["category_id", 2]]
+  [1m[36mDish Load (0.1ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."category_id" = ?[0m  [["category_id", 3]]
+  [1m[36mDish Load (0.2ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes"[0m
+  Rendered pages/_cart.html.erb (3.0ms)
+  Rendered pages/dishes.html.erb within layouts/application (13.5ms)
+Completed 200 OK in 168ms (Views: 162.9ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-09-08 16:10:28 +0600
+Processing by PagesController#rests as HTML
+  Rendering pages/rests.html.erb within layouts/application
+  [1m[36mRest Load (0.3ms)[0m  [1m[34mSELECT "rests".* FROM "rests"[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mDish Load (0.2ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes"[0m
+  Rendered pages/_cart.html.erb (4.6ms)
+  Rendered pages/rests.html.erb within layouts/application (8.6ms)
+Completed 200 OK in 146ms (Views: 142.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/2" for 127.0.0.1 at 2016-09-08 16:10:31 +0600
+Processing by PagesController#dishes as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mRest Load (0.2ms)[0m  [1m[34mSELECT  "rests".* FROM "rests" WHERE "rests"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."rest_id" = ?[0m  [["rest_id", 2]]
+  Rendering pages/dishes.html.erb within layouts/application
+  [1m[36mDish Load (0.3ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."category_id" = ?[0m  [["category_id", 4]]
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mDish Load (0.2ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."category_id" = ?[0m  [["category_id", 5]]
+  [1m[36mDish Load (0.3ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes"[0m
+  Rendered pages/_cart.html.erb (3.8ms)
+  Rendered pages/dishes.html.erb within layouts/application (18.7ms)
+Completed 200 OK in 218ms (Views: 210.5ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/pages/adder.9" for 127.0.0.1 at 2016-09-08 16:10:36 +0600
+Processing by PagesController#adder as 
+  [1m[36mCart Load (0.3ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" ORDER BY "carts"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" ORDER BY "carts"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mDish Load (0.1ms)[0m  [1m[34mSELECT  "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mRest Load (0.1ms)[0m  [1m[34mSELECT  "rests".* FROM "rests" WHERE "rests"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "carts" WHERE "carts"."id" = ?[0m  [["id", 1]]
+  [1m[35m (121.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "carts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", 2016-09-08 10:10:36 UTC], ["updated_at", 2016-09-08 10:10:36 UTC]]
+  [1m[35m (118.9ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/pages/alldeleter
+Completed 302 Found in 254ms (ActiveRecord: 242.5ms)
+
+
+Started GET "/pages/alldeleter" for 127.0.0.1 at 2016-09-08 16:10:37 +0600
+Processing by PagesController#alldeleter as HTML
+  [1m[36mDish Load (0.4ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "dishes" SET "counter" = ?, "updated_at" = ? WHERE "dishes"."id" = ?[0m  [["counter", 0], ["updated_at", 2016-09-08 10:10:37 UTC], ["id", 1]]
+  [1m[35m (188.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "dishes" SET "counter" = ?, "updated_at" = ? WHERE "dishes"."id" = ?[0m  [["counter", 0], ["updated_at", 2016-09-08 10:10:37 UTC], ["id", 3]]
+  [1m[35m (140.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.8ms)[0m  [1m[33mUPDATE "dishes" SET "counter" = ?, "updated_at" = ? WHERE "dishes"."id" = ?[0m  [["counter", 0], ["updated_at", 2016-09-08 10:10:37 UTC], ["id", 5]]
+  [1m[35m (137.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "dishes" SET "counter" = ?, "updated_at" = ? WHERE "dishes"."id" = ?[0m  [["counter", 0], ["updated_at", 2016-09-08 10:10:37 UTC], ["id", 6]]
+  [1m[35m (139.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mRest Load (0.2ms)[0m  [1m[34mSELECT  "rests".* FROM "rests" WHERE "rests"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/1
+Completed 302 Found in 642ms (ActiveRecord: 610.5ms)
+
+
+Started GET "/1" for 127.0.0.1 at 2016-09-08 16:10:37 +0600
+Processing by PagesController#dishes as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRest Load (0.2ms)[0m  [1m[34mSELECT  "rests".* FROM "rests" WHERE "rests"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."rest_id" = ?[0m  [["rest_id", 1]]
+  Rendering pages/dishes.html.erb within layouts/application
+  [1m[36mDish Load (0.2ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."category_id" = ?[0m  [["category_id", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mDish Load (0.1ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."category_id" = ?[0m  [["category_id", 2]]
+  [1m[36mDish Load (0.2ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."category_id" = ?[0m  [["category_id", 3]]
+  [1m[36mDish Load (0.3ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes"[0m
+  Rendered pages/_cart.html.erb (3.1ms)
+  Rendered pages/dishes.html.erb within layouts/application (17.1ms)
+Completed 200 OK in 208ms (Views: 201.1ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-09-08 16:10:48 +0600
+Processing by PagesController#rests as HTML
+  Rendering pages/rests.html.erb within layouts/application
+  [1m[36mRest Load (0.4ms)[0m  [1m[34mSELECT "rests".* FROM "rests"[0m
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mDish Load (0.4ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes"[0m
+  Rendered pages/_cart.html.erb (6.5ms)
+  Rendered pages/rests.html.erb within layouts/application (15.1ms)
+Completed 200 OK in 203ms (Views: 199.7ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-09-08 16:10:49 +0600
+Processing by PagesController#rests as HTML
+  Rendering pages/rests.html.erb within layouts/application
+  [1m[36mRest Load (0.3ms)[0m  [1m[34mSELECT "rests".* FROM "rests"[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mDish Load (0.3ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes"[0m
+  Rendered pages/_cart.html.erb (4.2ms)
+  Rendered pages/rests.html.erb within layouts/application (9.3ms)
+Completed 200 OK in 147ms (Views: 144.3ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-09-08 16:10:50 +0600
+Processing by PagesController#rests as HTML
+  Rendering pages/rests.html.erb within layouts/application
+  [1m[36mRest Load (0.3ms)[0m  [1m[34mSELECT "rests".* FROM "rests"[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mDish Load (0.2ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes"[0m
+  Rendered pages/_cart.html.erb (4.1ms)
+  Rendered pages/rests.html.erb within layouts/application (8.6ms)
+Completed 200 OK in 166ms (Views: 159.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-09-08 16:10:52 +0600
+Processing by PagesController#rests as HTML
+  Rendering pages/rests.html.erb within layouts/application
+  [1m[36mRest Load (0.4ms)[0m  [1m[34mSELECT "rests".* FROM "rests"[0m
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mDish Load (0.5ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes"[0m
+  Rendered pages/_cart.html.erb (6.1ms)
+  Rendered pages/rests.html.erb within layouts/application (12.5ms)
+Completed 200 OK in 206ms (Views: 202.1ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/users/edit.1" for 127.0.0.1 at 2016-09-08 16:10:54 +0600
+Processing by Devise::RegistrationsController#edit as 
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering devise/registrations/edit.html.erb within layouts/application
+  Rendered shared/_field_errors.html.erb (0.8ms)
+  Rendered shared/_field_errors.html.erb (0.0ms)
+  Rendered shared/_field_errors.html.erb (0.1ms)
+  Rendered shared/_field_errors.html.erb (0.1ms)
+  Rendered shared/_field_errors.html.erb (0.0ms)
+  Rendered shared/_field_errors.html.erb (0.0ms)
+  Rendered shared/_field_errors.html.erb (0.0ms)
+  Rendered devise/registrations/edit.html.erb within layouts/application (80.8ms)
+Completed 200 OK in 289ms (Views: 285.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-09-08 16:11:43 +0600
+Processing by PagesController#rests as HTML
+  Rendering pages/rests.html.erb within layouts/application
+  [1m[36mRest Load (0.3ms)[0m  [1m[34mSELECT "rests".* FROM "rests"[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mDish Load (0.3ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes"[0m
+  Rendered pages/_cart.html.erb (5.8ms)
+  Rendered pages/rests.html.erb within layouts/application (12.4ms)
+Completed 200 OK in 172ms (Views: 168.6ms | ActiveRecord: 1.1ms)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2016-09-08 16:11:48 +0600
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"EqelhJNVCSXDbTAGFNfXlV6EjaGWU2pHzdXKuIoHDNDbO99sSe1M35sNh1gr8yA+5KTcyTKHEki1uJVwxK01CA=="}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 71ms (ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-09-08 16:11:48 +0600
+Processing by PagesController#rests as HTML
+  Rendering pages/rests.html.erb within layouts/application
+  [1m[36mRest Load (0.3ms)[0m  [1m[34mSELECT "rests".* FROM "rests"[0m
+  Rendered pages/_cart.html.erb (1.7ms)
+  Rendered pages/rests.html.erb within layouts/application (6.4ms)
+Completed 200 OK in 153ms (Views: 150.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/admin" for 127.0.0.1 at 2016-09-08 16:11:53 +0600
+Processing by Admin::DashboardController#index as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/login" for 127.0.0.1 at 2016-09-08 16:11:53 +0600
+Processing by ActiveAdmin::Devise::SessionsController#new as HTML
+  Rendering /home/fedyay/.rvm/gems/ruby-2.3.0/gems/activeadmin-1.0.0.pre4/app/views/active_admin/devise/sessions/new.html.erb within layouts/active_admin_logged_out
+  Rendered /home/fedyay/.rvm/gems/ruby-2.3.0/gems/activeadmin-1.0.0.pre4/app/views/active_admin/devise/shared/_links.erb (2.4ms)
+  Rendered /home/fedyay/.rvm/gems/ruby-2.3.0/gems/activeadmin-1.0.0.pre4/app/views/active_admin/devise/sessions/new.html.erb within layouts/active_admin_logged_out (149.3ms)
+Completed 200 OK in 642ms (Views: 621.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-09-08 16:12:11 +0600
+Processing by PagesController#rests as HTML
+  Rendering pages/rests.html.erb within layouts/application
+  [1m[36mRest Load (0.4ms)[0m  [1m[34mSELECT "rests".* FROM "rests"[0m
+  Rendered pages/_cart.html.erb (2.4ms)
+  Rendered pages/rests.html.erb within layouts/application (9.7ms)
+Completed 200 OK in 167ms (Views: 164.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-09-08 16:12:19 +0600
+Processing by PagesController#rests as HTML
+  Rendering pages/rests.html.erb within layouts/application
+  [1m[36mRest Load (0.2ms)[0m  [1m[34mSELECT "rests".* FROM "rests"[0m
+  Rendered pages/_cart.html.erb (1.8ms)
+  Rendered pages/rests.html.erb within layouts/application (6.1ms)
+Completed 200 OK in 149ms (Views: 147.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-09-08 16:12:37 +0600
+Processing by PagesController#rests as HTML
+  Rendering pages/rests.html.erb within layouts/application
+  [1m[36mRest Load (0.3ms)[0m  [1m[34mSELECT "rests".* FROM "rests"[0m
+  Rendered pages/_cart.html.erb (1.6ms)
+  Rendered pages/rests.html.erb within layouts/application (6.9ms)
+Completed 200 OK in 164ms (Views: 161.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-09-08 16:13:07 +0600
+Processing by PagesController#rests as HTML
+  Rendering pages/rests.html.erb within layouts/application
+  [1m[36mRest Load (0.2ms)[0m  [1m[34mSELECT "rests".* FROM "rests"[0m
+  Rendered pages/_cart.html.erb (1.3ms)
+  Rendered pages/rests.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 149ms (Views: 146.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-09-08 16:13:13 +0600
+Processing by PagesController#rests as HTML
+  Rendering pages/rests.html.erb within layouts/application
+  [1m[36mRest Load (0.3ms)[0m  [1m[34mSELECT "rests".* FROM "rests"[0m
+  Rendered pages/_cart.html.erb (1.3ms)
+  Rendered pages/rests.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 148ms (Views: 146.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-09-08 16:13:22 +0600
+Processing by PagesController#rests as HTML
+  Rendering pages/rests.html.erb within layouts/application
+  [1m[36mRest Load (0.4ms)[0m  [1m[34mSELECT "rests".* FROM "rests"[0m
+  Rendered pages/_cart.html.erb (2.1ms)
+  Rendered pages/rests.html.erb within layouts/application (10.1ms)
+Completed 200 OK in 172ms (Views: 169.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-09-08 16:13:28 +0600
+Processing by PagesController#rests as HTML
+  Rendering pages/rests.html.erb within layouts/application
+  [1m[36mRest Load (0.3ms)[0m  [1m[34mSELECT "rests".* FROM "rests"[0m
+  Rendered pages/_cart.html.erb (2.6ms)
+  Rendered pages/rests.html.erb within layouts/application (8.2ms)
+Completed 200 OK in 174ms (Views: 172.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-09-08 16:14:19 +0600
+Processing by PagesController#rests as HTML
+  Rendering pages/rests.html.erb within layouts/application
+  [1m[36mRest Load (0.5ms)[0m  [1m[34mSELECT "rests".* FROM "rests"[0m
+  Rendered pages/_cart.html.erb (2.7ms)
+  Rendered pages/rests.html.erb within layouts/application (11.2ms)
+Completed 200 OK in 216ms (Views: 212.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-09-08 16:14:33 +0600
+Processing by PagesController#rests as HTML
+  Rendering pages/rests.html.erb within layouts/application
+  [1m[36mRest Load (0.3ms)[0m  [1m[34mSELECT "rests".* FROM "rests"[0m
+  Rendered pages/_cart.html.erb (1.5ms)
+  Rendered pages/rests.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 163ms (Views: 160.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-09-08 16:14:46 +0600
+Processing by PagesController#rests as HTML
+  Rendering pages/rests.html.erb within layouts/application
+  [1m[36mRest Load (0.3ms)[0m  [1m[34mSELECT "rests".* FROM "rests"[0m
+  Rendered pages/_cart.html.erb (1.3ms)
+  Rendered pages/rests.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 152ms (Views: 149.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-09-08 16:14:56 +0600
+Processing by PagesController#rests as HTML
+  Rendering pages/rests.html.erb within layouts/application
+  [1m[36mRest Load (0.3ms)[0m  [1m[34mSELECT "rests".* FROM "rests"[0m
+  Rendered pages/_cart.html.erb (1.4ms)
+  Rendered pages/rests.html.erb within layouts/application (7.2ms)
+Completed 200 OK in 153ms (Views: 151.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-09-08 16:15:02 +0600
+Processing by PagesController#rests as HTML
+  Rendering pages/rests.html.erb within layouts/application
+  [1m[36mRest Load (0.3ms)[0m  [1m[34mSELECT "rests".* FROM "rests"[0m
+  Rendered pages/_cart.html.erb (1.6ms)
+  Rendered pages/rests.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 169ms (Views: 166.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-09-08 16:15:08 +0600
+Processing by PagesController#rests as HTML
+  Rendering pages/rests.html.erb within layouts/application
+  [1m[36mRest Load (0.3ms)[0m  [1m[34mSELECT "rests".* FROM "rests"[0m
+  Rendered pages/_cart.html.erb (1.7ms)
+  Rendered pages/rests.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 151ms (Views: 149.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-09-08 16:15:17 +0600
+Processing by PagesController#rests as HTML
+  Rendering pages/rests.html.erb within layouts/application
+  [1m[36mRest Load (0.3ms)[0m  [1m[34mSELECT "rests".* FROM "rests"[0m
+  Rendered pages/_cart.html.erb (1.5ms)
+  Rendered pages/rests.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 146ms (Views: 143.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-09-08 16:15:26 +0600
+Processing by PagesController#rests as HTML
+  Rendering pages/rests.html.erb within layouts/application
+  [1m[36mRest Load (0.3ms)[0m  [1m[34mSELECT "rests".* FROM "rests"[0m
+  Rendered pages/_cart.html.erb (1.8ms)
+  Rendered pages/rests.html.erb within layouts/application (7.8ms)
+Completed 200 OK in 150ms (Views: 148.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-09-08 16:15:41 +0600
+Processing by PagesController#rests as HTML
+  Rendering pages/rests.html.erb within layouts/application
+  [1m[36mRest Load (0.3ms)[0m  [1m[34mSELECT "rests".* FROM "rests"[0m
+  Rendered pages/_cart.html.erb (1.4ms)
+  Rendered pages/rests.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 147ms (Views: 144.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-09-08 16:15:50 +0600
+Processing by PagesController#rests as HTML
+  Rendering pages/rests.html.erb within layouts/application
+  [1m[36mRest Load (0.3ms)[0m  [1m[34mSELECT "rests".* FROM "rests"[0m
+  Rendered pages/_cart.html.erb (1.4ms)
+  Rendered pages/rests.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 163ms (Views: 161.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-09-08 16:15:55 +0600
+Processing by PagesController#rests as HTML
+  Rendering pages/rests.html.erb within layouts/application
+  [1m[36mRest Load (0.3ms)[0m  [1m[34mSELECT "rests".* FROM "rests"[0m
+  Rendered pages/_cart.html.erb (1.5ms)
+  Rendered pages/rests.html.erb within layouts/application (5.5ms)
+Completed 200 OK in 191ms (Views: 188.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-09-08 16:16:41 +0600
+Processing by PagesController#rests as HTML
+  Rendering pages/rests.html.erb within layouts/application
+  [1m[36mRest Load (0.2ms)[0m  [1m[34mSELECT "rests".* FROM "rests"[0m
+  Rendered pages/_cart.html.erb (1.5ms)
+  Rendered pages/rests.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 152ms (Views: 150.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-09-08 16:16:47 +0600
+Processing by PagesController#rests as HTML
+  Rendering pages/rests.html.erb within layouts/application
+  [1m[36mRest Load (0.3ms)[0m  [1m[34mSELECT "rests".* FROM "rests"[0m
+  Rendered pages/_cart.html.erb (1.5ms)
+  Rendered pages/rests.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 146ms (Views: 144.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-09-08 16:16:56 +0600
+Processing by PagesController#rests as HTML
+  Rendering pages/rests.html.erb within layouts/application
+  [1m[36mRest Load (0.3ms)[0m  [1m[34mSELECT "rests".* FROM "rests"[0m
+  Rendered pages/_cart.html.erb (1.4ms)
+  Rendered pages/rests.html.erb within layouts/application (5.5ms)
+Completed 200 OK in 147ms (Views: 144.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-09-08 16:17:03 +0600
+Processing by PagesController#rests as HTML
+  Rendering pages/rests.html.erb within layouts/application
+  [1m[36mRest Load (0.3ms)[0m  [1m[34mSELECT "rests".* FROM "rests"[0m
+  Rendered pages/_cart.html.erb (2.1ms)
+  Rendered pages/rests.html.erb within layouts/application (6.7ms)
+Completed 200 OK in 161ms (Views: 159.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-09-08 16:17:11 +0600
+Processing by PagesController#rests as HTML
+  Rendering pages/rests.html.erb within layouts/application
+  [1m[36mRest Load (0.2ms)[0m  [1m[34mSELECT "rests".* FROM "rests"[0m
+  Rendered pages/_cart.html.erb (1.9ms)
+  Rendered pages/rests.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 165ms (Views: 163.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-09-08 16:17:18 +0600
+Processing by PagesController#rests as HTML
+  Rendering pages/rests.html.erb within layouts/application
+  [1m[36mRest Load (0.2ms)[0m  [1m[34mSELECT "rests".* FROM "rests"[0m
+  Rendered pages/_cart.html.erb (1.5ms)
+  Rendered pages/rests.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 167ms (Views: 164.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-09-08 16:17:27 +0600
+Processing by PagesController#rests as HTML
+  Rendering pages/rests.html.erb within layouts/application
+  [1m[36mRest Load (0.3ms)[0m  [1m[34mSELECT "rests".* FROM "rests"[0m
+  Rendered pages/_cart.html.erb (1.4ms)
+  Rendered pages/rests.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 176ms (Views: 173.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/1" for 127.0.0.1 at 2016-09-08 16:17:34 +0600
+Processing by PagesController#dishes as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRest Load (0.2ms)[0m  [1m[34mSELECT  "rests".* FROM "rests" WHERE "rests"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."rest_id" = ?[0m  [["rest_id", 1]]
+  Rendering pages/dishes.html.erb within layouts/application
+  [1m[36mDish Load (0.2ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."category_id" = ?[0m  [["category_id", 1]]
+  [1m[36mDish Load (0.2ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."category_id" = ?[0m  [["category_id", 2]]
+  [1m[36mDish Load (0.1ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."category_id" = ?[0m  [["category_id", 3]]
+  Rendered pages/_cart.html.erb (1.4ms)
+  Rendered pages/dishes.html.erb within layouts/application (11.5ms)
+Completed 200 OK in 212ms (Views: 184.9ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/2" for 127.0.0.1 at 2016-09-08 16:17:41 +0600
+Processing by PagesController#dishes as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mRest Load (0.1ms)[0m  [1m[34mSELECT  "rests".* FROM "rests" WHERE "rests"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."rest_id" = ?[0m  [["rest_id", 2]]
+  Rendering pages/dishes.html.erb within layouts/application
+  [1m[36mDish Load (0.2ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."category_id" = ?[0m  [["category_id", 4]]
+  [1m[36mDish Load (0.1ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."category_id" = ?[0m  [["category_id", 5]]
+  Rendered pages/_cart.html.erb (1.1ms)
+  Rendered pages/dishes.html.erb within layouts/application (7.3ms)
+Completed 200 OK in 180ms (Views: 175.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/2" for 127.0.0.1 at 2016-09-08 16:17:55 +0600
+Processing by PagesController#dishes as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mRest Load (0.1ms)[0m  [1m[34mSELECT  "rests".* FROM "rests" WHERE "rests"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."rest_id" = ?[0m  [["rest_id", 2]]
+  Rendering pages/dishes.html.erb within layouts/application
+  [1m[36mDish Load (0.2ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."category_id" = ?[0m  [["category_id", 4]]
+  [1m[36mDish Load (0.1ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."category_id" = ?[0m  [["category_id", 5]]
+  Rendered pages/_cart.html.erb (1.2ms)
+  Rendered pages/dishes.html.erb within layouts/application (8.3ms)
+Completed 200 OK in 158ms (Views: 154.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/2" for 127.0.0.1 at 2016-09-08 16:18:00 +0600
+Processing by PagesController#dishes as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mRest Load (0.2ms)[0m  [1m[34mSELECT  "rests".* FROM "rests" WHERE "rests"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."rest_id" = ?[0m  [["rest_id", 2]]
+  Rendering pages/dishes.html.erb within layouts/application
+  [1m[36mDish Load (0.2ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."category_id" = ?[0m  [["category_id", 4]]
+  [1m[36mDish Load (0.1ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."category_id" = ?[0m  [["category_id", 5]]
+  Rendered pages/_cart.html.erb (1.3ms)
+  Rendered pages/dishes.html.erb within layouts/application (9.4ms)
+Completed 200 OK in 151ms (Views: 146.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/2" for 127.0.0.1 at 2016-09-08 16:18:10 +0600
+Processing by PagesController#dishes as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mRest Load (0.2ms)[0m  [1m[34mSELECT  "rests".* FROM "rests" WHERE "rests"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."rest_id" = ?[0m  [["rest_id", 2]]
+  Rendering pages/dishes.html.erb within layouts/application
+  [1m[36mDish Load (0.2ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."category_id" = ?[0m  [["category_id", 4]]
+  [1m[36mDish Load (0.1ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."category_id" = ?[0m  [["category_id", 5]]
+  Rendered pages/_cart.html.erb (1.2ms)
+  Rendered pages/dishes.html.erb within layouts/application (7.8ms)
+Completed 200 OK in 145ms (Views: 140.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/2" for 127.0.0.1 at 2016-09-08 16:18:13 +0600
+Processing by PagesController#dishes as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mRest Load (0.2ms)[0m  [1m[34mSELECT  "rests".* FROM "rests" WHERE "rests"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."rest_id" = ?[0m  [["rest_id", 2]]
+  Rendering pages/dishes.html.erb within layouts/application
+  [1m[36mDish Load (0.2ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."category_id" = ?[0m  [["category_id", 4]]
+  [1m[36mDish Load (0.1ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."category_id" = ?[0m  [["category_id", 5]]
+  Rendered pages/_cart.html.erb (1.3ms)
+  Rendered pages/dishes.html.erb within layouts/application (7.7ms)
+Completed 200 OK in 150ms (Views: 144.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-09-08 16:18:15 +0600
+Processing by PagesController#rests as HTML
+  Rendering pages/rests.html.erb within layouts/application
+  [1m[36mRest Load (0.3ms)[0m  [1m[34mSELECT "rests".* FROM "rests"[0m
+  Rendered pages/_cart.html.erb (1.5ms)
+  Rendered pages/rests.html.erb within layouts/application (8.2ms)
+Completed 200 OK in 167ms (Views: 164.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/1" for 127.0.0.1 at 2016-09-08 16:18:16 +0600
+Processing by PagesController#dishes as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRest Load (0.2ms)[0m  [1m[34mSELECT  "rests".* FROM "rests" WHERE "rests"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."rest_id" = ?[0m  [["rest_id", 1]]
+  Rendering pages/dishes.html.erb within layouts/application
+  [1m[36mDish Load (0.2ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."category_id" = ?[0m  [["category_id", 1]]
+  [1m[36mDish Load (0.2ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."category_id" = ?[0m  [["category_id", 2]]
+  [1m[36mDish Load (0.3ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."category_id" = ?[0m  [["category_id", 3]]
+  Rendered pages/_cart.html.erb (1.5ms)
+  Rendered pages/dishes.html.erb within layouts/application (47.9ms)
+Completed 200 OK in 203ms (Views: 193.9ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-09-08 16:18:19 +0600
+Processing by PagesController#rests as HTML
+  Rendering pages/rests.html.erb within layouts/application
+  [1m[36mRest Load (0.4ms)[0m  [1m[34mSELECT "rests".* FROM "rests"[0m
+  Rendered pages/_cart.html.erb (2.3ms)
+  Rendered pages/rests.html.erb within layouts/application (14.8ms)
+Completed 200 OK in 242ms (Views: 239.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/2" for 127.0.0.1 at 2016-09-08 16:18:20 +0600
+Processing by PagesController#dishes as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mRest Load (0.2ms)[0m  [1m[34mSELECT  "rests".* FROM "rests" WHERE "rests"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."rest_id" = ?[0m  [["rest_id", 2]]
+  Rendering pages/dishes.html.erb within layouts/application
+  [1m[36mDish Load (0.2ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."category_id" = ?[0m  [["category_id", 4]]
+  [1m[36mDish Load (0.2ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."category_id" = ?[0m  [["category_id", 5]]
+  Rendered pages/_cart.html.erb (1.7ms)
+  Rendered pages/dishes.html.erb within layouts/application (14.0ms)
+Completed 200 OK in 168ms (Views: 158.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-09-08 16:18:24 +0600
+Processing by PagesController#rests as HTML
+  Rendering pages/rests.html.erb within layouts/application
+  [1m[36mRest Load (1.0ms)[0m  [1m[34mSELECT "rests".* FROM "rests"[0m
+  Rendered pages/_cart.html.erb (3.5ms)
+  Rendered pages/rests.html.erb within layouts/application (10.9ms)
+Completed 200 OK in 210ms (Views: 206.0ms | ActiveRecord: 1.0ms)
+
+
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", :environment]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", :environment]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", :environment]]
+  [1m[35m (165.1ms)[0m  [1m[35mCREATE TABLE "active_admin_comments" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "namespace" varchar, "body" text, "resource_id" varchar NOT NULL, "resource_type" varchar NOT NULL, "author_type" varchar, "author_id" integer, "created_at" datetime, "updated_at" datetime)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mselect sqlite_version(*)[0m
+  [1m[35m (132.2ms)[0m  [1m[35mCREATE  INDEX "index_active_admin_comments_on_author_type_and_author_id" ON "active_admin_comments" ("author_type", "author_id")[0m
+  [1m[35m (0.3ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_active_admin_comments_on_author_type_and_author_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_active_admin_comments_on_author_type_and_author_id' AND type='index'
+[0m
+  [1m[35m (143.4ms)[0m  [1m[35mCREATE  INDEX "index_active_admin_comments_on_namespace" ON "active_admin_comments" ("namespace")[0m
+  [1m[35m (0.4ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_active_admin_comments_on_namespace' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_active_admin_comments_on_namespace' AND type='index'
+[0m
+  [1m[35m (0.3ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_active_admin_comments_on_author_type_and_author_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_active_admin_comments_on_author_type_and_author_id' AND type='index'
+[0m
+  [1m[35m (176.9ms)[0m  [1m[35mCREATE  INDEX "index_active_admin_comments_on_resource_type_and_resource_id" ON "active_admin_comments" ("resource_type", "resource_id")[0m
+  [1m[35m (151.6ms)[0m  [1m[35mCREATE TABLE "admin_users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar DEFAULT '' NOT NULL, "encrypted_password" varchar DEFAULT '' NOT NULL, "reset_password_token" varchar, "reset_password_sent_at" datetime, "remember_created_at" datetime, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" datetime, "last_sign_in_at" datetime, "current_sign_in_ip" varchar, "last_sign_in_ip" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "name" varchar, "phone" varchar, "address" varchar)[0m
+  [1m[35m (168.8ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_admin_users_on_email" ON "admin_users" ("email")[0m
+  [1m[35m (0.3ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_admin_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_admin_users_on_email' AND type='index'
+[0m
+  [1m[35m (132.8ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_admin_users_on_reset_password_token" ON "admin_users" ("reset_password_token")[0m
+  [1m[35m (120.2ms)[0m  [1m[35mCREATE TABLE "carts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "dishes" text, "cur_rest" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (133.9ms)[0m  [1m[35mCREATE TABLE "categories" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "rest_id" integer)[0m
+  [1m[35m (143.7ms)[0m  [1m[35mCREATE  INDEX "index_categories_on_rest_id" ON "categories" ("rest_id")[0m
+  [1m[35m (154.0ms)[0m  [1m[35mCREATE TABLE "dishes" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "price" float, "description" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "counter" integer, "rest_id" integer, "category_id" integer)[0m
+  [1m[35m (167.7ms)[0m  [1m[35mCREATE  INDEX "index_dishes_on_category_id" ON "dishes" ("category_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_dishes_on_category_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_dishes_on_category_id' AND type='index'
+[0m
+  [1m[35m (141.9ms)[0m  [1m[35mCREATE  INDEX "index_dishes_on_rest_id" ON "dishes" ("rest_id")[0m
+  [1m[35m (122.6ms)[0m  [1m[35mCREATE TABLE "rests" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "image" varchar, "description" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "image_file_name" varchar, "image_content_type" varchar, "image_file_size" integer, "image_updated_at" datetime)[0m
+  [1m[35m (156.5ms)[0m  [1m[35mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "phone" varchar, "address" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "email" varchar DEFAULT '' NOT NULL, "encrypted_password" varchar DEFAULT '' NOT NULL, "reset_password_token" varchar, "reset_password_sent_at" datetime, "remember_created_at" datetime, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" datetime, "last_sign_in_at" datetime, "current_sign_in_ip" varchar, "last_sign_in_ip" varchar)[0m
+  [1m[35m (145.3ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (0.3ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+[0m
+  [1m[35m (132.3ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  [1m[35m (144.2ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (145.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES ('20160901141503')[0m
+  [1m[35m (122.0ms)[0m  [1m[32mINSERT INTO schema_migrations (version) VALUES ('20160901132138'), ('20160716131956'), ('20160901132638'), ('20160901132141'), ('20160901135959'), ('20160716131435'), ('20160706130211'), ('20160901141330'), ('20160706130210'), ('20160706144338'), ('20160712065628'), ('20160706130351');
+
+[0m
+  [1m[35m (133.6ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", 2016-09-08 10:18:49 UTC], ["updated_at", 2016-09-08 10:18:49 UTC]]
+  [1m[35m (110.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (108.8ms)[0m  [1m[35mCREATE TABLE "active_admin_comments" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "namespace" varchar, "body" text, "resource_id" varchar NOT NULL, "resource_type" varchar NOT NULL, "author_type" varchar, "author_id" integer, "created_at" datetime, "updated_at" datetime)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mselect sqlite_version(*)[0m
+  [1m[35m (130.8ms)[0m  [1m[35mCREATE  INDEX "index_active_admin_comments_on_author_type_and_author_id" ON "active_admin_comments" ("author_type", "author_id")[0m
+  [1m[35m (0.2ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_active_admin_comments_on_author_type_and_author_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_active_admin_comments_on_author_type_and_author_id' AND type='index'
+[0m
+  [1m[35m (156.0ms)[0m  [1m[35mCREATE  INDEX "index_active_admin_comments_on_namespace" ON "active_admin_comments" ("namespace")[0m
+  [1m[35m (0.3ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_active_admin_comments_on_namespace' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_active_admin_comments_on_namespace' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_active_admin_comments_on_author_type_and_author_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_active_admin_comments_on_author_type_and_author_id' AND type='index'
+[0m
+  [1m[35m (143.5ms)[0m  [1m[35mCREATE  INDEX "index_active_admin_comments_on_resource_type_and_resource_id" ON "active_admin_comments" ("resource_type", "resource_id")[0m
+  [1m[35m (152.9ms)[0m  [1m[35mCREATE TABLE "admin_users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar DEFAULT '' NOT NULL, "encrypted_password" varchar DEFAULT '' NOT NULL, "reset_password_token" varchar, "reset_password_sent_at" datetime, "remember_created_at" datetime, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" datetime, "last_sign_in_at" datetime, "current_sign_in_ip" varchar, "last_sign_in_ip" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "name" varchar, "phone" varchar, "address" varchar)[0m
+  [1m[35m (143.1ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_admin_users_on_email" ON "admin_users" ("email")[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_admin_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_admin_users_on_email' AND type='index'
+[0m
+  [1m[35m (144.5ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_admin_users_on_reset_password_token" ON "admin_users" ("reset_password_token")[0m
+  [1m[35m (143.8ms)[0m  [1m[35mCREATE TABLE "carts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "dishes" text, "cur_rest" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (175.1ms)[0m  [1m[35mCREATE TABLE "categories" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "rest_id" integer)[0m
+  [1m[35m (149.2ms)[0m  [1m[35mCREATE  INDEX "index_categories_on_rest_id" ON "categories" ("rest_id")[0m
+  [1m[35m (132.6ms)[0m  [1m[35mCREATE TABLE "dishes" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "price" float, "description" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "counter" integer, "rest_id" integer, "category_id" integer)[0m
+  [1m[35m (134.9ms)[0m  [1m[35mCREATE  INDEX "index_dishes_on_category_id" ON "dishes" ("category_id")[0m
+  [1m[35m (0.3ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_dishes_on_category_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_dishes_on_category_id' AND type='index'
+[0m
+  [1m[35m (119.6ms)[0m  [1m[35mCREATE  INDEX "index_dishes_on_rest_id" ON "dishes" ("rest_id")[0m
+  [1m[35m (131.9ms)[0m  [1m[35mCREATE TABLE "rests" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "image" varchar, "description" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "image_file_name" varchar, "image_content_type" varchar, "image_file_size" integer, "image_updated_at" datetime)[0m
+  [1m[35m (143.1ms)[0m  [1m[35mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "phone" varchar, "address" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "email" varchar DEFAULT '' NOT NULL, "encrypted_password" varchar DEFAULT '' NOT NULL, "reset_password_token" varchar, "reset_password_sent_at" datetime, "remember_created_at" datetime, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" datetime, "last_sign_in_at" datetime, "current_sign_in_ip" varchar, "last_sign_in_ip" varchar)[0m
+  [1m[35m (146.4ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (0.2ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+[0m
+  [1m[35m (154.5ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  [1m[35m (154.0ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (123.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES ('20160901141503')[0m
+  [1m[35m (143.9ms)[0m  [1m[32mINSERT INTO schema_migrations (version) VALUES ('20160901132138'), ('20160716131956'), ('20160901132638'), ('20160901132141'), ('20160901135959'), ('20160716131435'), ('20160706130211'), ('20160901141330'), ('20160706130210'), ('20160706144338'), ('20160712065628'), ('20160706130351');
+
+[0m
+  [1m[35m (156.0ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", 2016-09-08 10:18:52 UTC], ["updated_at", 2016-09-08 10:18:52 UTC]]
+  [1m[35m (162.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mAdminUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "admin_users" WHERE "admin_users"."email" = ? LIMIT ?[0m  [["email", "admin@example.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "admin_users" ("email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["email", "admin@example.com"], ["encrypted_password", "$2a$11$V8w3lWTlyBrOfzYWqhfBHeH/1W2ANcfLzhx5FDTmhtqWWKkLjpm1."], ["created_at", 2016-09-08 10:18:52 UTC], ["updated_at", 2016-09-08 10:18:52 UTC]]
+  [1m[35m (147.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "lorem@example.com"], ["LIMIT", 1]]
+  [1m[35mSQL (1.1ms)[0m  [1m[32mINSERT INTO "users" ("name", "phone", "address", "created_at", "updated_at", "email", "encrypted_password") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Lorem"], ["phone", "+663238674"], ["address", "96574 Natasha Via"], ["created_at", 2016-09-08 10:18:53 UTC], ["updated_at", 2016-09-08 10:18:53 UTC], ["email", "lorem@example.com"], ["encrypted_password", "$2a$11$WdhqO76N0L04J8BVNXnt9.kweCjYwy0ZH/GqfFQDfpYGXGsfx1VsK"]]
+  [1m[35m (167.3ms)[0m  [1m[36mcommit transaction[0m
+Command :: file -b --mime '/tmp/754f2d653505079625cae664a87558af20160908-26600-1ujha2j.png'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/754f2d653505079625cae664a87558af20160908-26600-4f4me8.png[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/754f2d653505079625cae664a87558af20160908-26600-4f4me8.png[0]'
+Command :: convert '/tmp/754f2d653505079625cae664a87558af20160908-26600-4f4me8.png[0]' -auto-orient -resize "300x300" '/tmp/1f4de1d0ac0e95f6ae3ab3abb2cb57f320160908-26600-2reas1'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/754f2d653505079625cae664a87558af20160908-26600-4f4me8.png[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/754f2d653505079625cae664a87558af20160908-26600-4f4me8.png[0]'
+Command :: convert '/tmp/754f2d653505079625cae664a87558af20160908-26600-4f4me8.png[0]' -auto-orient -resize "100x100" '/tmp/1f4de1d0ac0e95f6ae3ab3abb2cb57f320160908-26600-1nqbs6v'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+Command :: file -b --mime '/tmp/754f2d653505079625cae664a87558af20160908-26600-vd16k1.png'
+  [1m[35mSQL (1.1ms)[0m  [1m[32mINSERT INTO "rests" ("title", "description", "created_at", "updated_at", "image_file_name", "image_content_type", "image_file_size", "image_updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Baraszek"], ["description", "[\"Est quam minus omnis aliquam aut ex quasi.\", \"Deserunt quis iure non adipisci rerum maiores.\", \"Est id cupiditate consequuntur et.\"]"], ["created_at", 2016-09-08 10:18:56 UTC], ["updated_at", 2016-09-08 10:18:56 UTC], ["image_file_name", "occaecatietmolestiae.png"], ["image_content_type", "image/png"], ["image_file_size", 32340], ["image_updated_at", 2016-09-08 10:18:55 UTC]]
+  [1m[35m (125.8ms)[0m  [1m[36mcommit transaction[0m
+Command :: file -b --mime '/tmp/4d3c92fe2b90ffad3b5c79cc410d9e0d20160908-26600-ulzvcn.png'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/4d3c92fe2b90ffad3b5c79cc410d9e0d20160908-26600-1ktdkiq.png[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/4d3c92fe2b90ffad3b5c79cc410d9e0d20160908-26600-1ktdkiq.png[0]'
+Command :: convert '/tmp/4d3c92fe2b90ffad3b5c79cc410d9e0d20160908-26600-1ktdkiq.png[0]' -auto-orient -resize "300x300" '/tmp/170f20f5471ab4e80f6036c0d8275fed20160908-26600-148yita'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/4d3c92fe2b90ffad3b5c79cc410d9e0d20160908-26600-1ktdkiq.png[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/4d3c92fe2b90ffad3b5c79cc410d9e0d20160908-26600-1ktdkiq.png[0]'
+Command :: convert '/tmp/4d3c92fe2b90ffad3b5c79cc410d9e0d20160908-26600-1ktdkiq.png[0]' -auto-orient -resize "100x100" '/tmp/170f20f5471ab4e80f6036c0d8275fed20160908-26600-jf7cuq'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+Command :: file -b --mime '/tmp/4d3c92fe2b90ffad3b5c79cc410d9e0d20160908-26600-1jwv4mu.png'
+  [1m[35mSQL (1.6ms)[0m  [1m[32mINSERT INTO "rests" ("title", "description", "created_at", "updated_at", "image_file_name", "image_content_type", "image_file_size", "image_updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["title", "natus"], ["description", "[\"Amet sequi dolorem aut velit.\", \"Sunt reprehenderit veniam sint ex totam et dicta.\", \"Ut officia provident placeat id similique.\"]"], ["created_at", 2016-09-08 10:18:57 UTC], ["updated_at", 2016-09-08 10:18:57 UTC], ["image_file_name", "my-own-slug.png"], ["image_content_type", "image/png"], ["image_file_size", 36774], ["image_updated_at", 2016-09-08 10:18:57 UTC]]
+  [1m[35m (135.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "categories" ("title", "created_at", "updated_at", "rest_id") VALUES (?, ?, ?, ?)[0m  [["title", "inventore"], ["created_at", 2016-09-08 10:18:58 UTC], ["updated_at", 2016-09-08 10:18:58 UTC], ["rest_id", 1]]
+  [1m[35m (166.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "categories" ("title", "created_at", "updated_at", "rest_id") VALUES (?, ?, ?, ?)[0m  [["title", "quo"], ["created_at", 2016-09-08 10:18:58 UTC], ["updated_at", 2016-09-08 10:18:58 UTC], ["rest_id", 1]]
+  [1m[35m (243.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "categories" ("title", "created_at", "updated_at", "rest_id") VALUES (?, ?, ?, ?)[0m  [["title", "magni"], ["created_at", 2016-09-08 10:18:58 UTC], ["updated_at", 2016-09-08 10:18:58 UTC], ["rest_id", 1]]
+  [1m[35m (177.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "categories" ("title", "created_at", "updated_at", "rest_id") VALUES (?, ?, ?, ?)[0m  [["title", "quae"], ["created_at", 2016-09-08 10:18:58 UTC], ["updated_at", 2016-09-08 10:18:58 UTC], ["rest_id", 2]]
+  [1m[35m (141.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "categories" ("title", "created_at", "updated_at", "rest_id") VALUES (?, ?, ?, ?)[0m  [["title", "cumque"], ["created_at", 2016-09-08 10:18:58 UTC], ["updated_at", 2016-09-08 10:18:58 UTC], ["rest_id", 2]]
+  [1m[35m (153.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "dishes" ("title", "price", "description", "created_at", "updated_at", "counter", "rest_id", "category_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["title", "alias"], ["price", 613.0], ["description", "Accusantium ut consectetur molestias voluptas earum nihil quod qui."], ["created_at", 2016-09-08 10:18:59 UTC], ["updated_at", 2016-09-08 10:18:59 UTC], ["counter", 0], ["rest_id", 1], ["category_id", 1]]
+  [1m[35m (127.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.4ms)[0m  [1m[32mINSERT INTO "dishes" ("title", "price", "description", "created_at", "updated_at", "counter", "rest_id", "category_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["title", "non"], ["price", 228.0], ["description", "Eum et aut reiciendis quod ut."], ["created_at", 2016-09-08 10:18:59 UTC], ["updated_at", 2016-09-08 10:18:59 UTC], ["counter", 0], ["rest_id", 1], ["category_id", 1]]
+  [1m[35m (139.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "dishes" ("title", "price", "description", "created_at", "updated_at", "counter", "rest_id", "category_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["title", "quo"], ["price", 769.0], ["description", "Quia dolorem est omnis perferendis."], ["created_at", 2016-09-08 10:18:59 UTC], ["updated_at", 2016-09-08 10:18:59 UTC], ["counter", 0], ["rest_id", 1], ["category_id", 1]]
+  [1m[35m (153.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "dishes" ("title", "price", "description", "created_at", "updated_at", "counter", "rest_id", "category_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["title", "nobis"], ["price", 681.0], ["description", "Officia officiis dolorem accusamus sint aliquam iste."], ["created_at", 2016-09-08 10:18:59 UTC], ["updated_at", 2016-09-08 10:18:59 UTC], ["counter", 0], ["rest_id", 1], ["category_id", 2]]
+  [1m[35m (141.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "dishes" ("title", "price", "description", "created_at", "updated_at", "counter", "rest_id", "category_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["title", "quod"], ["price", 328.0], ["description", "Nesciunt quae iure non cupiditate."], ["created_at", 2016-09-08 10:18:59 UTC], ["updated_at", 2016-09-08 10:18:59 UTC], ["counter", 0], ["rest_id", 1], ["category_id", 2]]
+  [1m[35m (139.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "dishes" ("title", "price", "description", "created_at", "updated_at", "counter", "rest_id", "category_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["title", "optio"], ["price", 249.0], ["description", "At repudiandae voluptatum aut in et quis omnis debitis."], ["created_at", 2016-09-08 10:18:59 UTC], ["updated_at", 2016-09-08 10:18:59 UTC], ["counter", 0], ["rest_id", 1], ["category_id", 3]]
+  [1m[35m (132.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "dishes" ("title", "price", "description", "created_at", "updated_at", "counter", "rest_id", "category_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["title", "sit"], ["price", 580.0], ["description", "Consectetur esse quis enim doloremque ut tenetur temporibus."], ["created_at", 2016-09-08 10:18:59 UTC], ["updated_at", 2016-09-08 10:18:59 UTC], ["counter", 0], ["rest_id", 2], ["category_id", 4]]
+  [1m[35m (140.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "dishes" ("title", "price", "description", "created_at", "updated_at", "counter", "rest_id", "category_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["title", "veniam"], ["price", 734.0], ["description", "Qui eligendi nulla ab porro repellat omnis id."], ["created_at", 2016-09-08 10:19:00 UTC], ["updated_at", 2016-09-08 10:19:00 UTC], ["counter", 0], ["rest_id", 2], ["category_id", 4]]
+  [1m[35m (132.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "dishes" ("title", "price", "description", "created_at", "updated_at", "counter", "rest_id", "category_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["title", "animi"], ["price", 737.0], ["description", "Itaque dolores ipsam minima est alias."], ["created_at", 2016-09-08 10:19:00 UTC], ["updated_at", 2016-09-08 10:19:00 UTC], ["counter", 0], ["rest_id", 2], ["category_id", 5]]
+  [1m[35m (195.1ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/" for 127.0.0.1 at 2016-09-08 16:19:09 +0600
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PagesController#rests as HTML
+  Rendering pages/rests.html.erb within layouts/application
+  [1m[36mRest Load (0.4ms)[0m  [1m[34mSELECT "rests".* FROM "rests"[0m
+  Rendered pages/_cart.html.erb (5.3ms)
+  Rendered pages/rests.html.erb within layouts/application (29.4ms)
+Completed 200 OK in 1053ms (Views: 990.9ms | ActiveRecord: 1.9ms)
+
+
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", :environment]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", :environment]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", :environment]]
+  [1m[35m (154.8ms)[0m  [1m[35mCREATE TABLE "active_admin_comments" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "namespace" varchar, "body" text, "resource_id" varchar NOT NULL, "resource_type" varchar NOT NULL, "author_type" varchar, "author_id" integer, "created_at" datetime, "updated_at" datetime)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mselect sqlite_version(*)[0m
+  [1m[35m (153.5ms)[0m  [1m[35mCREATE  INDEX "index_active_admin_comments_on_author_type_and_author_id" ON "active_admin_comments" ("author_type", "author_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_active_admin_comments_on_author_type_and_author_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_active_admin_comments_on_author_type_and_author_id' AND type='index'
+[0m
+  [1m[35m (143.2ms)[0m  [1m[35mCREATE  INDEX "index_active_admin_comments_on_namespace" ON "active_admin_comments" ("namespace")[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_active_admin_comments_on_namespace' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_active_admin_comments_on_namespace' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_active_admin_comments_on_author_type_and_author_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_active_admin_comments_on_author_type_and_author_id' AND type='index'
+[0m
+  [1m[35m (134.0ms)[0m  [1m[35mCREATE  INDEX "index_active_admin_comments_on_resource_type_and_resource_id" ON "active_admin_comments" ("resource_type", "resource_id")[0m
+  [1m[35m (149.5ms)[0m  [1m[35mCREATE TABLE "admin_users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar DEFAULT '' NOT NULL, "encrypted_password" varchar DEFAULT '' NOT NULL, "reset_password_token" varchar, "reset_password_sent_at" datetime, "remember_created_at" datetime, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" datetime, "last_sign_in_at" datetime, "current_sign_in_ip" varchar, "last_sign_in_ip" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "name" varchar, "phone" varchar, "address" varchar)[0m
+  [1m[35m (165.4ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_admin_users_on_email" ON "admin_users" ("email")[0m
+  [1m[35m (0.3ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_admin_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_admin_users_on_email' AND type='index'
+[0m
+  [1m[35m (132.7ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_admin_users_on_reset_password_token" ON "admin_users" ("reset_password_token")[0m
+  [1m[35m (144.3ms)[0m  [1m[35mCREATE TABLE "carts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "dishes" text, "cur_rest" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (150.7ms)[0m  [1m[35mCREATE TABLE "categories" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "rest_id" integer)[0m
+  [1m[35m (171.5ms)[0m  [1m[35mCREATE  INDEX "index_categories_on_rest_id" ON "categories" ("rest_id")[0m
+  [1m[35m (156.3ms)[0m  [1m[35mCREATE TABLE "dishes" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "price" float, "description" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "counter" integer, "rest_id" integer, "category_id" integer)[0m
+  [1m[35m (145.5ms)[0m  [1m[35mCREATE  INDEX "index_dishes_on_category_id" ON "dishes" ("category_id")[0m
+  [1m[35m (0.3ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_dishes_on_category_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_dishes_on_category_id' AND type='index'
+[0m
+  [1m[35m (142.8ms)[0m  [1m[35mCREATE  INDEX "index_dishes_on_rest_id" ON "dishes" ("rest_id")[0m
+  [1m[35m (155.1ms)[0m  [1m[35mCREATE TABLE "rests" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "image" varchar, "description" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "image_file_name" varchar, "image_content_type" varchar, "image_file_size" integer, "image_updated_at" datetime)[0m
+  [1m[35m (157.1ms)[0m  [1m[35mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "phone" varchar, "address" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "email" varchar DEFAULT '' NOT NULL, "encrypted_password" varchar DEFAULT '' NOT NULL, "reset_password_token" varchar, "reset_password_sent_at" datetime, "remember_created_at" datetime, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" datetime, "last_sign_in_at" datetime, "current_sign_in_ip" varchar, "last_sign_in_ip" varchar)[0m
+  [1m[35m (144.7ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (0.3ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+[0m
+  [1m[35m (165.3ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  [1m[35m (167.6ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (143.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES ('20160901141503')[0m
+  [1m[35m (144.9ms)[0m  [1m[32mINSERT INTO schema_migrations (version) VALUES ('20160901132138'), ('20160716131956'), ('20160901132638'), ('20160901132141'), ('20160901135959'), ('20160716131435'), ('20160706130211'), ('20160901141330'), ('20160706130210'), ('20160706144338'), ('20160712065628'), ('20160706130351');
+
+[0m
+  [1m[35m (133.3ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", 2016-09-08 10:19:30 UTC], ["updated_at", 2016-09-08 10:19:30 UTC]]
+  [1m[35m (131.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (140.6ms)[0m  [1m[35mCREATE TABLE "active_admin_comments" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "namespace" varchar, "body" text, "resource_id" varchar NOT NULL, "resource_type" varchar NOT NULL, "author_type" varchar, "author_id" integer, "created_at" datetime, "updated_at" datetime)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mselect sqlite_version(*)[0m
+  [1m[35m (165.0ms)[0m  [1m[35mCREATE  INDEX "index_active_admin_comments_on_author_type_and_author_id" ON "active_admin_comments" ("author_type", "author_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_active_admin_comments_on_author_type_and_author_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_active_admin_comments_on_author_type_and_author_id' AND type='index'
+[0m
+  [1m[35m (145.4ms)[0m  [1m[35mCREATE  INDEX "index_active_admin_comments_on_namespace" ON "active_admin_comments" ("namespace")[0m
+  [1m[35m (0.3ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_active_admin_comments_on_namespace' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_active_admin_comments_on_namespace' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_active_admin_comments_on_author_type_and_author_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_active_admin_comments_on_author_type_and_author_id' AND type='index'
+[0m
+  [1m[35m (164.9ms)[0m  [1m[35mCREATE  INDEX "index_active_admin_comments_on_resource_type_and_resource_id" ON "active_admin_comments" ("resource_type", "resource_id")[0m
+  [1m[35m (183.6ms)[0m  [1m[35mCREATE TABLE "admin_users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar DEFAULT '' NOT NULL, "encrypted_password" varchar DEFAULT '' NOT NULL, "reset_password_token" varchar, "reset_password_sent_at" datetime, "remember_created_at" datetime, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" datetime, "last_sign_in_at" datetime, "current_sign_in_ip" varchar, "last_sign_in_ip" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "name" varchar, "phone" varchar, "address" varchar)[0m
+  [1m[35m (260.8ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_admin_users_on_email" ON "admin_users" ("email")[0m
+  [1m[35m (0.2ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_admin_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_admin_users_on_email' AND type='index'
+[0m
+  [1m[35m (145.8ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_admin_users_on_reset_password_token" ON "admin_users" ("reset_password_token")[0m
+  [1m[35m (132.6ms)[0m  [1m[35mCREATE TABLE "carts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "dishes" text, "cur_rest" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (121.2ms)[0m  [1m[35mCREATE TABLE "categories" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "rest_id" integer)[0m
+  [1m[35m (144.4ms)[0m  [1m[35mCREATE  INDEX "index_categories_on_rest_id" ON "categories" ("rest_id")[0m
+  [1m[35m (155.3ms)[0m  [1m[35mCREATE TABLE "dishes" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "price" float, "description" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "counter" integer, "rest_id" integer, "category_id" integer)[0m
+  [1m[35m (168.1ms)[0m  [1m[35mCREATE  INDEX "index_dishes_on_category_id" ON "dishes" ("category_id")[0m
+  [1m[35m (0.3ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_dishes_on_category_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_dishes_on_category_id' AND type='index'
+[0m
+  [1m[35m (131.4ms)[0m  [1m[35mCREATE  INDEX "index_dishes_on_rest_id" ON "dishes" ("rest_id")[0m
+  [1m[35m (124.9ms)[0m  [1m[35mCREATE TABLE "rests" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "image" varchar, "description" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "image_file_name" varchar, "image_content_type" varchar, "image_file_size" integer, "image_updated_at" datetime)[0m
+  [1m[35m (131.6ms)[0m  [1m[35mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "phone" varchar, "address" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "email" varchar DEFAULT '' NOT NULL, "encrypted_password" varchar DEFAULT '' NOT NULL, "reset_password_token" varchar, "reset_password_sent_at" datetime, "remember_created_at" datetime, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" datetime, "last_sign_in_at" datetime, "current_sign_in_ip" varchar, "last_sign_in_ip" varchar)[0m
+  [1m[35m (143.4ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (0.3ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+[0m
+  [1m[35m (130.4ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  [1m[35m (132.6ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (149.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES ('20160901141503')[0m
+  [1m[35m (175.6ms)[0m  [1m[32mINSERT INTO schema_migrations (version) VALUES ('20160901132138'), ('20160716131956'), ('20160901132638'), ('20160901132141'), ('20160901135959'), ('20160716131435'), ('20160706130211'), ('20160901141330'), ('20160706130210'), ('20160706144338'), ('20160712065628'), ('20160706130351');
+
+[0m
+  [1m[35m (147.0ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", 2016-09-08 10:19:33 UTC], ["updated_at", 2016-09-08 10:19:33 UTC]]
+  [1m[35m (138.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mAdminUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "admin_users" WHERE "admin_users"."email" = ? LIMIT ?[0m  [["email", "admin@example.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "admin_users" ("email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["email", "admin@example.com"], ["encrypted_password", "$2a$11$33IH4hkd/dVCGyc.X7WfQuCTgxyA.aZEsDpdDi086bm8ox5Saln6."], ["created_at", 2016-09-08 10:19:34 UTC], ["updated_at", 2016-09-08 10:19:34 UTC]]
+  [1m[35m (137.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "lorem@example.com"], ["LIMIT", 1]]
+  [1m[35mSQL (1.5ms)[0m  [1m[32mINSERT INTO "users" ("name", "phone", "address", "created_at", "updated_at", "email", "encrypted_password") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Lorem"], ["phone", "+663238674"], ["address", "5335 Watsica Locks"], ["created_at", 2016-09-08 10:19:34 UTC], ["updated_at", 2016-09-08 10:19:34 UTC], ["email", "lorem@example.com"], ["encrypted_password", "$2a$11$/7AXaAQNYJXzF.2BaJzh0OuAZZdclqXuEpLLJ2kAcQSrraubVFSmu"]]
+  [1m[35m (121.3ms)[0m  [1m[36mcommit transaction[0m
+Command :: file -b --mime '/tmp/b446b1fff71a547efaa6d61d5bf1cdf720160908-26805-71csnu.png'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/b446b1fff71a547efaa6d61d5bf1cdf720160908-26805-13fx0hb.png[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/b446b1fff71a547efaa6d61d5bf1cdf720160908-26805-13fx0hb.png[0]'
+Command :: convert '/tmp/b446b1fff71a547efaa6d61d5bf1cdf720160908-26805-13fx0hb.png[0]' -auto-orient -resize "300x300" '/tmp/99f52b8127c657db5c96963353d3235920160908-26805-1couo1s'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/b446b1fff71a547efaa6d61d5bf1cdf720160908-26805-13fx0hb.png[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/b446b1fff71a547efaa6d61d5bf1cdf720160908-26805-13fx0hb.png[0]'
+Command :: convert '/tmp/b446b1fff71a547efaa6d61d5bf1cdf720160908-26805-13fx0hb.png[0]' -auto-orient -resize "100x100" '/tmp/99f52b8127c657db5c96963353d3235920160908-26805-1tyi9yn'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+Command :: file -b --mime '/tmp/b446b1fff71a547efaa6d61d5bf1cdf720160908-26805-zjdgiu.png'
+  [1m[35mSQL (1.2ms)[0m  [1m[32mINSERT INTO "rests" ("title", "description", "created_at", "updated_at", "image_file_name", "image_content_type", "image_file_size", "image_updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Baraszek"], ["description", "[\"Et non quo nulla cum.\", \"Quis excepturi est voluptate quisquam dolore id.\", \"Totam consequatur distinctio minus quas.\"]"], ["created_at", 2016-09-08 10:19:36 UTC], ["updated_at", 2016-09-08 10:19:36 UTC], ["image_file_name", "voluptasnullaaut.png"], ["image_content_type", "image/png"], ["image_file_size", 24474], ["image_updated_at", 2016-09-08 10:19:35 UTC]]
+  [1m[35m (146.8ms)[0m  [1m[36mcommit transaction[0m
+Command :: file -b --mime '/tmp/4d3c92fe2b90ffad3b5c79cc410d9e0d20160908-26805-183nfi8.png'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/4d3c92fe2b90ffad3b5c79cc410d9e0d20160908-26805-lye30m.png[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/4d3c92fe2b90ffad3b5c79cc410d9e0d20160908-26805-lye30m.png[0]'
+Command :: convert '/tmp/4d3c92fe2b90ffad3b5c79cc410d9e0d20160908-26805-lye30m.png[0]' -auto-orient -resize "300x300" '/tmp/9231a607d6412c620abe3e97b9f95dce20160908-26805-1umgfvr'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/4d3c92fe2b90ffad3b5c79cc410d9e0d20160908-26805-lye30m.png[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/4d3c92fe2b90ffad3b5c79cc410d9e0d20160908-26805-lye30m.png[0]'
+Command :: convert '/tmp/4d3c92fe2b90ffad3b5c79cc410d9e0d20160908-26805-lye30m.png[0]' -auto-orient -resize "100x100" '/tmp/9231a607d6412c620abe3e97b9f95dce20160908-26805-l9ty6f'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+Command :: file -b --mime '/tmp/4d3c92fe2b90ffad3b5c79cc410d9e0d20160908-26805-11a3g55.png'
+  [1m[35mSQL (1.3ms)[0m  [1m[32mINSERT INTO "rests" ("title", "description", "created_at", "updated_at", "image_file_name", "image_content_type", "image_file_size", "image_updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["title", "repudiandae"], ["description", "[\"At ex nihil.\", \"Corporis omnis omnis doloremque suscipit sapiente.\", \"Labore nemo sed rerum et aut tempora voluptatem.\"]"], ["created_at", 2016-09-08 10:19:37 UTC], ["updated_at", 2016-09-08 10:19:37 UTC], ["image_file_name", "my-own-slug.png"], ["image_content_type", "image/png"], ["image_file_size", 36774], ["image_updated_at", 2016-09-08 10:19:37 UTC]]
+  [1m[35m (126.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "categories" ("title", "created_at", "updated_at", "rest_id") VALUES (?, ?, ?, ?)[0m  [["title", "sequi"], ["created_at", 2016-09-08 10:19:37 UTC], ["updated_at", 2016-09-08 10:19:37 UTC], ["rest_id", 1]]
+  [1m[35m (175.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "categories" ("title", "created_at", "updated_at", "rest_id") VALUES (?, ?, ?, ?)[0m  [["title", "cupiditate"], ["created_at", 2016-09-08 10:19:37 UTC], ["updated_at", 2016-09-08 10:19:37 UTC], ["rest_id", 1]]
+  [1m[35m (270.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "categories" ("title", "created_at", "updated_at", "rest_id") VALUES (?, ?, ?, ?)[0m  [["title", "ut"], ["created_at", 2016-09-08 10:19:38 UTC], ["updated_at", 2016-09-08 10:19:38 UTC], ["rest_id", 1]]
+  [1m[35m (140.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "categories" ("title", "created_at", "updated_at", "rest_id") VALUES (?, ?, ?, ?)[0m  [["title", "provident"], ["created_at", 2016-09-08 10:19:38 UTC], ["updated_at", 2016-09-08 10:19:38 UTC], ["rest_id", 2]]
+  [1m[35m (129.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "categories" ("title", "created_at", "updated_at", "rest_id") VALUES (?, ?, ?, ?)[0m  [["title", "aut"], ["created_at", 2016-09-08 10:19:38 UTC], ["updated_at", 2016-09-08 10:19:38 UTC], ["rest_id", 2]]
+  [1m[35m (131.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "dishes" ("title", "price", "description", "created_at", "updated_at", "counter", "rest_id", "category_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["title", "ea"], ["price", 875.0], ["description", "Dolorem quo est ipsam aperiam."], ["created_at", 2016-09-08 10:19:38 UTC], ["updated_at", 2016-09-08 10:19:38 UTC], ["counter", 0], ["rest_id", 1], ["category_id", 1]]
+  [1m[35m (127.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "dishes" ("title", "price", "description", "created_at", "updated_at", "counter", "rest_id", "category_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["title", "inventore"], ["price", 772.0], ["description", "Nemo vero et totam."], ["created_at", 2016-09-08 10:19:38 UTC], ["updated_at", 2016-09-08 10:19:38 UTC], ["counter", 0], ["rest_id", 1], ["category_id", 1]]
+  [1m[35m (128.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "dishes" ("title", "price", "description", "created_at", "updated_at", "counter", "rest_id", "category_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["title", "odit"], ["price", 286.0], ["description", "Ad provident doloribus repudiandae harum distinctio aliquid nulla consequatur."], ["created_at", 2016-09-08 10:19:38 UTC], ["updated_at", 2016-09-08 10:19:38 UTC], ["counter", 0], ["rest_id", 1], ["category_id", 1]]
+  [1m[35m (128.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "dishes" ("title", "price", "description", "created_at", "updated_at", "counter", "rest_id", "category_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["title", "eveniet"], ["price", 618.0], ["description", "Sed eos dolores occaecati quia."], ["created_at", 2016-09-08 10:19:39 UTC], ["updated_at", 2016-09-08 10:19:39 UTC], ["counter", 0], ["rest_id", 1], ["category_id", 2]]
+  [1m[35m (147.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "dishes" ("title", "price", "description", "created_at", "updated_at", "counter", "rest_id", "category_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["title", "quo"], ["price", 425.0], ["description", "Doloribus veritatis aut explicabo ut et debitis suscipit sunt."], ["created_at", 2016-09-08 10:19:39 UTC], ["updated_at", 2016-09-08 10:19:39 UTC], ["counter", 0], ["rest_id", 1], ["category_id", 2]]
+  [1m[35m (147.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "dishes" ("title", "price", "description", "created_at", "updated_at", "counter", "rest_id", "category_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["title", "sint"], ["price", 485.0], ["description", "Porro nulla voluptas eum unde ipsa nam aspernatur in."], ["created_at", 2016-09-08 10:19:39 UTC], ["updated_at", 2016-09-08 10:19:39 UTC], ["counter", 0], ["rest_id", 1], ["category_id", 3]]
+  [1m[35m (142.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "dishes" ("title", "price", "description", "created_at", "updated_at", "counter", "rest_id", "category_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["title", "enim"], ["price", 263.0], ["description", "Minima suscipit sequi dolorem sed necessitatibus dignissimos optio provident."], ["created_at", 2016-09-08 10:19:39 UTC], ["updated_at", 2016-09-08 10:19:39 UTC], ["counter", 0], ["rest_id", 2], ["category_id", 4]]
+  [1m[35m (152.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "dishes" ("title", "price", "description", "created_at", "updated_at", "counter", "rest_id", "category_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["title", "debitis"], ["price", 743.0], ["description", "Eligendi quos ab repellat occaecati."], ["created_at", 2016-09-08 10:19:39 UTC], ["updated_at", 2016-09-08 10:19:39 UTC], ["counter", 0], ["rest_id", 2], ["category_id", 4]]
+  [1m[35m (139.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "dishes" ("title", "price", "description", "created_at", "updated_at", "counter", "rest_id", "category_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["title", "ad"], ["price", 322.0], ["description", "Et facilis dolorem natus in."], ["created_at", 2016-09-08 10:19:39 UTC], ["updated_at", 2016-09-08 10:19:39 UTC], ["counter", 0], ["rest_id", 2], ["category_id", 5]]
+  [1m[35m (153.4ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/" for 127.0.0.1 at 2016-09-08 16:19:49 +0600
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PagesController#rests as HTML
+  Rendering pages/rests.html.erb within layouts/application
+  [1m[36mRest Load (0.3ms)[0m  [1m[34mSELECT "rests".* FROM "rests"[0m
+  Rendered pages/_cart.html.erb (5.5ms)
+  Rendered pages/rests.html.erb within layouts/application (25.0ms)
+Completed 200 OK in 770ms (Views: 757.1ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/admin" for 127.0.0.1 at 2016-09-08 16:20:03 +0600
+Processing by Admin::DashboardController#index as HTML
+Completed 401 Unauthorized in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/login" for 127.0.0.1 at 2016-09-08 16:20:03 +0600
+Processing by ActiveAdmin::Devise::SessionsController#new as HTML
+  Rendering /home/fedyay/.rvm/gems/ruby-2.3.0/gems/activeadmin-1.0.0.pre4/app/views/active_admin/devise/sessions/new.html.erb within layouts/active_admin_logged_out
+  Rendered /home/fedyay/.rvm/gems/ruby-2.3.0/gems/activeadmin-1.0.0.pre4/app/views/active_admin/devise/shared/_links.erb (1.7ms)
+  Rendered /home/fedyay/.rvm/gems/ruby-2.3.0/gems/activeadmin-1.0.0.pre4/app/views/active_admin/devise/sessions/new.html.erb within layouts/active_admin_logged_out (88.9ms)
+Completed 200 OK in 437ms (Views: 396.4ms | ActiveRecord: 1.4ms)
+
+
+Started POST "/admin/login" for 127.0.0.1 at 2016-09-08 16:20:23 +0600
+Processing by ActiveAdmin::Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"CF5tpl8D3/pFazi7r+7YkbDYXyve8mfYuPxhrRizKOslHXzMgay6IiEE9E79k6su2H8eKSQqcFqDpLB/ohygkw==", "admin_user"=>{"email"=>"admin@example.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Login"}
+  [1m[36mAdminUser Load (0.9ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."email" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["email", "admin@example.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (3.2ms)[0m  [1m[33mUPDATE "admin_users" SET "current_sign_in_at" = ?, "last_sign_in_at" = ?, "current_sign_in_ip" = ?, "last_sign_in_ip" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "admin_users"."id" = ?[0m  [["current_sign_in_at", 2016-09-08 10:20:23 UTC], ["last_sign_in_at", 2016-09-08 10:20:23 UTC], ["current_sign_in_ip", "127.0.0.1"], ["last_sign_in_ip", "127.0.0.1"], ["sign_in_count", 1], ["updated_at", 2016-09-08 10:20:23 UTC], ["id", 1]]
+  [1m[35m (138.2ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/admin
+Completed 302 Found in 384ms (ActiveRecord: 142.5ms)
+
+
+Started GET "/admin" for 127.0.0.1 at 2016-09-08 16:20:23 +0600
+Processing by Admin::DashboardController#index as HTML
+  [1m[36mAdminUser Load (0.4ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /home/fedyay/.rvm/gems/ruby-2.3.0/gems/activeadmin-1.0.0.pre4/app/views/active_admin/page/index.html.arb
+  Rendered /home/fedyay/.rvm/gems/ruby-2.3.0/gems/activeadmin-1.0.0.pre4/app/views/active_admin/page/index.html.arb (172.6ms)
+Completed 200 OK in 215ms (Views: 193.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/admin/rests" for 127.0.0.1 at 2016-09-08 16:20:25 +0600
+Processing by Admin::RestsController#index as HTML
+  [1m[36mAdminUser Load (1.1ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /home/fedyay/.rvm/gems/ruby-2.3.0/gems/activeadmin-1.0.0.pre4/app/views/active_admin/resource/index.html.arb
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "rests" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "rests" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "rests"[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "rests" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mRest Load (0.4ms)[0m  [1m[34mSELECT  "rests".* FROM "rests" ORDER BY "rests"."id" desc LIMIT ? OFFSET ?[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mDish Load (0.5ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes"[0m
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered /home/fedyay/.rvm/gems/ruby-2.3.0/gems/activeadmin-1.0.0.pre4/app/views/active_admin/resource/index.html.arb (417.2ms)
+Completed 200 OK in 484ms (Views: 431.5ms | ActiveRecord: 4.5ms)
+
+
+Started GET "/admin/dishes" for 127.0.0.1 at 2016-09-08 16:20:27 +0600
+Processing by Admin::DishesController#index as HTML
+  [1m[36mAdminUser Load (0.7ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /home/fedyay/.rvm/gems/ruby-2.3.0/gems/activeadmin-1.0.0.pre4/app/views/active_admin/resource/index.html.arb
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "dishes" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "dishes" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "dishes"[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "dishes" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mDish Load (0.3ms)[0m  [1m[34mSELECT  "dishes".* FROM "dishes" ORDER BY "dishes"."id" desc LIMIT ? OFFSET ?[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mRest Load (0.4ms)[0m  [1m[34mSELECT  "rests".* FROM "rests" WHERE "rests"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "rests".* FROM "rests" WHERE "rests"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "rests".* FROM "rests" WHERE "rests"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mRest Load (0.2ms)[0m  [1m[34mSELECT  "rests".* FROM "rests" WHERE "rests"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "rests".* FROM "rests" WHERE "rests"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "rests".* FROM "rests" WHERE "rests"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "rests".* FROM "rests" WHERE "rests"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "rests".* FROM "rests" WHERE "rests"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "rests".* FROM "rests" WHERE "rests"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mRest Load (0.3ms)[0m  [1m[34mSELECT "rests".* FROM "rests"[0m
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered /home/fedyay/.rvm/gems/ruby-2.3.0/gems/activeadmin-1.0.0.pre4/app/views/active_admin/resource/index.html.arb (323.2ms)
+Completed 200 OK in 332ms (Views: 324.6ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/admin/comments" for 127.0.0.1 at 2016-09-08 16:20:28 +0600
+Processing by Admin::CommentsController#index as HTML
+  [1m[36mAdminUser Load (0.3ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /home/fedyay/.rvm/gems/ruby-2.3.0/gems/activeadmin-1.0.0.pre4/app/views/active_admin/resource/index.html.arb
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "active_admin_comments" WHERE "active_admin_comments"."namespace" = ?[0m  [["namespace", "admin"]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "active_admin_comments" WHERE "active_admin_comments"."namespace" = ? LIMIT ? OFFSET ?) subquery_for_count[0m  [["namespace", "admin"], ["LIMIT", 30], ["OFFSET", 0]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT DISTINCT "active_admin_comments"."resource_type" FROM "active_admin_comments" ORDER BY resource_type asc[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT DISTINCT "active_admin_comments"."author_type" FROM "active_admin_comments" ORDER BY author_type asc[0m
+  Rendered /home/fedyay/.rvm/gems/ruby-2.3.0/gems/activeadmin-1.0.0.pre4/app/views/active_admin/resource/index.html.arb (170.1ms)
+Completed 200 OK in 181ms (Views: 172.9ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/admin/categories" for 127.0.0.1 at 2016-09-08 16:20:29 +0600
+Processing by Admin::CategoriesController#index as HTML
+  [1m[36mAdminUser Load (0.4ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /home/fedyay/.rvm/gems/ruby-2.3.0/gems/activeadmin-1.0.0.pre4/app/views/active_admin/resource/index.html.arb
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "categories" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "categories" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "categories"[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "categories" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" ORDER BY "categories"."id" desc LIMIT ? OFFSET ?[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mRest Load (0.4ms)[0m  [1m[34mSELECT "rests".* FROM "rests"[0m
+  [1m[36mDish Load (0.3ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes"[0m
+  Rendered /home/fedyay/.rvm/gems/ruby-2.3.0/gems/activeadmin-1.0.0.pre4/app/views/active_admin/resource/index.html.arb (205.5ms)
+Completed 200 OK in 217ms (Views: 208.5ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/admin/logout" for 127.0.0.1 at 2016-09-08 16:20:33 +0600
+Processing by ActiveAdmin::Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"kNTcUMVEuou7Yz9Zk1AYcJxvm2lyBtfPAa2jyW+KhmxL9tdip+oTNVVM1IC97Gn+H/TLWPOp2IQftCaI5sUfbw=="}
+  [1m[36mAdminUser Load (0.5ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/admin
+Completed 302 Found in 55ms (ActiveRecord: 0.7ms)
+
+
+Started GET "/admin" for 127.0.0.1 at 2016-09-08 16:20:33 +0600
+Processing by Admin::DashboardController#index as HTML
+Completed 401 Unauthorized in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/login" for 127.0.0.1 at 2016-09-08 16:20:33 +0600
+Processing by ActiveAdmin::Devise::SessionsController#new as HTML
+  Rendering /home/fedyay/.rvm/gems/ruby-2.3.0/gems/activeadmin-1.0.0.pre4/app/views/active_admin/devise/sessions/new.html.erb within layouts/active_admin_logged_out
+  Rendered /home/fedyay/.rvm/gems/ruby-2.3.0/gems/activeadmin-1.0.0.pre4/app/views/active_admin/devise/shared/_links.erb (3.4ms)
+  Rendered /home/fedyay/.rvm/gems/ruby-2.3.0/gems/activeadmin-1.0.0.pre4/app/views/active_admin/devise/sessions/new.html.erb within layouts/active_admin_logged_out (31.2ms)
+Completed 200 OK in 193ms (Views: 191.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-09-08 16:20:37 +0600
+Processing by PagesController#rests as HTML
+  Rendering pages/rests.html.erb within layouts/application
+  [1m[36mRest Load (0.4ms)[0m  [1m[34mSELECT "rests".* FROM "rests"[0m
+  Rendered pages/_cart.html.erb (2.4ms)
+  Rendered pages/rests.html.erb within layouts/application (22.9ms)
+Started GET "/" for 127.0.0.1 at 2016-09-08 16:20:37 +0600
+Processing by PagesController#rests as HTML
+  Rendering pages/rests.html.erb within layouts/application
+  [1m[36mRest Load (0.3ms)[0m  [1m[34mSELECT "rests".* FROM "rests"[0m
+  Rendered pages/_cart.html.erb (2.6ms)
+  Rendered pages/rests.html.erb within layouts/application (13.5ms)
+Completed 200 OK in 358ms (Views: 355.0ms | ActiveRecord: 0.4ms)
+
+
+Completed 200 OK in 368ms (Views: 364.1ms | ActiveRecord: 0.3ms)
+
+

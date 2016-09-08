@@ -11,9 +11,9 @@
 	<% @rests.each do |rest| %>
 
 	<tr class="row">
-		<td><div class="col-md-2"><%= link_to rest.title, forest_show_path(rest), class: 'btn btn-primary' %></div></td>
-		<td><div class="col-md-2"><%= rest.description %></div></td>
-		<td><div class="col-md-2"><%= image_tag rest.image.url(:medium) %></div></td>
+		<td><div class="col-md-3"><%= link_to rest.title, forest_show_path(rest), class: 'btn btn-primary' %></div></td>
+		<td><div class="col-md-10"><%= rest.description %></div></td>
+		<td class="col-md-6"><%= image_tag rest.image.url(:medium) %></td>
 	</tr>
 
 	<% end %>

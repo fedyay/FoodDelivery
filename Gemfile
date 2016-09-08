@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+gem 'faker'
 gem 'bootstrap-sass'
 gem 'active_bootstrap_skin'
 gem 'twitter-bootstrap-rails'
