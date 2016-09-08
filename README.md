@@ -1,3 +1,3 @@
 # FetchFood
 
-Default Admin account is: admin@admin.admin/adminadmin
+Default Admin account is: admin@example.com/123456
